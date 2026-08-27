@@ -1,7 +1,3 @@
-from pathlib import Path
-
-path = Path("/mnt/data/daekwang_bigbit_guestbook.html")
-html = r'''<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -55,7 +51,7 @@ footer{text-align:center;color:#748196;font-size:12px;padding:8px 20px 30px}
 </div>
 <div class="actions"><button onclick="addEntry()">방문록 등록</button></div>
 <div class="hint">※ 작성할 때 입력한 비밀번호로 본인 글을 수정·삭제할 수 있습니다.</div>
-<div class="master">🔐 관리자 기능: 마스터 비밀번호를 사용하면 <b>모든 방문록을 수정하거나 삭제</b>할 수 있습니다.</div>
+
 </section>
 
 <section class="panel">
@@ -63,7 +59,7 @@ footer{text-align:center;color:#748196;font-size:12px;padding:8px 20px 30px}
 <div id="entries"></div>
 </section>
 </main>
-<footer>대광고등학교 큰빛축제 방문록 · 브라우저 저장형 데모</footer>
+
 
 <div id="modal" class="modal">
 <div class="modal-card">
@@ -130,5 +126,3 @@ render();
 </script>
 </body>
 </html>'''
-path.write_text(html, encoding="utf-8")
-print("완성되었습니다:", path)
