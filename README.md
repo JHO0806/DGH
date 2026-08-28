@@ -204,6 +204,12 @@ input,textarea{
  background:#fff;
 }
 
+input:disabled{
+ background:#f1edef;
+ color:#8f858a;
+ cursor:not-allowed;
+}
+
 textarea{
  min-height:105px;
  resize:none;
@@ -752,77 +758,166 @@ button.danger{
 
 <div class="logo-float logo-float-1">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-2">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-3">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-4">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-5">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-6">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-7">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-8">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-9">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-10">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-11">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-12">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
+<!-- =========================
+     헤더
+========================= -->
+
 <header class="hero">
+
 <div class="top">
 
 <div class="logo">
@@ -838,6 +933,7 @@ button.danger{
 </div>
 
 </div>
+
 </header>
 
 <!-- =========================
@@ -872,6 +968,7 @@ button.danger{
 </div>
 
 </div>
+
 </div>
 
 </section>
@@ -919,7 +1016,11 @@ placeholder="수정·삭제용 비밀번호"
 </div>
 
 <div class="actions">
-<button onclick="addEntry()">방문록 등록</button>
+
+<button onclick="addEntry()">
+방문록 등록
+</button>
+
 </div>
 
 <div class="hint">
@@ -957,10 +1058,12 @@ placeholder="수정·삭제용 비밀번호"
 
 <section class="game-box">
 
-<h2 class="game-title">🎮 랜덤 수학 미니게임</h2>
+<h2 class="game-title">
+🎮 랜덤 수학 미니게임
+</h2>
 
 <p class="game-description">
-30초 동안 최대한 많은 문제를 풀어보세요. <b>각 문제에는 20초의 제한시간</b>이 있습니다.
+30초 동안 최대한 많은 문제를 풀어보세요. 각 문제에는 20초의 제한시간이 있습니다.
 </p>
 
 <div class="nickname-row">
@@ -1027,9 +1130,14 @@ placeholder="랭킹에 표시할 닉네임"
 
 <div class="game-start-wrap">
 
-<button id="startGameBtn" class="big-btn" onclick="startMathGame()">
-게임 시작
-</button>
+<button
+id="startGameBtn"
+class="big-btn"
+onclick="startMathGame()"
+
+>
+
+게임 시작 </button>
 
 </div>
 
@@ -1094,9 +1202,13 @@ placeholder="비밀번호"
 
 <div class="actions">
 
-<button class="secondary" onclick="closeModal()">
-취소
-</button>
+<button
+class="secondary"
+onclick="closeModal()"
+
+>
+
+취소 </button>
 
 <button onclick="confirmPassword()">
 확인
@@ -1114,7 +1226,8 @@ placeholder="비밀번호"
    페이지 상태 저장
 ===================================================== */
 
-const PAGE_KEY="daekwang_bigbit_current_page_v1";
+const PAGE_KEY=
+"daekwang_bigbit_current_page_v2";
 
 
 function showPage(pageId){
@@ -1247,8 +1360,10 @@ function addEntry(){
 
  const id=
   window.crypto&&crypto.randomUUID
-  ?crypto.randomUUID()
-  :String(Date.now()+Math.random());
+  ?
+  crypto.randomUUID()
+  :
+  String(Date.now()+Math.random());
 
 
  entries.unshift({
@@ -1264,6 +1379,7 @@ function addEntry(){
 
  save();
  render();
+
 
  document.getElementById("name").value="";
  document.getElementById("password").value="";
@@ -1348,6 +1464,7 @@ function getCancelableIndex(id){
   return -1;
 
  }
+
 
  const now=Date.now();
 
@@ -1434,6 +1551,7 @@ function getCancelText(id){
  const earliest=
   Math.min(...data.times);
 
+
  const remain=
   Math.max(
    0,
@@ -1444,6 +1562,7 @@ function getCancelText(id){
     )/1000
    )
   );
+
 
  return `${remain}초 후 취소`;
 
@@ -1481,98 +1600,96 @@ function render(){
 
 
  box.innerHTML=
- entries.map(e=>{
+  entries.map(e=>{
 
-  const data=
-   normalizeLikes(e.id);
+   const data=
+    normalizeLikes(e.id);
 
-  const cancelAvailable=
-   getCancelableIndex(e.id)!==-1;
+   const cancelAvailable=
+    getCancelableIndex(e.id)!==-1;
 
-  const cancelText=
-   getCancelText(e.id);
+   const cancelText=
+    getCancelText(e.id);
 
 
-  return `
+   return `
 
-  <article class="entry">
+   <article class="entry">
 
-   <div class="entry-head">
+    <div class="entry-head">
 
-    <div class="name">
-    ${escapeHTML(e.name)}
+     <div class="name">
+     ${escapeHTML(e.name)}
+     </div>
+
+     <div class="time">
+     작성:
+     ${formatDate(e.createdAt)}
+     ${
+      e.updatedAt
+      ?
+      `<br>수정: ${formatDate(e.updatedAt)}`
+      :
+      ""
+     }
+     </div>
+
     </div>
 
-    <div class="time">
-    작성:
-    ${formatDate(e.createdAt)}
 
-    ${
-     e.updatedAt
-     ?
-     `<br>수정: ${formatDate(e.updatedAt)}`
-     :
-     ""
-    }
-
+    <div class="content">
+    ${escapeHTML(e.message)}
     </div>
 
-   </div>
 
+    <div class="actions">
 
-   <div class="content">
-   ${escapeHTML(e.message)}
-   </div>
+     <div class="like-area">
 
+      <button
+       class="like-btn"
+       onclick="addLike('${e.id}')"
+      >
+       ❤️ 좋아요
+      </button>
 
-   <div class="actions">
+      <span class="like-count">
+       ${data.count}
+      </span>
 
-    <div class="like-area">
+      <button
+       class="cancel-like"
+       onclick="cancelLike('${e.id}')"
+       ${cancelAvailable?"":"disabled"}
+      >
+       ${cancelText}
+      </button>
+
+     </div>
+
 
      <button
-      class="like-btn"
-      onclick="addLike('${e.id}')"
+      class="secondary"
+      onclick="requestAction('edit','${e.id}')"
      >
-      ❤️ 좋아요
+     수정
      </button>
 
-     <span class="like-count">
-      ${data.count}
-     </span>
 
      <button
-      class="cancel-like"
-      onclick="cancelLike('${e.id}')"
-      ${cancelAvailable?"":"disabled"}
+      class="danger"
+      onclick="requestAction('delete','${e.id}')"
      >
-      ${cancelText}
+     삭제
      </button>
 
     </div>
 
+   </article>
 
-    <button
-     class="secondary"
-     onclick="requestAction('edit','${e.id}')"
-    >
-    수정
-    </button>
+   `;
 
-
-    <button
-     class="danger"
-     onclick="requestAction('delete','${e.id}')"
-    >
-    삭제
-    </button>
-
-   </div>
-
-  </article>
-
-  `;
-
- }).join("");
+  }).join("");
 
 }
 
@@ -1588,9 +1705,11 @@ function requestAction(action,id){
   id:id
  };
 
+
  document.getElementById("checkPw").value="";
 
  document.getElementById("pwError").textContent="";
+
 
  document.getElementById("modalTitle").textContent=
   action==="edit"
@@ -1599,8 +1718,10 @@ function requestAction(action,id){
   :
   "삭제를 위한 비밀번호 확인";
 
+
  document.getElementById("modal")
  .classList.add("show");
+
 
  setTimeout(
   ()=>{
@@ -1635,6 +1756,7 @@ function confirmPassword(){
   entries.find(
    x=>x.id===pending.id
   );
+
 
  const pw=
   document
@@ -1790,15 +1912,17 @@ document.addEventListener(
    수학게임
 ===================================================== */
 
-const GAME_TOTAL_TIME=30;
+const GAME_TOTAL_TIME=
+ 30;
 
-const QUESTION_TIME=20;
+const QUESTION_TIME=
+ 20;
 
 const RANKING_KEY=
- "daekwang_bigbit_math_ranking_v3";
+ "daekwang_bigbit_math_ranking_v4";
 
 const BEST_KEY=
- "daekwang_bigbit_math_best_v3";
+ "daekwang_bigbit_math_best_v4";
 
 
 const difficultyConfig={
@@ -1876,7 +2000,7 @@ let bestGameScore=
 
 document.getElementById("gameBest")
 .textContent=
-bestGameScore;
+ bestGameScore;
 
 
 /* =====================================================
@@ -1913,7 +2037,6 @@ function gcd(a,b){
   const t=a%b;
 
   a=b;
-
   b=t;
 
  }
@@ -2097,10 +2220,9 @@ function generateKindergarten(){
   const b=randInt(1,10);
 
   return {
-   type:type,
+   type,
    question:`${a} + ${b} = ?`,
-   answer:a
-    +b
+   answer:a+b
   };
 
  }
@@ -2112,7 +2234,7 @@ function generateKindergarten(){
   const b=randInt(1,a);
 
   return {
-   type:type,
+   type,
    question:`${a} - ${b} = ?`,
    answer:a-b
   };
@@ -2126,7 +2248,7 @@ function generateKindergarten(){
   const b=randInt(1,20);
 
   return {
-   type:type,
+   type,
    question:`다음 두 수 중 더 큰 수는?  ${a} , ${b}`,
    answer:Math.max(a,b)
   };
@@ -2140,7 +2262,7 @@ function generateKindergarten(){
   const each=randInt(1,5);
 
   return {
-   type:type,
+   type,
    question:`사탕 ${groups}묶음이 있고 한 묶음에 ${each}개입니다. 모두 몇 개일까요?`,
    answer:groups*each
   };
@@ -2153,7 +2275,7 @@ function generateKindergarten(){
   const a=randInt(1,10);
 
   return {
-   type:type,
+   type,
    question:`${a}의 2배는?`,
    answer:a*2
   };
@@ -2166,7 +2288,7 @@ function generateKindergarten(){
   const a=randInt(2,20)*2;
 
   return {
-   type:type,
+   type,
    question:`${a}의 절반은?`,
    answer:a/2
   };
@@ -2174,17 +2296,20 @@ function generateKindergarten(){
  }
 
 
- const shapes=randomChoice([
+ const shapes=[
   {name:"삼각형",count:3},
   {name:"사각형",count:4},
   {name:"오각형",count:5},
   {name:"육각형",count:6}
- ]);
+ ];
+
+ const shape=
+  randomChoice(shapes);
 
  return {
-  type:type,
-  question:`${shapes.name}의 변은 몇 개일까요?`,
-  answer:shapes.count
+  type,
+  question:`${shape.name}의 변은 몇 개일까요?`,
+  answer:shape.count
  };
 
 }
@@ -2294,18 +2419,21 @@ function generateElementaryLow(){
  }
 
 
- const sides=randomChoice([
+ const sides=[
   {name:"삼각형",value:3},
   {name:"사각형",value:4},
   {name:"오각형",value:5},
   {name:"육각형",value:6},
   {name:"팔각형",value:8}
- ]);
+ ];
+
+ const shape=
+  randomChoice(sides);
 
  return {
   type,
-  question:`${sides.name}의 변의 개수는?`,
-  answer:sides.value
+  question:`${shape.name}의 변의 개수는?`,
+  answer:shape.value
  };
 
 }
@@ -2325,7 +2453,8 @@ function generateElementaryHigh(){
   "eh_average",
   "eh_ratio",
   "eh_circle_basic",
-  "eh_triangle_area"
+  "eh_triangle_area",
+  "eh_perimeter"
  ];
 
  const type=
@@ -2396,15 +2525,9 @@ function generateElementaryHigh(){
   const n=randInt(3,6);
   const values=[];
 
-  for(
-   let i=0;
-   i<n;
-   i++
-  ){
+  for(let i=0;i<n;i++){
 
-   values.push(
-    randInt(5,30)
-   );
+   values.push(randInt(5,30));
 
   }
 
@@ -2429,11 +2552,9 @@ function generateElementaryHigh(){
   const b=randInt(2,9);
   const multiplier=randInt(2,8);
 
-  const B=b*multiplier;
-
   return {
    type,
-   question:`A:B=${a}:${b}이고 B=${B}일 때 A는?`,
+   question:`A:B=${a}:${b}이고 B=${b*multiplier}일 때 A는?`,
    answer:a*multiplier
   };
 
@@ -2453,13 +2574,27 @@ function generateElementaryHigh(){
  }
 
 
- const base=randInt(3,15);
- const height=randInt(3,15);
+ if(type==="eh_triangle_area"){
+
+  const base=randInt(3,15);
+  const height=randInt(3,15);
+
+  return {
+   type,
+   question:`밑변 ${base}, 높이 ${height}인 삼각형의 넓이는?`,
+   answer:base*height/2
+  };
+
+ }
+
+
+ const w=randInt(3,20);
+ const h=randInt(3,20);
 
  return {
   type,
-  question:`밑변 ${base}, 높이 ${height}인 삼각형의 넓이는?`,
-  answer:base*height/2
+  question:`가로 ${w}, 세로 ${h}인 직사각형의 둘레는?`,
+  answer:2*(w+h)
  };
 
 }
@@ -2710,8 +2845,8 @@ function generateHigh(){
  if(type==="h_trig"){
 
   const data=randomChoice([
-   {q:"sin 30°",a:0.5},
-   {q:"cos 60°",a:0.5},
+   {q:"sin 30°",a:.5},
+   {q:"cos 60°",a:.5},
    {q:"sin 90°",a:1},
    {q:"cos 0°",a:1},
    {q:"tan 45°",a:1}
@@ -2760,14 +2895,10 @@ function generateHigh(){
   const n=randInt(3,6);
   const success=randInt(0,n);
 
-  const probability=
-   combination(n,success)*
-   Math.pow(.5,n);
-
   return {
    type,
    question:`동전을 ${n}번 던질 때 앞면이 정확히 ${success}번 나올 확률은?`,
-   answer:probability
+   answer:combination(n,success)*Math.pow(.5,n)
   };
 
  }
@@ -2855,14 +2986,14 @@ function generateUniversity(){
  const types=[
   "u_integral",
   "u_integral_linear",
-  "u_product_derivative",
+  "u_derivative",
   "u_trace",
   "u_determinant",
   "u_probability",
   "u_complex",
   "u_limit",
   "u_vector",
-  "u_circle_arc"
+  "u_geometry"
  ];
 
  const type=
@@ -2897,7 +3028,7 @@ function generateUniversity(){
  }
 
 
- if(type==="u_product_derivative"){
+ if(type==="u_derivative"){
 
   const a=randInt(2,8);
   const x=randInt(1,6);
@@ -3005,7 +3136,7 @@ function generateUniversity(){
 
  return {
   type,
-  question:`반지름 ${r}인 원에서 중심각 ${angle}°가 나타내는 부채꼴의 호의 길이를 2πr 기준으로 나타낸 비율은?`,
+  question:`반지름 ${r}인 원에서 중심각 ${angle}°가 나타내는 부채꼴의 넓이를 πr² 기준으로 나타낸 비율은?`,
   answer:angle/360
  };
 
@@ -3093,10 +3224,7 @@ function generateUniversityHard(){
 
   const x1=randInt(1,5);
   const x2=randInt(6,10);
-
-  const p=randomChoice([
-   .2,.3,.4,.6,.7,.8
-  ]);
+  const p=randomChoice([.2,.3,.4,.6,.7,.8]);
 
   return {
    type,
@@ -3188,43 +3316,27 @@ function createQuestion(){
 
 
   if(level==="kindergarten"){
-
    q=generateKindergarten();
-
   }
   else if(level==="elementaryLow"){
-
    q=generateElementaryLow();
-
   }
   else if(level==="elementaryHigh"){
-
    q=generateElementaryHigh();
-
   }
   else if(level==="middle"){
-
    q=generateMiddle();
-
   }
   else if(level==="high"){
-
    q=generateHigh();
-
   }
   else if(level==="university"){
-
    q=generateUniversity();
-
   }
   else{
-
    q=generateUniversityHard();
-
   }
 
-
-  /* 같은 유형 연속 방지 */
 
   if(q.type===lastQuestionType){
 
@@ -3237,8 +3349,6 @@ function createQuestion(){
    `${level}|${q.type}|${q.question}|${formatNumber(q.answer)}`;
 
 
-  /* 같은 문제 방지 */
-
   if(
    usedQuestionKeys.has(key)
   ){
@@ -3250,7 +3360,8 @@ function createQuestion(){
 
   usedQuestionKeys.add(key);
 
-  lastQuestionType=q.type;
+  lastQuestionType=
+   q.type;
 
 
   return {
@@ -3263,8 +3374,6 @@ function createQuestion(){
 
  }
 
-
- /* 안전장치 */
 
  const a=randInt(1,100);
  const b=randInt(1,100);
@@ -3281,7 +3390,7 @@ function createQuestion(){
 
 
 /* =====================================================
-   보기
+   보기 만들기
 ===================================================== */
 
 function makeChoices(answer,level){
@@ -3297,9 +3406,6 @@ function makeChoices(answer,level){
  ){
 
   attempts++;
-
-
-  let wrong;
 
 
   if(
@@ -3348,7 +3454,7 @@ function makeChoices(answer,level){
    }
 
 
-   wrong=
+   let wrong=
     answer+
     randomChoice([
      -1,1,-2,2,
@@ -3357,9 +3463,7 @@ function makeChoices(answer,level){
     ]);
 
 
-   if(
-    !Number.isInteger(answer)
-   ){
+   if(!Number.isInteger(answer)){
 
     wrong=
      Math.round(
@@ -3369,14 +3473,16 @@ function makeChoices(answer,level){
    }
 
 
-   if(
-    !choices.some(
-     x=>
+   const duplicate=
+    choices.some(
+     value=>
       Math.abs(
-       Number(x)-Number(wrong)
+       Number(value)-Number(wrong)
       )<0.000001
-    )
-   ){
+    );
+
+
+   if(!duplicate){
 
     choices.push(wrong);
 
@@ -3390,27 +3496,21 @@ function makeChoices(answer,level){
  while(choices.length<5){
 
   let extra=
-   typeof answer==="number"
-   ?answer+choices.length*7+3
-   :"보기 "+(choices.length+1);
+   answer+
+   choices.length*7+
+   3;
 
 
-  if(
-   typeof extra==="number"
+  while(
+   choices.some(
+    value=>
+     Math.abs(
+      Number(value)-Number(extra)
+     )<0.000001
+   )
   ){
 
-   while(
-    choices.some(
-     x=>
-      Math.abs(
-       Number(x)-Number(extra)
-      )<0.000001
-    )
-   ){
-
-    extra+=7;
-
-   }
+   extra+=7;
 
   }
 
@@ -3419,8 +3519,6 @@ function makeChoices(answer,level){
 
  }
 
-
- /* Fisher-Yates */
 
  for(
   let i=choices.length-1;
@@ -3471,7 +3569,7 @@ function showQuestion(){
 
  document.getElementById("difficulty")
  .textContent=
- `${config.label} · 정답 +${config.score}점`;
+  `${config.label} · 정답 +${config.score}점`;
 
 
  document.getElementById("question")
@@ -3543,7 +3641,7 @@ function showQuestion(){
 
 
 /* =====================================================
-   문제별 20초 타이머
+   문제별 20초
 ===================================================== */
 
 function startQuestionTimer(){
@@ -3590,33 +3688,19 @@ function startQuestionTimer(){
 
 function updateQuestionTimer(){
 
- const timeEl=
-  document.getElementById(
-   "questionTime"
-  );
-
-
- const bar=
-  document.getElementById(
-   "questionTimerBar"
-  );
-
-
- timeEl.textContent=
+ document.getElementById(
+  "questionTime"
+ ).textContent=
   questionTime;
 
 
- const percent=
-  Math.max(
+ document.getElementById(
+  "questionTimerBar"
+ ).style.width=
+  `${Math.max(
    0,
-   questionTime/
-   QUESTION_TIME*
-   100
-  );
-
-
- bar.style.width=
-  percent+"%";
+   questionTime/QUESTION_TIME*100
+  )}%`;
 
 }
 
@@ -3743,35 +3827,6 @@ function answerQuestion(
   );
 
 
-  buttons.forEach(
-   button=>{
-
-    const text=
-     button.textContent
-      .replace(
-       /^[①②③④⑤]\s*/,
-       ""
-      )
-      .trim();
-
-
-    if(
-     Math.abs(
-      Number(text)-
-      Number(currentQuestion.answer)
-     )<0.000001
-    ){
-
-     button.classList.add(
-      "correct"
-     );
-
-    }
-
-   }
-  );
-
-
   document.getElementById(
    "gameMessage"
   ).textContent=
@@ -3828,6 +3883,13 @@ function startMathGame(){
 
  gameRunning=true;
 
+ /* 게임 중 닉네임 입력 잠금 */
+
+ document.getElementById(
+  "gameNickname"
+ ).disabled=true;
+
+
  gameScore=0;
 
  gameTime=
@@ -3850,28 +3912,19 @@ function startMathGame(){
   "gameScore"
  ).textContent="0";
 
-
  document.getElementById(
   "gameTime"
  ).textContent=
   GAME_TOTAL_TIME;
-
 
  document.getElementById(
   "questionTime"
  ).textContent=
   QUESTION_TIME;
 
-
  document.getElementById(
   "gameSolved"
  ).textContent="0";
-
-
- document.getElementById(
-  "gameMessage"
- ).textContent=
-  "게임 시작!";
 
 
  document.getElementById(
@@ -3884,7 +3937,6 @@ function startMathGame(){
  document.getElementById(
   "startGameBtn"
  ).disabled=true;
-
 
  document.getElementById(
   "startGameBtn"
@@ -3950,6 +4002,13 @@ function endMathGame(){
  }
 
 
+ /* 게임이 끝나면 닉네임 다시 입력 가능 */
+
+ document.getElementById(
+  "gameNickname"
+ ).disabled=false;
+
+
  document.querySelectorAll(
   ".choice-btn"
  ).forEach(
@@ -3962,7 +4021,6 @@ function endMathGame(){
  document.getElementById(
   "startGameBtn"
  ).disabled=false;
-
 
  document.getElementById(
   "startGameBtn"
@@ -4083,9 +4141,7 @@ function saveRanking(
  ranking.push({
 
   name:nickname,
-
   score:score,
-
   time:Date.now()
 
  });
@@ -4163,7 +4219,7 @@ function renderRanking(){
 
 
 /* =====================================================
-   페이지 새로고침 후 마지막 페이지 복원
+   새로고침해도 현재 페이지 유지
 ===================================================== */
 
 function restorePage(){
@@ -4198,14 +4254,12 @@ function restorePage(){
 
 
 /* =====================================================
-   좋아요 시간 표시 갱신
+   좋아요 시간 갱신
 ===================================================== */
 
 setInterval(
  ()=>{
-
   render();
-
  },
  1000
 );
