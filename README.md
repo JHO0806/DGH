@@ -20,7 +20,7 @@ input,textarea,button{font:inherit}
 input,textarea{user-select:text}
 
 /* =========================
-   배경 로고
+   움직이는 배경 교표
 ========================= */
 
 .logo-float{
@@ -465,7 +465,7 @@ button.danger{
 }
 
 /* =========================
-   게임
+   수학게임
 ========================= */
 
 .game-box{
@@ -492,7 +492,7 @@ button.danger{
 
 .game-status{
  display:grid;
- grid-template-columns:repeat(4,1fr);
+ grid-template-columns:repeat(5,1fr);
  gap:10px;
  margin-bottom:18px;
 }
@@ -543,16 +543,32 @@ button.danger{
  color:#741b38;
  font-size:12px;
  font-weight:800;
- margin-bottom:14px;
+ margin-bottom:10px;
+}
+
+.question-timer-wrap{
+ width:100%;
+ height:8px;
+ background:#eadde1;
+ border-radius:999px;
+ overflow:hidden;
+ margin-bottom:12px;
+}
+
+#questionTimerBar{
+ height:100%;
+ width:100%;
+ background:#8a2947;
+ transition:width 1s linear;
 }
 
 .question{
- min-height:105px;
+ min-height:110px;
  display:flex;
  align-items:center;
  justify-content:center;
  text-align:center;
- font-size:25px;
+ font-size:24px;
  font-weight:900;
  color:#24151b;
  line-height:1.55;
@@ -713,7 +729,7 @@ button.danger{
  }
 
  .question{
-  font-size:22px;
+  font-size:21px;
  }
 
  .nickname-row{
@@ -730,172 +746,83 @@ button.danger{
 
 <body>
 
-<!-- =====================================================
+<!-- =========================
      배경 로고
-===================================================== -->
+========================= -->
 
 <div class="logo-float logo-float-1">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-2">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-3">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-4">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-5">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-6">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-7">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-8">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-9">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-10">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-11">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-12">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/><circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/><path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/><path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/><text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text><text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text><text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text><text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
-<!-- =========================
-     헤더
-========================= -->
-
 <header class="hero">
-
 <div class="top">
 
 <div class="logo">
@@ -911,14 +838,13 @@ button.danger{
 </div>
 
 </div>
-
 </header>
 
 <!-- =========================
      메뉴
 ========================= -->
 
-<section id="menuPage" class="page active">
+<section id="menuPage" class="page">
 
 <div class="menu-wrap">
 
@@ -946,7 +872,6 @@ button.danger{
 </div>
 
 </div>
-
 </div>
 
 </section>
@@ -1032,13 +957,10 @@ placeholder="수정·삭제용 비밀번호"
 
 <section class="game-box">
 
-<h2 class="game-title">
-🎮 랜덤 수학 미니게임
-</h2>
+<h2 class="game-title">🎮 랜덤 수학 미니게임</h2>
 
 <p class="game-description">
-30초 동안 최대한 많은 문제를 풀어보세요.
-문제의 종류와 숫자는 계속 무작위로 바뀝니다.
+30초 동안 최대한 많은 문제를 풀어보세요. <b>각 문제에는 20초의 제한시간</b>이 있습니다.
 </p>
 
 <div class="nickname-row">
@@ -1060,8 +982,13 @@ placeholder="랭킹에 표시할 닉네임"
 </div>
 
 <div class="status-box">
-<span class="status-label">남은 시간</span>
+<span class="status-label">전체 시간</span>
 <span id="gameTime" class="status-value">30</span>
+</div>
+
+<div class="status-box">
+<span class="status-label">문제 시간</span>
+<span id="questionTime" class="status-value">20</span>
 </div>
 
 <div class="status-box">
@@ -1082,6 +1009,10 @@ placeholder="랭킹에 표시할 닉네임"
 게임을 시작해주세요
 </div>
 
+<div class="question-timer-wrap">
+<div id="questionTimerBar"></div>
+</div>
+
 <div id="question" class="question">
 랜덤 수학문제 5지선다
 </div>
@@ -1096,14 +1027,9 @@ placeholder="랭킹에 표시할 닉네임"
 
 <div class="game-start-wrap">
 
-<button
-id="startGameBtn"
-class="big-btn"
-onclick="startMathGame()"
-
->
-
-게임 시작 </button>
+<button id="startGameBtn" class="big-btn" onclick="startMathGame()">
+게임 시작
+</button>
 
 </div>
 
@@ -1126,13 +1052,11 @@ onclick="startMathGame()"
 <table class="ranking-table">
 
 <thead>
-
 <tr>
 <th>순위</th>
 <th>닉네임</th>
 <th>점수</th>
 </tr>
-
 </thead>
 
 <tbody id="rankingBody"></tbody>
@@ -1170,13 +1094,9 @@ placeholder="비밀번호"
 
 <div class="actions">
 
-<button
-class="secondary"
-onclick="closeModal()"
-
->
-
-취소 </button>
+<button class="secondary" onclick="closeModal()">
+취소
+</button>
 
 <button onclick="confirmPassword()">
 확인
@@ -1191,8 +1111,11 @@ onclick="closeModal()"
 <script>
 
 /* =====================================================
-   페이지 전환
+   페이지 상태 저장
 ===================================================== */
+
+const PAGE_KEY="daekwang_bigbit_current_page_v1";
+
 
 function showPage(pageId){
 
@@ -1202,11 +1125,17 @@ function showPage(pageId){
   }
  );
 
- const target=document.getElementById(pageId);
+ const target=
+  document.getElementById(pageId);
 
- if(target){
-  target.classList.add("active");
- }
+ if(!target)return;
+
+ target.classList.add("active");
+
+ sessionStorage.setItem(
+  PAGE_KEY,
+  pageId
+ );
 
  window.scrollTo(0,0);
 
@@ -1282,7 +1211,8 @@ function formatDate(iso){
 
  const d=new Date(iso);
 
- const p=n=>String(n).padStart(2,"0");
+ const p=n=>
+  String(n).padStart(2,"0");
 
  return `${d.getFullYear()}년 ${p(d.getMonth()+1)}월 ${p(d.getDate())}일 ${p(d.getHours())}시 ${p(d.getMinutes())}분 ${p(d.getSeconds())}초`;
 
@@ -1292,16 +1222,16 @@ function formatDate(iso){
 function addEntry(){
 
  const name=
- document.getElementById("name")
- .value.trim();
+  document.getElementById("name")
+  .value.trim();
 
  const pw=
- document.getElementById("password")
- .value;
+  document.getElementById("password")
+  .value;
 
  const message=
- document.getElementById("message")
- .value.trim();
+  document.getElementById("message")
+  .value.trim();
 
 
  if(!name||!pw||!message){
@@ -1316,11 +1246,9 @@ function addEntry(){
 
 
  const id=
- window.crypto&&crypto.randomUUID
- ?
- crypto.randomUUID()
- :
- String(Date.now()+Math.random());
+  window.crypto&&crypto.randomUUID
+  ?crypto.randomUUID()
+  :String(Date.now()+Math.random());
 
 
  entries.unshift({
@@ -1335,9 +1263,7 @@ function addEntry(){
 
 
  save();
-
  render();
-
 
  document.getElementById("name").value="";
  document.getElementById("password").value="";
@@ -1393,11 +1319,14 @@ function normalizeLikes(id){
 
 function addLike(id){
 
- const data=normalizeLikes(id);
+ const data=
+  normalizeLikes(id);
 
  data.count++;
 
- data.times.push(Date.now());
+ data.times.push(
+  Date.now()
+ );
 
  saveLikes();
 
@@ -1408,7 +1337,8 @@ function addLike(id){
 
 function getCancelableIndex(id){
 
- const data=likes[id];
+ const data=
+  likes[id];
 
  if(
   !data||
@@ -1431,13 +1361,14 @@ function getCancelableIndex(id){
 
 function cancelLike(id){
 
- const data=likes[id];
+ const data=
+  likes[id];
 
  if(!data)return;
 
 
  const index=
- getCancelableIndex(id);
+  getCancelableIndex(id);
 
 
  if(index===-1){
@@ -1471,7 +1402,8 @@ function cancelLike(id){
 
 function getCancelText(id){
 
- const data=likes[id];
+ const data=
+  likes[id];
 
  if(
   !data||
@@ -1486,14 +1418,13 @@ function getCancelText(id){
 
  const now=Date.now();
 
- const canCancel=
- data.times.some(
-  time=>
-   now-time>=LIKE_CANCEL_DELAY
- );
+ const available=
+  data.times.some(
+   time=>
+    now-time>=LIKE_CANCEL_DELAY
+  );
 
-
- if(canCancel){
+ if(available){
 
   return "좋아요 취소";
 
@@ -1501,17 +1432,18 @@ function getCancelText(id){
 
 
  const earliest=
- Math.min(...data.times);
-
+  Math.min(...data.times);
 
  const remain=
- Math.max(
-  0,
-  Math.ceil(
-   (LIKE_CANCEL_DELAY-(now-earliest))/1000
-  )
- );
-
+  Math.max(
+   0,
+   Math.ceil(
+    (
+     LIKE_CANCEL_DELAY-
+     (now-earliest)
+    )/1000
+   )
+  );
 
  return `${remain}초 후 취소`;
 
@@ -1521,16 +1453,16 @@ function getCancelText(id){
 function render(){
 
  const box=
- document.getElementById("entries");
+  document.getElementById("entries");
 
  const count=
- document.getElementById("count");
+  document.getElementById("count");
 
  if(!box||!count)return;
 
 
  count.textContent=
- `${entries.length}개`;
+  `${entries.length}개`;
 
 
  if(!entries.length){
@@ -1552,7 +1484,7 @@ function render(){
  entries.map(e=>{
 
   const data=
-  normalizeLikes(e.id);
+   normalizeLikes(e.id);
 
   const cancelAvailable=
    getCancelableIndex(e.id)!==-1;
@@ -1574,6 +1506,7 @@ function render(){
     <div class="time">
     작성:
     ${formatDate(e.createdAt)}
+
     ${
      e.updatedAt
      ?
@@ -1581,6 +1514,7 @@ function render(){
      :
      ""
     }
+
     </div>
 
    </div>
@@ -1659,11 +1593,11 @@ function requestAction(action,id){
  document.getElementById("pwError").textContent="";
 
  document.getElementById("modalTitle").textContent=
- action==="edit"
- ?
- "수정을 위한 비밀번호 확인"
- :
- "삭제를 위한 비밀번호 확인";
+  action==="edit"
+  ?
+  "수정을 위한 비밀번호 확인"
+  :
+  "삭제를 위한 비밀번호 확인";
 
  document.getElementById("modal")
  .classList.add("show");
@@ -1684,7 +1618,8 @@ function closeModal(){
 
  pending=null;
 
- document.getElementById("modal")
+ document
+ .getElementById("modal")
  .classList
  .remove("show");
 
@@ -1697,13 +1632,14 @@ function confirmPassword(){
 
 
  const e=
- entries.find(
-  x=>x.id===pending.id
- );
-
+  entries.find(
+   x=>x.id===pending.id
+  );
 
  const pw=
- document.getElementById("checkPw").value;
+  document
+  .getElementById("checkPw")
+  .value;
 
 
  if(
@@ -1712,9 +1648,10 @@ function confirmPassword(){
     pw===MASTER_PASSWORD)
  ){
 
-  document.getElementById("pwError")
+  document
+  .getElementById("pwError")
   .textContent=
-  "비밀번호가 올바르지 않습니다.";
+   "비밀번호가 올바르지 않습니다.";
 
   return;
 
@@ -1722,10 +1659,10 @@ function confirmPassword(){
 
 
  const action=
- pending.action;
+  pending.action;
 
  const id=
- pending.id;
+  pending.id;
 
 
  closeModal();
@@ -1740,16 +1677,14 @@ function confirmPassword(){
   ){
 
    entries=
-   entries.filter(
-    x=>x.id!==id
-   );
+    entries.filter(
+     x=>x.id!==id
+    );
 
    delete likes[id];
 
    save();
-
    saveLikes();
-
    render();
 
   }
@@ -1760,27 +1695,27 @@ function confirmPassword(){
  else{
 
   const target=
-  entries.find(
-   x=>x.id===id
-  );
+   entries.find(
+    x=>x.id===id
+   );
 
   if(!target)return;
 
 
   const newName=
-  prompt(
-   "이름 또는 닉네임",
-   target.name
-  );
+   prompt(
+    "이름 또는 닉네임",
+    target.name
+   );
 
   if(newName===null)return;
 
 
   const newMessage=
-  prompt(
-   "방문록 내용",
-   target.message
-  );
+   prompt(
+    "방문록 내용",
+    target.message
+   );
 
   if(newMessage===null)return;
 
@@ -1800,23 +1735,26 @@ function confirmPassword(){
 
 
   target.name=
-  newName.trim();
+   newName.trim();
 
   target.message=
-  newMessage.trim();
+   newMessage.trim();
 
   target.updatedAt=
-  new Date().toISOString();
+   new Date().toISOString();
 
 
   save();
-
   render();
 
  }
 
 }
 
+
+/* =====================================================
+   모달
+===================================================== */
 
 document
 .getElementById("modal")
@@ -1852,13 +1790,15 @@ document.addEventListener(
    수학게임
 ===================================================== */
 
-const GAME_TIME=30;
+const GAME_TOTAL_TIME=30;
+
+const QUESTION_TIME=20;
 
 const RANKING_KEY=
-"daekwang_bigbit_math_ranking_v2";
+ "daekwang_bigbit_math_ranking_v3";
 
 const BEST_KEY=
-"daekwang_bigbit_math_best_v2";
+ "daekwang_bigbit_math_best_v3";
 
 
 const difficultyConfig={
@@ -1909,10 +1849,19 @@ const difficultyConfig={
 
 
 let gameRunning=false;
+
 let gameScore=0;
-let gameTime=GAME_TIME;
+
+let gameTime=GAME_TOTAL_TIME;
+
+let questionTime=QUESTION_TIME;
+
 let gameSolved=0;
+
 let gameTimer=null;
+
+let questionTimer=null;
+
 let currentQuestion=null;
 
 let usedQuestionKeys=new Set();
@@ -1931,7 +1880,7 @@ bestGameScore;
 
 
 /* =====================================================
-   랜덤 기본 함수
+   공통 수학 함수
 ===================================================== */
 
 function randInt(min,max){
@@ -1943,9 +1892,13 @@ function randInt(min,max){
 }
 
 
-function randFloat(min,max){
+function randomChoice(array){
 
- return Math.random()*(max-min)+min;
+ return array[
+  Math.floor(
+   Math.random()*array.length
+  )
+ ];
 
 }
 
@@ -1958,7 +1911,9 @@ function gcd(a,b){
  while(b){
 
   const t=a%b;
+
   a=b;
+
   b=t;
 
  }
@@ -1984,57 +1939,88 @@ function fraction(n,d){
  n/=g;
  d/=g;
 
- if(d===1)return String(n);
+ if(d===1){
+
+  return String(n);
+
+ }
 
  return `${n}/${d}`;
 
 }
 
 
-/* =====================================================
-   보기용 값
-===================================================== */
+function combination(n,r){
+
+ if(r<0||r>n){
+
+  return 0;
+
+ }
+
+ r=Math.min(r,n-r);
+
+ let result=1;
+
+ for(
+  let i=1;
+  i<=r;
+  i++
+ ){
+
+  result=
+   result*(n-r+i)/i;
+
+ }
+
+ return Math.round(result);
+
+}
+
 
 function formatNumber(value){
 
+ if(typeof value!=="number"){
+
+  return String(value);
+
+ }
+
+ if(!Number.isFinite(value)){
+
+  return "∞";
+
+ }
+
  if(
-  typeof value==="number" &&
-  Number.isFinite(value)
+  Math.abs(
+   value-Math.round(value)
+  )<0.0000001
  ){
 
-  if(
-   Math.abs(
-    value-Math.round(value)
-   )<1e-10
-  ){
-
-   return String(
-    Math.round(value)
-   );
-
-  }
-
   return String(
-   Math.round(value*100)/100
+   Math.round(value)
   );
 
  }
 
- return String(value);
+ return String(
+  Math.round(value*100)/100
+ );
 
 }
 
 
 /* =====================================================
-   난이도 선택
+   난이도
 ===================================================== */
 
 function chooseDifficulty(){
 
  const keys=
- Object.keys(
-  difficultyConfig
- );
+  Object.keys(
+   difficultyConfig
+  );
 
  let total=0;
 
@@ -2062,38 +2048,12 @@ function chooseDifficulty(){
 
  }
 
-
  return keys[0];
 
 }
 
 
-/* =====================================================
-   랜덤 선택
-===================================================== */
-
-function randomChoice(array){
-
- return array[
-  Math.floor(
-   Math.random()*array.length
-  )
- ];
-
-}
-
-
-/* =====================================================
-   유형 ID가 연속되지 않게 선택
-===================================================== */
-
 function chooseType(types){
-
- if(types.length===1){
-
-  return types[0];
-
- }
 
  let pool=
   types.filter(
@@ -2103,6 +2063,7 @@ function chooseType(types){
  if(!pool.length){
 
   pool=types;
+
  }
 
  return randomChoice(pool);
@@ -2117,106 +2078,113 @@ function chooseType(types){
 function generateKindergarten(){
 
  const types=[
-  "k_add_small",
-  "k_sub_small",
+  "k_add",
+  "k_sub",
   "k_compare",
   "k_count",
   "k_double",
-  "k_half"
+  "k_half",
+  "k_shape_count"
  ];
 
  const type=
   chooseType(types);
 
- let a,b,answer,question;
 
+ if(type==="k_add"){
 
- if(type==="k_add_small"){
+  const a=randInt(1,10);
+  const b=randInt(1,10);
 
-  a=randInt(1,10);
-  b=randInt(1,10);
-
-  answer=a+b;
-
-  question=
-   `${a} + ${b} = ?`;
-
- }
-
-
- else if(type==="k_sub_small"){
-
-  a=randInt(2,15);
-  b=randInt(1,a);
-
-  answer=a-b;
-
-  question=
-   `${a} - ${b} = ?`;
+  return {
+   type:type,
+   question:`${a} + ${b} = ?`,
+   answer:a
+    +b
+  };
 
  }
 
 
- else if(type==="k_compare"){
+ if(type==="k_sub"){
 
-  a=randInt(1,20);
-  b=randInt(1,20);
+  const a=randInt(2,15);
+  const b=randInt(1,a);
 
-  answer=
-   a>b
-   ?a
-   :a<b
-   ?b
-   :a;
-
-  question=
-   `다음 두 수 중 더 큰 수는? ${a} , ${b}`;
+  return {
+   type:type,
+   question:`${a} - ${b} = ?`,
+   answer:a-b
+  };
 
  }
 
 
- else if(type==="k_count"){
+ if(type==="k_compare"){
+
+  const a=randInt(1,20);
+  const b=randInt(1,20);
+
+  return {
+   type:type,
+   question:`다음 두 수 중 더 큰 수는?  ${a} , ${b}`,
+   answer:Math.max(a,b)
+  };
+
+ }
+
+
+ if(type==="k_count"){
 
   const groups=randInt(2,5);
   const each=randInt(1,5);
 
-  answer=groups*each;
-
-  question=
-   `사탕이 ${groups}묶음 있고, 한 묶음에 ${each}개가 있습니다. 모두 몇 개일까요?`;
-
- }
-
-
- else if(type==="k_double"){
-
-  a=randInt(1,10);
-
-  answer=a*2;
-
-  question=
-   `${a}의 2배는 얼마일까요?`;
+  return {
+   type:type,
+   question:`사탕 ${groups}묶음이 있고 한 묶음에 ${each}개입니다. 모두 몇 개일까요?`,
+   answer:groups*each
+  };
 
  }
 
 
- else{
+ if(type==="k_double"){
 
-  a=randInt(2,20);
+  const a=randInt(1,10);
 
-  answer=a/2;
-
-  question=
-   `${a}의 절반은 얼마일까요?`;
+  return {
+   type:type,
+   question:`${a}의 2배는?`,
+   answer:a*2
+  };
 
  }
 
+
+ if(type==="k_half"){
+
+  const a=randInt(2,20)*2;
+
+  return {
+   type:type,
+   question:`${a}의 절반은?`,
+   answer:a/2
+  };
+
+ }
+
+
+ const shapes=randomChoice([
+  {name:"삼각형",count:3},
+  {name:"사각형",count:4},
+  {name:"오각형",count:5},
+  {name:"육각형",count:6}
+ ]);
 
  return {
-  level:"kindergarten",
   type:type,
-  question:question,
-  answer:answer
+  question:`${shapes.name}의 변은 몇 개일까요?`,
+  answer:shapes.count
  };
 
 }
@@ -2234,13 +2202,12 @@ function generateElementaryLow(){
   "el_mul",
   "el_money",
   "el_time",
-  "el_missing"
+  "el_missing",
+  "el_shape_side"
  ];
 
  const type=
   chooseType(types);
-
- let question,answer;
 
 
  if(type==="el_add"){
@@ -2248,85 +2215,97 @@ function generateElementaryLow(){
   const a=randInt(10,99);
   const b=randInt(10,99);
 
-  answer=a+b;
-
-  question=
-   `${a} + ${b} = ?`;
+  return {
+   type,
+   question:`${a} + ${b} = ?`,
+   answer:a+b
+  };
 
  }
 
 
- else if(type==="el_sub"){
+ if(type==="el_sub"){
 
   const a=randInt(30,180);
   const b=randInt(5,a);
 
-  answer=a-b;
-
-  question=
-   `${a} - ${b} = ?`;
+  return {
+   type,
+   question:`${a} - ${b} = ?`,
+   answer:a-b
+  };
 
  }
 
 
- else if(type==="el_mul"){
+ if(type==="el_mul"){
 
   const a=randInt(2,12);
   const b=randInt(2,12);
 
-  answer=a*b;
-
-  question=
-   `${a} × ${b} = ?`;
+  return {
+   type,
+   question:`${a} × ${b} = ?`,
+   answer:a*b
+  };
 
  }
 
 
- else if(type==="el_money"){
+ if(type==="el_money"){
 
   const price=randInt(5,30)*100;
   const count=randInt(2,5);
 
-  answer=price*count;
-
-  question=
-   `한 개에 ${price.toLocaleString()}원인 물건 ${count}개의 가격은?`;
+  return {
+   type,
+   question:`한 개에 ${price.toLocaleString()}원인 물건 ${count}개의 가격은?`,
+   answer:price*count
+  };
 
  }
 
 
- else if(type==="el_time"){
+ if(type==="el_time"){
 
   const hour=randInt(1,11);
   const add=randInt(1,6);
 
-  answer=hour+add;
-
-  question=
-   `오후 ${hour}시에 시작해서 ${add}시간 후의 시간은?`;
+  return {
+   type,
+   question:`오후 ${hour}시에 시작해서 ${add}시간 후는 몇 시일까요?`,
+   answer:hour+add
+  };
 
  }
 
 
- else{
+ if(type==="el_missing"){
 
   const x=randInt(2,30);
   const b=randInt(1,20);
-  const sum=x+b;
 
-  answer=x;
-
-  question=
-   `□ + ${b} = ${sum}일 때 □는?`;
+  return {
+   type,
+   question:`□ + ${b} = ${x+b}일 때 □는?`,
+   answer:x
+  };
 
  }
 
 
+ const sides=randomChoice([
+  {name:"삼각형",value:3},
+  {name:"사각형",value:4},
+  {name:"오각형",value:5},
+  {name:"육각형",value:6},
+  {name:"팔각형",value:8}
+ ]);
+
  return {
-  level:"elementaryLow",
-  type:type,
-  question:question,
-  answer:answer
+  type,
+  question:`${sides.name}의 변의 개수는?`,
+  answer:sides.value
  };
 
 }
@@ -2339,49 +2318,35 @@ function generateElementaryLow(){
 function generateElementaryHigh(){
 
  const types=[
-  "eh_add_decimal",
   "eh_div",
   "eh_fraction",
   "eh_percent",
-  "eh_area",
+  "eh_area_rect",
   "eh_average",
-  "eh_ratio"
+  "eh_ratio",
+  "eh_circle_basic",
+  "eh_triangle_area"
  ];
 
  const type=
   chooseType(types);
 
- let question,answer;
 
-
- if(type==="eh_add_decimal"){
-
-  const a=randInt(10,99);
-  const b=randInt(10,99);
-
-  answer=a+b;
-
-  question=
-   `${a} + ${b} = ?`;
-
- }
-
-
- else if(type==="eh_div"){
+ if(type==="eh_div"){
 
   const b=randInt(2,12);
   const q=randInt(2,25);
-  const a=b*q;
 
-  answer=q;
-
-  question=
-   `${a} ÷ ${b} = ?`;
+  return {
+   type,
+   question:`${b*q} ÷ ${b} = ?`,
+   answer:q
+  };
 
  }
 
 
- else if(type==="eh_fraction"){
+ if(type==="eh_fraction"){
 
   const d=randInt(2,10);
   const n=randInt(1,d-1);
@@ -2389,47 +2354,53 @@ function generateElementaryHigh(){
   const d2=randInt(2,10);
   const n2=randInt(1,d2-1);
 
-  answer=
-   n/d+n2/d2;
-
-  question=
-   `${fraction(n,d)} + ${fraction(n2,d2)} = ?`;
+  return {
+   type,
+   question:`${fraction(n,d)} + ${fraction(n2,d2)} = ?`,
+   answer:n/d+n2/d2
+  };
 
  }
 
 
- else if(type==="eh_percent"){
+ if(type==="eh_percent"){
 
   const base=randInt(2,20)*50;
   const p=randomChoice([10,20,25,30,40,50]);
 
-  answer=base*p/100;
-
-  question=
-   `${base}의 ${p}%는?`;
+  return {
+   type,
+   question:`${base}의 ${p}%는?`,
+   answer:base*p/100
+  };
 
  }
 
 
- else if(type==="eh_area"){
+ if(type==="eh_area_rect"){
 
   const w=randInt(3,20);
   const h=randInt(3,20);
 
-  answer=w*h;
-
-  question=
-   `가로 ${w}, 세로 ${h}인 직사각형의 넓이는?`;
+  return {
+   type,
+   question:`가로 ${w}, 세로 ${h}인 직사각형의 넓이는?`,
+   answer:w*h
+  };
 
  }
 
 
- else if(type==="eh_average"){
+ if(type==="eh_average"){
 
   const n=randInt(3,6);
   const values=[];
 
-  for(let i=0;i<n;i++){
+  for(
+   let i=0;
+   i<n;
+   i++
+  ){
 
    values.push(
     randInt(5,30)
@@ -2443,35 +2414,52 @@ function generateElementaryHigh(){
     0
    );
 
-  answer=total/n;
-
-  question=
-   `${values.join(", ")}의 평균은?`;
+  return {
+   type,
+   question:`${values.join(", ")}의 평균은?`,
+   answer:total/n
+  };
 
  }
 
 
- else{
+ if(type==="eh_ratio"){
 
-  const ratioA=randInt(2,9);
-  const ratioB=randInt(2,9);
+  const a=randInt(2,9);
+  const b=randInt(2,9);
   const multiplier=randInt(2,8);
 
-  const b=ratioB*multiplier;
+  const B=b*multiplier;
 
-  answer=ratioA*multiplier;
-
-  question=
-   `A:B=${ratioA}:${ratioB}이고 B=${b}일 때 A는?`;
+  return {
+   type,
+   question:`A:B=${a}:${b}이고 B=${B}일 때 A는?`,
+   answer:a*multiplier
+  };
 
  }
 
 
+ if(type==="eh_circle_basic"){
+
+  const r=randInt(2,10);
+
+  return {
+   type,
+   question:`반지름이 ${r}인 원의 지름은?`,
+   answer:r*2
+  };
+
+ }
+
+
+ const base=randInt(3,15);
+ const height=randInt(3,15);
+
  return {
-  level:"elementaryHigh",
-  type:type,
-  question:question,
-  answer:answer
+  type,
+  question:`밑변 ${base}, 높이 ${height}인 삼각형의 넓이는?`,
+  answer:base*height/2
  };
 
 }
@@ -2485,19 +2473,19 @@ function generateMiddle(){
 
  const types=[
   "m_linear",
-  "m_system",
   "m_factor",
   "m_square",
-  "m_percent_change",
+  "m_percent",
   "m_probability",
   "m_pythagoras",
-  "m_function"
+  "m_function",
+  "m_triangle_angle",
+  "m_rectangle_perimeter",
+  "m_circle_area"
  ];
 
  const type=
   chooseType(types);
-
- let question,answer;
 
 
  if(type==="m_linear"){
@@ -2507,122 +2495,142 @@ function generateMiddle(){
   const b=randInt(-15,15);
   const c=a*x+b;
 
-  answer=x;
-
-  question=
-   `${a}x ${b>=0?"+ "+b:"- "+Math.abs(b)} = ${c}일 때 x는?`;
-
- }
-
-
- else if(type==="m_system"){
-
-  const x=randInt(1,9);
-  const y=randInt(1,9);
-
-  const a1=randInt(2,6);
-  const b1=randInt(1,5);
-
-  const a2=randInt(1,5);
-  const b2=randInt(2,6);
-
-  const c1=a1*x+b1*y;
-  const c2=a2*x+b2*y;
-
-  answer=x;
-
-  question=
-   `연립방정식 ${a1}x + ${b1}y = ${c1}, ${a2}x + ${b2}y = ${c2}일 때 x는?`;
+  return {
+   type,
+   question:`${a}x ${b>=0?"+ "+b:"- "+Math.abs(b)} = ${c}일 때 x는?`,
+   answer:x
+  };
 
  }
 
 
- else if(type==="m_factor"){
+ if(type==="m_factor"){
 
   const r1=randInt(-8,8);
   const r2=randInt(-8,8);
 
-  answer=r1;
+  const B=-(r1+r2);
+  const C=r1*r2;
 
-  question=
-   `x² - ${(r1+r2)}x + ${r1*r2} = 0의 한 근은?`;
+  return {
+   type,
+   question:`x² ${B>=0?"+ "+B:"- "+Math.abs(B)}x ${C>=0?"+ "+C:"- "+Math.abs(C)} = 0의 한 근은?`,
+   answer:r1
+  };
 
  }
 
 
- else if(type==="m_square"){
+ if(type==="m_square"){
 
   const a=randInt(2,12);
   const b=randInt(2,12);
 
-  answer=(a+b)*(a+b);
-
-  question=
-   `(${a}+${b})² = ?`;
+  return {
+   type,
+   question:`(${a}+${b})² = ?`,
+   answer:(a+b)*(a+b)
+  };
 
  }
 
 
- else if(type==="m_percent_change"){
+ if(type==="m_percent"){
 
   const original=randInt(10,80)*100;
   const p=randomChoice([10,15,20,25,30]);
 
-  answer=original*(100+p)/100;
-
-  question=
-   `가격이 ${original}원에서 ${p}% 상승했다면 새 가격은?`;
+  return {
+   type,
+   question:`${original}원이 ${p}% 올랐을 때 가격은?`,
+   answer:original*(100+p)/100
+  };
 
  }
 
 
- else if(type==="m_probability"){
+ if(type==="m_probability"){
 
   const red=randInt(1,8);
   const blue=randInt(1,8);
-  const total=red+blue;
 
-  answer=red/total;
-
-  question=
-   `빨간 공 ${red}개, 파란 공 ${blue}개가 있을 때 빨간 공을 뽑을 확률은?`;
+  return {
+   type,
+   question:`빨간 공 ${red}개, 파란 공 ${blue}개가 있을 때 빨간 공을 뽑을 확률은?`,
+   answer:red/(red+blue)
+  };
 
  }
 
 
- else if(type==="m_pythagoras"){
+ if(type==="m_pythagoras"){
 
   const a=randInt(3,12);
   const b=randInt(3,12);
 
-  answer=Math.sqrt(a*a+b*b);
-
-  question=
-   `직각삼각형의 두 직각변이 ${a}, ${b}일 때 빗변의 길이는?`;
+  return {
+   type,
+   question:`직각삼각형의 두 직각변이 ${a}, ${b}일 때 빗변의 길이는?`,
+   answer:Math.sqrt(a*a+b*b)
+  };
 
  }
 
 
- else{
+ if(type==="m_function"){
 
   const a=randInt(2,8);
   const b=randInt(-10,10);
-
   const x=randInt(-5,10);
 
-  answer=a*x+b;
-
-  question=
-   `f(x)=${a}x${b>=0?"+ "+b:"- "+Math.abs(b)}일 때 f(${x})는?`;
+  return {
+   type,
+   question:`f(x)=${a}x ${b>=0?"+ "+b:"- "+Math.abs(b)}일 때 f(${x})는?`,
+   answer:a*x+b
+  };
 
  }
 
 
+ if(type==="m_triangle_angle"){
+
+  const a=randInt(30,80);
+  const b=randInt(20,70);
+  const c=180-a-b;
+
+  if(c<=10){
+   return generateMiddle();
+  }
+
+  return {
+   type,
+   question:`삼각형의 두 내각이 ${a}°, ${b}°일 때 나머지 한 각은?`,
+   answer:c
+  };
+
+ }
+
+
+ if(type==="m_rectangle_perimeter"){
+
+  const w=randInt(3,20);
+  const h=randInt(3,20);
+
+  return {
+   type,
+   question:`가로 ${w}, 세로 ${h}인 직사각형의 둘레는?`,
+   answer:2*(w+h)
+  };
+
+ }
+
+
+ const r=randInt(2,9);
+
  return {
-  level:"middle",
-  type:type,
-  question:question,
-  answer:answer
+  type,
+  question:`반지름이 ${r}인 원의 넓이를 πr²로 나타낼 때 π의 계수는?`,
+  answer:r*r
  };
 
 }
@@ -2635,25 +2643,25 @@ function generateMiddle(){
 function generateHigh(){
 
  const types=[
-  "h_quadratic_root",
+  "h_quadratic",
   "h_log",
   "h_exponent",
   "h_trig",
   "h_sequence",
-  "h_derivative_basic",
-  "h_derivative_power",
-  "h_probability_binomial",
+  "h_derivative",
+  "h_probability",
   "h_combinatorics",
-  "h_function_value"
+  "h_triangle_area",
+  "h_circle_angle",
+  "h_coordinate_distance",
+  "h_parabola_value"
  ];
 
  const type=
   chooseType(types);
 
- let question,answer;
 
-
- if(type==="h_quadratic_root"){
+ if(type==="h_quadratic"){
 
   const r1=randInt(-9,9);
   const r2=randInt(-9,9);
@@ -2661,46 +2669,45 @@ function generateHigh(){
   const B=-(r1+r2);
   const C=r1*r2;
 
-  answer=r1;
-
-  question=
-   `x² ${B>=0?"+ "+B:"- "+Math.abs(B)}x ${C>=0?"+ "+C:"- "+Math.abs(C)}=0의 한 근은?`;
+  return {
+   type,
+   question:`x² ${B>=0?"+ "+B:"- "+Math.abs(B)}x ${C>=0?"+ "+C:"- "+Math.abs(C)}=0의 한 근은?`,
+   answer:r1
+  };
 
  }
 
 
- else if(type==="h_log"){
+ if(type==="h_log"){
 
   const base=randomChoice([2,3,4,5]);
-
   const exponent=randInt(2,6);
 
-  const value=Math.pow(base,exponent);
-
-  answer=exponent;
-
-  question=
-   `log_${base}(${value}) = ?`;
+  return {
+   type,
+   question:`log_${base}(${Math.pow(base,exponent)}) = ?`,
+   answer:exponent
+  };
 
  }
 
 
- else if(type==="h_exponent"){
+ if(type==="h_exponent"){
 
   const base=randomChoice([2,3,5]);
-
   const a=randInt(2,6);
   const b=randInt(1,4);
 
-  answer=Math.pow(base,a+b);
-
-  question=
-   `${base}^${a} × ${base}^${b} = ?`;
+  return {
+   type,
+   question:`${base}^${a} × ${base}^${b} = ?`,
+   answer:Math.pow(base,a+b)
+  };
 
  }
 
 
- else if(type==="h_trig"){
+ if(type==="h_trig"){
 
   const data=randomChoice([
    {q:"sin 30°",a:0.5},
@@ -2710,108 +2717,130 @@ function generateHigh(){
    {q:"tan 45°",a:1}
   ]);
 
-  answer=data.a;
-
-  question=
-   `${data.q} = ?`;
+  return {
+   type,
+   question:`${data.q} = ?`,
+   answer:data.a
+  };
 
  }
 
 
- else if(type==="h_sequence"){
+ if(type==="h_sequence"){
 
   const first=randInt(1,10);
   const d=randInt(2,8);
   const n=randInt(5,15);
 
-  answer=first+(n-1)*d;
-
-  question=
-   `등차수열의 첫째항이 ${first}, 공차가 ${d}일 때 ${n}번째 항은?`;
-
- }
-
-
- else if(type==="h_derivative_basic"){
-
-  const a=randInt(2,12);
-
-  answer=a;
-
-  question=
-   `f(x)=${a}x일 때 f'(x)는?`;
+  return {
+   type,
+   question:`등차수열의 첫째항이 ${first}, 공차가 ${d}일 때 ${n}번째 항은?`,
+   answer:first+(n-1)*d
+  };
 
  }
 
 
- else if(type==="h_derivative_power"){
+ if(type==="h_derivative"){
 
   const n=randInt(2,6);
   const x=randInt(1,8);
 
-  answer=n*Math.pow(x,n-1);
-
-  question=
-   `f(x)=x^${n}일 때 f'(${x})는?`;
+  return {
+   type,
+   question:`f(x)=x^${n}일 때 f'(${x})는?`,
+   answer:n*Math.pow(x,n-1)
+  };
 
  }
 
 
- else if(type==="h_probability_binomial"){
+ if(type==="h_probability"){
 
   const n=randInt(3,6);
   const success=randInt(0,n);
 
-  const p=0.5;
+  const probability=
+   combination(n,success)*
+   Math.pow(.5,n);
 
-  answer=
-   Math.round(
-    1000000*
-    (
-     combination(n,success)*
-     Math.pow(p,success)*
-     Math.pow(1-p,n-success)
-    )
-   )/1000000;
-
-  question=
-   `동전을 ${n}번 던질 때 앞면이 정확히 ${success}번 나올 확률은?`;
+  return {
+   type,
+   question:`동전을 ${n}번 던질 때 앞면이 정확히 ${success}번 나올 확률은?`,
+   answer:probability
+  };
 
  }
 
 
- else if(type==="h_combinatorics"){
+ if(type==="h_combinatorics"){
 
   const n=randInt(5,10);
   const r=randInt(2,n-2);
 
-  answer=combination(n,r);
+  return {
+   type,
+   question:`C(${n}, ${r}) = ?`,
+   answer:combination(n,r)
+  };
 
-  question=
-   `C(${n},${r}) = ?`;
+ }
+
+
+ if(type==="h_triangle_area"){
+
+  const base=randInt(4,16);
+  const height=randInt(4,16);
+
+  return {
+   type,
+   question:`밑변 ${base}, 높이 ${height}인 삼각형의 넓이는?`,
+   answer:base*height/2
+  };
 
  }
 
 
- else{
+ if(type==="h_circle_angle"){
 
-  const a=randInt(2,8);
-  const x=randInt(-5,8);
-  const b=randInt(-12,12);
+  const radius=randInt(2,9);
+  const angle=randomChoice([30,45,60,90]);
 
-  answer=a*x*x+b;
-
-  question=
-   `f(x)=${a}x² ${b>=0?"+ "+b:"- "+Math.abs(b)}일 때 f(${x})는?`;
+  return {
+   type,
+   question:`반지름 ${radius}인 원에서 중심각이 ${angle}°인 부채꼴의 중심각 비율은?`,
+   answer:angle/360
+  };
 
  }
 
+
+ if(type==="h_coordinate_distance"){
+
+  const x1=randInt(-6,6);
+  const y1=randInt(-6,6);
+  const x2=randInt(-6,6);
+  const y2=randInt(-6,6);
+
+  return {
+   type,
+   question:`두 점 (${x1},${y1}), (${x2},${y2}) 사이의 거리는?`,
+   answer:Math.sqrt(
+    Math.pow(x2-x1,2)+
+    Math.pow(y2-y1,2)
+   )
+  };
+
+ }
+
+
+ const a=randInt(2,8);
+ const x=randInt(-5,8);
 
  return {
-  level:"high",
-  type:type,
-  question:question,
-  answer:answer
+  type,
+  question:`f(x)=${a}x²일 때 f(${x})는?`,
+  answer:a*x*x
  };
 
 }
@@ -2824,184 +2853,160 @@ function generateHigh(){
 function generateUniversity(){
 
  const types=[
-  "u_integral_power",
+  "u_integral",
   "u_integral_linear",
-  "u_derivative_product",
-  "u_matrix_trace",
+  "u_product_derivative",
+  "u_trace",
   "u_determinant",
   "u_probability",
-  "u_complex_abs",
-  "u_limit_linear",
-  "u_vector_dot",
-  "u_stat_mean"
+  "u_complex",
+  "u_limit",
+  "u_vector",
+  "u_circle_arc"
  ];
 
  const type=
   chooseType(types);
 
- let question,answer;
 
-
- if(type==="u_integral_power"){
+ if(type==="u_integral"){
 
   const n=randInt(2,8);
 
-  answer=
-   n*n*n/3;
-
-  question=
-   `∫₀^${n} x² dx = ?`;
+  return {
+   type,
+   question:`∫₀^${n} x² dx = ?`,
+   answer:n*n*n/3
+  };
 
  }
 
 
- else if(type==="u_integral_linear"){
+ if(type==="u_integral_linear"){
 
   const a=randInt(2,9);
   const b=randInt(1,8);
   const upper=randInt(2,7);
 
-  answer=
-   a*upper*upper/2+
-   b*upper;
-
-  question=
-   `∫₀^${upper} (${a}x + ${b}) dx = ?`;
+  return {
+   type,
+   question:`∫₀^${upper} (${a}x + ${b}) dx = ?`,
+   answer:a*upper*upper/2+b*upper
+  };
 
  }
 
 
- else if(type==="u_derivative_product"){
+ if(type==="u_product_derivative"){
 
   const a=randInt(2,8);
   const x=randInt(1,6);
 
-  answer=
-   2*a*x+a;
-
-  question=
-   `f(x)=x²·${a}x 일 때 f'(${x})는?`;
+  return {
+   type,
+   question:`f(x)=${a}x²일 때 f'(${x})는?`,
+   answer:2*a*x
+  };
 
  }
 
 
- else if(type==="u_matrix_trace"){
+ if(type==="u_trace"){
 
   const a=randInt(1,9);
   const b=randInt(1,9);
 
-  answer=a+b;
-
-  question=
-   `행렬 [[${a},0],[0,${b}]]의 trace는?`;
+  return {
+   type,
+   question:`행렬 [[${a},0],[0,${b}]]의 trace는?`,
+   answer:a+b
+  };
 
  }
 
 
- else if(type==="u_determinant"){
+ if(type==="u_determinant"){
 
   const a=randInt(1,8);
   const b=randInt(1,8);
   const c=randInt(1,8);
   const d=randInt(1,8);
 
-  answer=a*d-b*c;
-
-  question=
-   `det [[${a},${b}],[${c},${d}]] = ?`;
+  return {
+   type,
+   question:`det [[${a},${b}],[${c},${d}]] = ?`,
+   answer:a*d-b*c
+  };
 
  }
 
 
- else if(type==="u_probability"){
+ if(type==="u_probability"){
 
   const success=randInt(2,7);
   const total=randInt(success+1,12);
 
-  answer=
-   success/total;
-
-  question=
-   `성공 ${success}회 / 전체 ${total}회일 때 경험적 확률은?`;
+  return {
+   type,
+   question:`성공 ${success}회 / 전체 ${total}회일 때 경험적 확률은?`,
+   answer:success/total
+  };
 
  }
 
 
- else if(type==="u_complex_abs"){
+ if(type==="u_complex"){
 
   const a=randInt(1,8);
   const b=randInt(1,8);
 
-  answer=
-   Math.sqrt(a*a+b*b);
-
-  question=
-   `z=${a}+${b}i일 때 |z|는?`;
+  return {
+   type,
+   question:`z=${a}+${b}i일 때 |z|²는?`,
+   answer:a*a+b*b
+  };
 
  }
 
 
- else if(type==="u_limit_linear"){
+ if(type==="u_limit"){
 
   const a=randInt(2,9);
   const b=randInt(1,9);
   const x=randInt(1,7);
 
-  answer=a*x+b;
-
-  question=
-   `lim(x→${x}) (${a}x + ${b}) = ?`;
+  return {
+   type,
+   question:`lim(x→${x}) (${a}x + ${b}) = ?`,
+   answer:a*x+b
+  };
 
  }
 
 
- else if(type==="u_vector_dot"){
+ if(type==="u_vector"){
 
   const a=randInt(1,8);
   const b=randInt(1,8);
   const c=randInt(1,8);
   const d=randInt(1,8);
 
-  answer=a*c+b*d;
-
-  question=
-   `벡터 (${a},${b})·(${c},${d}) = ?`;
-
- }
-
-
- else{
-
-  const count=randInt(3,6);
-  const values=[];
-
-  for(let i=0;i<count;i++){
-
-   values.push(
-    randInt(10,40)
-   );
-
-  }
-
-  const total=
-   values.reduce(
-    (sum,v)=>sum+v,
-    0
-   );
-
-  answer=total/count;
-
-  question=
-   `자료 ${values.join(", ")}의 산술평균은?`;
+  return {
+   type,
+   question:`벡터 (${a},${b})·(${c},${d}) = ?`,
+   answer:a*c+b*d
+  };
 
  }
 
+
+ const r=randInt(2,8);
+ const angle=randomChoice([90,180,270]);
 
  return {
-  level:"university",
-  type:type,
-  question:question,
-  answer:answer
+  type,
+  question:`반지름 ${r}인 원에서 중심각 ${angle}°가 나타내는 부채꼴의 호의 길이를 2πr 기준으로 나타낸 비율은?`,
+  answer:angle/360
  };
 
 }
@@ -3015,206 +3020,162 @@ function generateUniversityHard(){
 
  const types=[
   "uh_integral_trig",
-  "uh_derivative_chain",
-  "uh_matrix_det3",
-  "uh_complex_square",
+  "uh_chain",
+  "uh_matrix",
+  "uh_complex",
   "uh_expectation",
-  "uh_eigen_simple",
+  "uh_eigen",
   "uh_series",
   "uh_vector_cross",
-  "uh_log_derivative"
+  "uh_geometry_coordinate"
  ];
 
  const type=
   chooseType(types);
-
- let question,answer;
 
 
  if(type==="uh_integral_trig"){
 
   const n=randInt(1,7);
 
-  answer=
-   2;
-
-  question=
-   `∫₀^π ${n}sin(x) dx ÷ ${n} = ?`;
+  return {
+   type,
+   question:`∫₀^π ${n}sin(x) dx ÷ ${n} = ?`,
+   answer:2
+  };
 
  }
 
 
- else if(type==="uh_derivative_chain"){
+ if(type==="uh_chain"){
 
   const a=randInt(2,7);
   const x=randInt(1,6);
 
-  answer=
-   2*a*x;
-
-  question=
-   `f(x)=(${a}x)²일 때 f'(${x})는?`;
+  return {
+   type,
+   question:`f(x)=(${a}x)²일 때 f'(${x})는?`,
+   answer:2*a*a*x
+  };
 
  }
 
 
- else if(type==="uh_matrix_det3"){
+ if(type==="uh_matrix"){
 
   const a=randInt(1,5);
   const b=randInt(1,5);
   const c=randInt(1,5);
 
-  answer=a*b*c;
-
-  question=
-   `대각행렬 diag(${a},${b},${c})의 행렬식은?`;
+  return {
+   type,
+   question:`diag(${a},${b},${c})의 행렬식은?`,
+   answer:a*b*c
+  };
 
  }
 
 
- else if(type==="uh_complex_square"){
+ if(type==="uh_complex"){
 
   const a=randInt(1,7);
 
-  answer=-(a*a);
-
-  question=
-   `복소수 z=${a}i일 때 z²는?`;
+  return {
+   type,
+   question:`z=${a}i일 때 z²는?`,
+   answer:-a*a
+  };
 
  }
 
 
- else if(type==="uh_expectation"){
+ if(type==="uh_expectation"){
 
   const x1=randInt(1,5);
   const x2=randInt(6,10);
 
-  const p=randomChoice([0.2,0.3,0.4,0.6,0.7,0.8]);
+  const p=randomChoice([
+   .2,.3,.4,.6,.7,.8
+  ]);
 
-  answer=
-   p*x1+(1-p)*x2;
-
-  question=
-   `X가 ${x1}을 확률 ${p}, ${x2}를 확률 ${1-p}로 가질 때 E[X]는?`;
+  return {
+   type,
+   question:`X가 ${x1}을 확률 ${p}, ${x2}를 확률 ${1-p}로 가질 때 E[X]는?`,
+   answer:p*x1+(1-p)*x2
+  };
 
  }
 
 
- else if(type==="uh_eigen_simple"){
+ if(type==="uh_eigen"){
 
   const a=randInt(2,9);
   const b=randInt(2,9);
 
-  answer=a;
-
-  question=
-   `행렬 [[${a},0],[0,${b}]]의 고유값 중 작은 값은?`;
+  return {
+   type,
+   question:`행렬 [[${a},0],[0,${b}]]의 고유값 중 작은 값은?`,
+   answer:Math.min(a,b)
+  };
 
  }
 
 
- else if(type==="uh_series"){
+ if(type==="uh_series"){
 
   const a=randInt(1,5);
-  const r=randInt(1,3);
+  const r=randInt(2,3);
   const n=randInt(3,7);
 
-  if(r===1){
-
-   answer=a*n;
-
-   question=
-    `수열 ${a},${a},${a},...의 첫 ${n}개 항의 합은?`;
-
-  }else{
-
-   answer=
-    a*(Math.pow(r,n)-1)/(r-1);
-
-   question=
-    `등비수열의 첫째항 ${a}, 공비 ${r}일 때 첫 ${n}개 항의 합은?`;
-
-  }
+  return {
+   type,
+   question:`등비수열의 첫째항 ${a}, 공비 ${r}일 때 첫 ${n}개 항의 합은?`,
+   answer:a*(Math.pow(r,n)-1)/(r-1)
+  };
 
  }
 
 
- else if(type==="uh_vector_cross"){
+ if(type==="uh_vector_cross"){
 
   const a=randInt(1,5);
   const b=randInt(1,5);
 
-  answer=a*b;
-
-  question=
-   `벡터 (${a},0,0) × (0,${b},0)의 크기는?`;
-
- }
-
-
- else{
-
-  const a=randInt(2,9);
-
-  answer=1;
-
-  question=
-   `f(x)=ln(${a}x)의 도함수에서 x=1/${a}일 때의 값은?`;
+  return {
+   type,
+   question:`벡터 (${a},0,0) × (0,${b},0)의 크기는?`,
+   answer:a*b
+  };
 
  }
 
+
+ const x1=randInt(-5,5);
+ const y1=randInt(-5,5);
+ const x2=randInt(-5,5);
+ const y2=randInt(-5,5);
 
  return {
-  level:"universityHard",
-  type:type,
-  question:question,
-  answer:answer
+  type,
+  question:`좌표평면에서 (${x1},${y1})과 (${x2},${y2})를 잇는 선분의 길이의 제곱은?`,
+  answer:
+   Math.pow(x2-x1,2)+
+   Math.pow(y2-y1,2)
  };
 
 }
 
 
 /* =====================================================
-   조합
-===================================================== */
-
-function combination(n,r){
-
- if(
-  r<0||
-  r>n
- ){
-  return 0;
- }
-
- r=Math.min(r,n-r);
-
- let result=1;
-
- for(let i=1;i<=r;i++){
-
-  result=
-   result*(n-r+i)/i;
-
- }
-
- return Math.round(result);
-
-}
-
-
-/* =====================================================
-   최종 문제 생성
+   문제 생성
 ===================================================== */
 
 function createQuestion(){
 
- let question=null;
-
  let attempts=0;
 
 
- while(attempts<300){
+ while(attempts<500){
 
   attempts++;
 
@@ -3223,52 +3184,60 @@ function createQuestion(){
    chooseDifficulty();
 
 
+  let q;
+
+
   if(level==="kindergarten"){
-   question=
-    generateKindergarten();
+
+   q=generateKindergarten();
+
   }
   else if(level==="elementaryLow"){
-   question=
-    generateElementaryLow();
+
+   q=generateElementaryLow();
+
   }
   else if(level==="elementaryHigh"){
-   question=
-    generateElementaryHigh();
+
+   q=generateElementaryHigh();
+
   }
   else if(level==="middle"){
-   question=
-    generateMiddle();
+
+   q=generateMiddle();
+
   }
   else if(level==="high"){
-   question=
-    generateHigh();
+
+   q=generateHigh();
+
   }
   else if(level==="university"){
-   question=
-    generateUniversity();
+
+   q=generateUniversity();
+
   }
   else{
-   question=
-    generateUniversityHard();
+
+   q=generateUniversityHard();
+
   }
 
 
   /* 같은 유형 연속 방지 */
 
-  if(
-   question.type===lastQuestionType
-  ){
+  if(q.type===lastQuestionType){
 
    continue;
 
   }
 
 
-  /* 문제 자체 중복 방지 */
-
   const key=
-   `${question.level}|${question.type}|${question.question}|${formatNumber(question.answer)}`;
+   `${level}|${q.type}|${q.question}|${formatNumber(q.answer)}`;
 
+
+  /* 같은 문제 방지 */
 
   if(
    usedQuestionKeys.has(key)
@@ -3281,154 +3250,111 @@ function createQuestion(){
 
   usedQuestionKeys.add(key);
 
-  lastQuestionType=
-   question.type;
+  lastQuestionType=q.type;
 
-  question.key=
-   key;
 
-  return question;
+  return {
+   level:level,
+   type:q.type,
+   question:q.question,
+   answer:q.answer,
+   key:key
+  };
 
  }
 
 
- /* 혹시라도 300회 실패하면 강제로 새로운 기본 문제 */
+ /* 안전장치 */
 
  const a=randInt(1,100);
  const b=randInt(1,100);
 
- const fallback={
+ return {
   level:"elementaryLow",
   type:"fallback_"+Date.now(),
   question:`${a} + ${b} = ?`,
-  answer:a+b
+  answer:a+b,
+  key:"fallback_"+Date.now()
  };
-
- lastQuestionType=
-  fallback.type;
-
- return fallback;
 
 }
 
 
 /* =====================================================
-   오답 보기 만들기
+   보기
 ===================================================== */
 
 function makeChoices(answer,level){
 
- const choices=[
-  answer
- ];
+ const choices=[answer];
 
  let attempts=0;
 
 
- function different(value){
-
-  return !choices.some(
-   existing=>
-    Math.abs(
-     Number(existing)-Number(value)
-    )<0.000001
-  );
-
- }
-
-
  while(
-  choices.length<5 &&
+  choices.length<5&&
   attempts<500
  ){
 
   attempts++;
 
 
-  let offset;
+  let wrong;
 
 
   if(
-   typeof answer==="number" &&
+   typeof answer==="number"&&
    Number.isFinite(answer)
   ){
 
-   const magnitude=
-    Math.max(
-     1,
-     Math.abs(answer)
-    );
+   let range;
 
 
-   if(
-    level==="kindergarten"
-   ){
+   if(level==="kindergarten"){
 
-    offset=randInt(1,5);
+    range=5;
 
    }
-   else if(
-    level==="elementaryLow"
-   ){
+   else if(level==="elementaryLow"){
 
-    offset=randInt(1,10);
+    range=10;
 
    }
-   else if(
-    level==="elementaryHigh"
-   ){
+   else if(level==="elementaryHigh"){
 
-    offset=randInt(1,15);
+    range=15;
 
    }
-   else if(
-    level==="middle"
-   ){
+   else if(level==="middle"){
 
-    offset=randInt(1,20);
+    range=20;
 
    }
-   else if(
-    level==="high"
-   ){
+   else if(level==="high"){
 
-    offset=randInt(1,25);
+    range=25;
 
    }
    else{
 
-    offset=
+    range=
      Math.max(
-      1,
+      2,
       Math.round(
-       magnitude*
-       randFloat(.08,.35)
+       Math.abs(answer)*.25
       )
      );
 
    }
 
 
-   const direction=
-    Math.random()<.5
-    ?-1
-    :1;
-
-
-   let wrong=
+   wrong=
     answer+
-    direction*offset;
-
-
-   if(
-    Math.random()<.35
-   ){
-
-    wrong=
-     answer+
-     randInt(-3,3);
-
-   }
+    randomChoice([
+     -1,1,-2,2,
+     -range,
+     range
+    ]);
 
 
    if(
@@ -3444,7 +3370,12 @@ function makeChoices(answer,level){
 
 
    if(
-    different(wrong)
+    !choices.some(
+     x=>
+      Math.abs(
+       Number(x)-Number(wrong)
+      )<0.000001
+    )
    ){
 
     choices.push(wrong);
@@ -3456,38 +3387,40 @@ function makeChoices(answer,level){
  }
 
 
- /* 안전망 */
-
  while(choices.length<5){
 
   let extra=
    typeof answer==="number"
-   ?
-   answer+choices.length*7+3
-   :
-   "보기 "+(choices.length+1);
+   ?answer+choices.length*7+3
+   :"보기 "+(choices.length+1);
 
 
   if(
-   typeof extra==="number" &&
-   !different(extra)
+   typeof extra==="number"
   ){
 
-   extra+=13;
+   while(
+    choices.some(
+     x=>
+      Math.abs(
+       Number(x)-Number(extra)
+      )<0.000001
+    )
+   ){
+
+    extra+=7;
+
+   }
 
   }
 
 
-  if(different(extra)){
-
-   choices.push(extra);
-
-  }
+  choices.push(extra);
 
  }
 
 
- /* 섞기 */
+ /* Fisher-Yates */
 
  for(
   let i=choices.length-1;
@@ -3499,6 +3432,7 @@ function makeChoices(answer,level){
    Math.floor(
     Math.random()*(i+1)
    );
+
 
   [
    choices[i],
@@ -3517,10 +3451,13 @@ function makeChoices(answer,level){
 
 
 /* =====================================================
-   보기 표시
+   문제 표시
 ===================================================== */
 
 function showQuestion(){
+
+ if(!gameRunning)return;
+
 
  currentQuestion=
   createQuestion();
@@ -3539,7 +3476,7 @@ function showQuestion(){
 
  document.getElementById("question")
  .textContent=
- currentQuestion.question;
+  currentQuestion.question;
 
 
  const choices=
@@ -3561,11 +3498,7 @@ function showQuestion(){
 
 
  const labels=[
-  "①",
-  "②",
-  "③",
-  "④",
-  "⑤"
+  "①","②","③","④","⑤"
  ];
 
 
@@ -3575,22 +3508,22 @@ function showQuestion(){
    const button=
     document.createElement("button");
 
+
    button.className=
     "choice-btn";
+
 
    button.textContent=
     `${labels[index]} ${formatNumber(choice)}`;
 
 
-   button.addEventListener(
-    "click",
+   button.onclick=
     ()=>{
      answerQuestion(
       index,
       button
      );
-    }
-   );
+    };
 
 
    box.appendChild(button);
@@ -3601,13 +3534,129 @@ function showQuestion(){
 
  document.getElementById("gameMessage")
  .textContent=
- "정답이라고 생각하는 답을 선택하세요.";
+  "정답을 선택하세요.";
+
+
+ startQuestionTimer();
 
 }
 
 
 /* =====================================================
-   정답 처리
+   문제별 20초 타이머
+===================================================== */
+
+function startQuestionTimer(){
+
+ if(questionTimer){
+
+  clearInterval(questionTimer);
+
+ }
+
+
+ questionTime=
+  QUESTION_TIME;
+
+
+ updateQuestionTimer();
+
+
+ questionTimer=
+  setInterval(
+   ()=>{
+
+    questionTime--;
+
+    updateQuestionTimer();
+
+
+    if(questionTime<=0){
+
+     clearInterval(questionTimer);
+
+     questionTimer=null;
+
+     questionTimeout();
+
+    }
+
+   },
+   1000
+  );
+
+}
+
+
+function updateQuestionTimer(){
+
+ const timeEl=
+  document.getElementById(
+   "questionTime"
+  );
+
+
+ const bar=
+  document.getElementById(
+   "questionTimerBar"
+  );
+
+
+ timeEl.textContent=
+  questionTime;
+
+
+ const percent=
+  Math.max(
+   0,
+   questionTime/
+   QUESTION_TIME*
+   100
+  );
+
+
+ bar.style.width=
+  percent+"%";
+
+}
+
+
+function questionTimeout(){
+
+ if(!gameRunning)return;
+
+
+ document.querySelectorAll(
+  ".choice-btn"
+ ).forEach(
+  button=>{
+   button.disabled=true;
+  }
+ );
+
+
+ document.getElementById(
+  "gameMessage"
+ ).textContent=
+  "⏰ 시간 초과! 다음 문제로 넘어갑니다.";
+
+
+ setTimeout(
+  ()=>{
+   if(gameRunning){
+
+    showQuestion();
+
+   }
+  },
+  500
+ );
+
+}
+
+
+/* =====================================================
+   답 처리
 ===================================================== */
 
 function answerQuestion(
@@ -3616,6 +3665,15 @@ function answerQuestion(
 ){
 
  if(!gameRunning)return;
+
+
+ if(questionTimer){
+
+  clearInterval(questionTimer);
+
+  questionTimer=null;
+
+ }
 
 
  const buttons=
@@ -3660,19 +3718,22 @@ function answerQuestion(
   gameSolved++;
 
 
-  document.getElementById("gameScore")
-  .textContent=
+  document.getElementById(
+   "gameScore"
+  ).textContent=
    gameScore;
 
 
-  document.getElementById("gameSolved")
-  .textContent=
+  document.getElementById(
+   "gameSolved"
+  ).textContent=
    gameSolved;
 
 
-  document.getElementById("gameMessage")
-  .textContent=
-   `정답! +${points}점`;
+  document.getElementById(
+   "gameMessage"
+  ).textContent=
+   `✅ 정답! +${points}점`;
 
  }
  else{
@@ -3714,7 +3775,7 @@ function answerQuestion(
   document.getElementById(
    "gameMessage"
   ).textContent=
-   `오답! 정답은 ${formatNumber(currentQuestion.answer)}입니다.`;
+   `❌ 오답! 정답은 ${formatNumber(currentQuestion.answer)}입니다.`;
 
  }
 
@@ -3729,7 +3790,7 @@ function answerQuestion(
    }
 
   },
-  350
+  450
  );
 
 }
@@ -3769,7 +3830,11 @@ function startMathGame(){
 
  gameScore=0;
 
- gameTime=GAME_TIME;
+ gameTime=
+  GAME_TOTAL_TIME;
+
+ questionTime=
+  QUESTION_TIME;
 
  gameSolved=0;
 
@@ -3778,19 +3843,30 @@ function startMathGame(){
  usedQuestionKeys=
   new Set();
 
- lastQuestionType=
-  null;
+ lastQuestionType=null;
 
 
- document.getElementById("gameScore")
- .textContent="0";
+ document.getElementById(
+  "gameScore"
+ ).textContent="0";
 
- document.getElementById("gameTime")
- .textContent=
-  GAME_TIME;
 
- document.getElementById("gameSolved")
- .textContent="0";
+ document.getElementById(
+  "gameTime"
+ ).textContent=
+  GAME_TOTAL_TIME;
+
+
+ document.getElementById(
+  "questionTime"
+ ).textContent=
+  QUESTION_TIME;
+
+
+ document.getElementById(
+  "gameSolved"
+ ).textContent="0";
+
 
  document.getElementById(
   "gameMessage"
@@ -3798,9 +3874,11 @@ function startMathGame(){
   "게임 시작!";
 
 
- document.getElementById("result")
- .classList
- .remove("show");
+ document.getElementById(
+  "result"
+ ).classList.remove(
+  "show"
+ );
 
 
  document.getElementById(
@@ -3863,6 +3941,15 @@ function endMathGame(){
  }
 
 
+ if(questionTimer){
+
+  clearInterval(questionTimer);
+
+  questionTimer=null;
+
+ }
+
+
  document.querySelectorAll(
   ".choice-btn"
  ).forEach(
@@ -3884,9 +3971,21 @@ function endMathGame(){
 
 
  document.getElementById(
+  "questionTime"
+ ).textContent=
+  "0";
+
+
+ document.getElementById(
+  "questionTimerBar"
+ ).style.width=
+  "0%";
+
+
+ document.getElementById(
   "gameMessage"
  ).textContent=
-  "시간 종료!";
+  "⏰ 전체 게임 시간이 끝났습니다!";
 
 
  const nickname=
@@ -3917,7 +4016,9 @@ function endMathGame(){
 
  document.getElementById(
   "result"
- ).classList.add("show");
+ ).classList.add(
+  "show"
+ );
 
 
  document.getElementById(
@@ -4044,11 +4145,17 @@ function renderRanking(){
  body.innerHTML=
   ranking.map(
    (item,index)=>`
+
    <tr>
+
     <td>${index+1}</td>
+
     <td>${escapeHTML(item.name)}</td>
+
     <td>${item.score}</td>
+
    </tr>
+
    `
   ).join("");
 
@@ -4056,12 +4163,49 @@ function renderRanking(){
 
 
 /* =====================================================
-   좋아요 1초 갱신
+   페이지 새로고침 후 마지막 페이지 복원
+===================================================== */
+
+function restorePage(){
+
+ const savedPage=
+  sessionStorage.getItem(
+   PAGE_KEY
+  );
+
+
+ const validPages=[
+  "menuPage",
+  "guestbookPage",
+  "gamePage"
+ ];
+
+
+ if(
+  savedPage&&
+  validPages.includes(savedPage)
+ ){
+
+  showPage(savedPage);
+
+ }else{
+
+  showPage("menuPage");
+
+ }
+
+}
+
+
+/* =====================================================
+   좋아요 시간 표시 갱신
 ===================================================== */
 
 setInterval(
  ()=>{
+
   render();
+
  },
  1000
 );
@@ -4072,7 +4216,10 @@ setInterval(
 ===================================================== */
 
 renderRanking();
+
 render();
+
+restorePage();
 
 </script>
 
