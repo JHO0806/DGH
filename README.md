@@ -12,7 +12,9 @@ body{
  font-family:"Malgun Gothic","Noto Sans KR",sans-serif;
  background:#f7eef1;
  color:#24151b;
- user-select:none
+ user-select:none;
+ overflow-x:hidden;
+ position:relative;
 }
 
 input,textarea,button{font:inherit}
@@ -21,7 +23,9 @@ input,textarea,button{font:inherit}
  background:linear-gradient(135deg,#64152f,#8f2948);
  color:#fff;
  padding:28px 18px 34px;
- box-shadow:0 4px 16px #0002
+ box-shadow:0 4px 16px #0002;
+ position:relative;
+ z-index:2;
 }
 
 .top{
@@ -29,7 +33,7 @@ input,textarea,button{font:inherit}
  margin:auto;
  display:flex;
  align-items:center;
- gap:18px
+ gap:18px;
 }
 
 .logo{
@@ -41,7 +45,7 @@ input,textarea,button{font:inherit}
  display:grid;
  place-items:center;
  flex:none;
- box-shadow:0 3px 10px #0004
+ box-shadow:0 3px 10px #0004;
 }
 
 .mark{
@@ -49,30 +53,32 @@ input,textarea,button{font:inherit}
  font-weight:900;
  font-size:25px;
  line-height:1;
- text-align:center
+ text-align:center;
 }
 
 .mark small{
  display:block;
  font-size:8px;
  letter-spacing:1px;
- margin-top:3px
+ margin-top:3px;
 }
 
 h1{
  margin:0;
- font-size:30px
+ font-size:30px;
 }
 
 .sub{
  margin-top:7px;
- opacity:.9
+ opacity:.9;
 }
 
 main{
  max-width:1050px;
  margin:24px auto;
- padding:0 14px
+ padding:0 14px;
+ position:relative;
+ z-index:2;
 }
 
 .panel{
@@ -80,18 +86,18 @@ main{
  border-radius:18px;
  padding:20px;
  box-shadow:0 4px 18px #6d203714;
- margin-bottom:20px
+ margin-bottom:20px;
 }
 
 .panel h2{
  margin:0 0 15px;
- font-size:20px
+ font-size:20px;
 }
 
 .grid{
  display:grid;
  grid-template-columns:1fr 1fr;
- gap:12px
+ gap:12px;
 }
 
 input,textarea{
@@ -101,21 +107,21 @@ input,textarea{
  padding:12px;
  outline:none;
  user-select:text;
- background:#fff
+ background:#fff;
 }
 
 textarea{
  min-height:105px;
- resize:vertical
+ resize:vertical;
 }
 
 input:focus,textarea:focus{
  border-color:#8a2947;
- box-shadow:0 0 0 3px #8a29471a
+ box-shadow:0 0 0 3px #8a29471a;
 }
 
 .full{
- grid-column:1/-1
+ grid-column:1/-1;
 }
 
 button{
@@ -125,16 +131,16 @@ button{
  cursor:pointer;
  background:#741b38;
  color:#fff;
- font-weight:700
+ font-weight:700;
 }
 
 button.secondary{
  background:#f1e5e9;
- color:#5d1930
+ color:#5d1930;
 }
 
 button.danger{
- background:#b73550
+ background:#b73550;
 }
 
 .actions{
@@ -142,13 +148,13 @@ button.danger{
  gap:8px;
  justify-content:flex-end;
  margin-top:12px;
- flex-wrap:wrap
+ flex-wrap:wrap;
 }
 
 .hint{
  font-size:13px;
  color:#76636b;
- margin-top:8px
+ margin-top:8px;
 }
 
 .entry{
@@ -156,30 +162,30 @@ button.danger{
  border-radius:15px;
  padding:17px;
  margin-top:12px;
- background:#fffafb
+ background:#fffafb;
 }
 
 .entry-head{
  display:flex;
  justify-content:space-between;
  gap:10px;
- align-items:center
+ align-items:center;
 }
 
 .name{
  font-weight:800;
- font-size:17px
+ font-size:17px;
 }
 
 .time{
  font-size:12px;
- color:#7d6c74
+ color:#7d6c74;
 }
 
 .content{
  white-space:pre-wrap;
  line-height:1.65;
- margin:12px 0
+ margin:12px 0;
 }
 
 .tag{
@@ -188,13 +194,13 @@ button.danger{
  color:#741b38;
  border-radius:999px;
  padding:4px 9px;
- font-size:12px
+ font-size:12px;
 }
 
 .empty{
  text-align:center;
  color:#8b7b82;
- padding:35px 10px
+ padding:35px 10px;
 }
 
 .modal{
@@ -205,11 +211,11 @@ button.danger{
  align-items:center;
  justify-content:center;
  padding:18px;
- z-index:10
+ z-index:10;
 }
 
 .modal.show{
- display:flex
+ display:flex;
 }
 
 .modal-card{
@@ -217,25 +223,25 @@ button.danger{
  border-radius:17px;
  padding:22px;
  width:min(430px,100%);
- box-shadow:0 15px 50px #0005
+ box-shadow:0 15px 50px #0005;
 }
 
 .modal-card h3{
- margin-top:0
+ margin-top:0;
 }
 
 .error{
  color:#b73550;
  font-size:13px;
  margin-top:8px;
- min-height:18px
+ min-height:18px;
 }
 
 footer{
  text-align:center;
  color:#806d76;
  font-size:12px;
- padding:8px 20px 30px
+ padding:8px 20px 30px;
 }
 
 .master{
@@ -245,7 +251,7 @@ footer{
  border:1px solid #ecd39c;
  border-radius:10px;
  font-size:13px;
- color:#77551b
+ color:#77551b;
 }
 
 /* 좋아요 */
@@ -253,7 +259,7 @@ footer{
  display:flex;
  align-items:center;
  gap:7px;
- flex-wrap:wrap
+ flex-wrap:wrap;
 }
 
 .like-btn{
@@ -264,11 +270,11 @@ footer{
  border-radius:10px;
  font-weight:700;
  cursor:pointer;
- transition:.15s
+ transition:.15s;
 }
 
 .like-btn:hover{
- background:#faedf1
+ background:#faedf1;
 }
 
 .like-count{
@@ -276,7 +282,7 @@ footer{
  text-align:center;
  color:#8a2947;
  font-size:14px;
- font-weight:800
+ font-weight:800;
 }
 
 .cancel-like{
@@ -286,36 +292,151 @@ footer{
  padding:9px 14px;
  border-radius:10px;
  font-weight:700;
- cursor:pointer
+ cursor:pointer;
 }
 
 .cancel-like:disabled{
  background:#f3f1f2;
  color:#aaa0a5;
- cursor:not-allowed
+ cursor:not-allowed;
+}
+
+/* ==========================================
+   외부 배경 대광고 로고 애니메이션
+   ========================================== */
+
+.bg-logo{
+ position:fixed;
+ width:130px;
+ height:130px;
+ border-radius:50%;
+ border:5px solid #8a2947;
+ color:#8a2947;
+ background:rgba(255,255,255,.22);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ font-weight:900;
+ font-size:34px;
+ line-height:1;
+ opacity:.075;
+ filter:blur(1px);
+ pointer-events:none;
+ z-index:0;
+ box-shadow:0 0 35px rgba(116,27,56,.12);
+}
+
+.bg-logo::after{
+ content:"DAE KWANG";
+ position:absolute;
+ left:50%;
+ top:67%;
+ transform:translate(-50%,-50%);
+ font-size:10px;
+ letter-spacing:2px;
+ white-space:nowrap;
+ font-weight:700;
+}
+
+.bg-logo-1{
+ top:12%;
+ left:-35px;
+ animation:floatLogo1 18s ease-in-out infinite alternate;
+}
+
+.bg-logo-2{
+ top:47%;
+ right:-40px;
+ width:170px;
+ height:170px;
+ font-size:42px;
+ animation:floatLogo2 22s ease-in-out infinite alternate;
+}
+
+.bg-logo-3{
+ top:78%;
+ left:18%;
+ width:100px;
+ height:100px;
+ font-size:27px;
+ animation:floatLogo3 20s ease-in-out infinite alternate;
+}
+
+.bg-logo-4{
+ top:68%;
+ right:20%;
+ width:115px;
+ height:115px;
+ font-size:29px;
+ animation:floatLogo4 25s ease-in-out infinite alternate;
+}
+
+@keyframes floatLogo1{
+ 0%{transform:translate(0,0) rotate(-8deg)}
+ 50%{transform:translate(90px,45px) rotate(7deg)}
+ 100%{transform:translate(25px,110px) rotate(-5deg)}
+}
+
+@keyframes floatLogo2{
+ 0%{transform:translate(0,0) rotate(8deg)}
+ 50%{transform:translate(-100px,-55px) rotate(-6deg)}
+ 100%{transform:translate(-45px,70px) rotate(5deg)}
+}
+
+@keyframes floatLogo3{
+ 0%{transform:translate(0,0) rotate(5deg)}
+ 50%{transform:translate(65px,-40px) rotate(-8deg)}
+ 100%{transform:translate(-35px,-90px) rotate(4deg)}
+}
+
+@keyframes floatLogo4{
+ 0%{transform:translate(0,0) rotate(-6deg)}
+ 50%{transform:translate(-75px,35px) rotate(8deg)}
+ 100%{transform:translate(40px,-55px) rotate(-4deg)}
 }
 
 @media(max-width:650px){
 
  .grid{
-  grid-template-columns:1fr
+  grid-template-columns:1fr;
  }
 
  .full{
-  grid-column:auto
+  grid-column:auto;
  }
 
  h1{
-  font-size:23px
+  font-size:23px;
  }
 
  .logo{
   width:65px;
-  height:65px
+  height:65px;
  }
 
  .like-area{
-  width:100%
+  width:100%;
+ }
+
+ .bg-logo{
+  opacity:.055;
+ }
+
+ .bg-logo-1{
+  left:-55px;
+ }
+
+ .bg-logo-2{
+  right:-70px;
+ }
+
+ .bg-logo-3{
+  left:-20px;
+ }
+
+ .bg-logo-4{
+  right:-20px;
  }
 }
 </style>
@@ -324,27 +445,29 @@ footer{
 
 <body>
 
+<!-- ==========================================
+     외부 배경 애니메이션
+========================================== -->
+
+<div class="bg-logo bg-logo-1">大光</div>
+<div class="bg-logo bg-logo-2">大光</div>
+<div class="bg-logo bg-logo-3">大光</div>
+<div class="bg-logo bg-logo-4">大光</div>
+
 <header class="hero">
 
 <div class="top">
 
 <div class="logo">
-
 <div class="mark">
 大光
 <small>DAE KWANG</small>
 </div>
-
 </div>
 
 <div>
-
 <h1>대광고등학교 큰빛축제</h1>
-
-<div class="sub">
-우리들의 축제, 우리들의 기록 · 큰빛축제 방문록
-</div>
-
+<div class="sub">우리들의 축제, 우리들의 기록 · 큰빛축제 방문록</div>
 </div>
 
 </div>
@@ -384,11 +507,7 @@ placeholder="수정·삭제용 비밀번호"
 </div>
 
 <div class="actions">
-
-<button onclick="addEntry()">
-방문록 등록
-</button>
-
+<button onclick="addEntry()">방문록 등록</button>
 </div>
 
 <div class="hint">
@@ -414,28 +533,17 @@ placeholder="수정·삭제용 비밀번호"
 
 <div class="modal-card">
 
-<h3 id="modalTitle">
-비밀번호 확인
-</h3>
+<h3 id="modalTitle">비밀번호 확인</h3>
 
-<input
-id="checkPw"
-type="password"
-placeholder="비밀번호"
-
->
+<input id="checkPw" type="password" placeholder="비밀번호">
 
 <div id="pwError" class="error"></div>
 
 <div class="actions">
 
-<button
-class="secondary"
-onclick="closeModal()"
-
->
-
-취소 </button>
+<button class="secondary" onclick="closeModal()">
+취소
+</button>
 
 <button onclick="confirmPassword()">
 확인
@@ -462,7 +570,8 @@ const LIKE_KEY =
 const MASTER_PASSWORD =
 "20100806";
 
-const LIKE_CANCEL_DELAY = 7000;
+const LIKE_CANCEL_DELAY =
+7000;
 
 let entries =
 JSON.parse(
@@ -528,7 +637,7 @@ function formatDate(iso){
 
  const d=new Date(iso);
 
- const p=n=>
+ const p=n =>
  String(n).padStart(2,"0");
 
  return `${d.getFullYear()}년 ${p(d.getMonth()+1)}월 ${p(d.getDate())}일 ${p(d.getHours())}시 ${p(d.getMinutes())}분 ${p(d.getSeconds())}초`;
@@ -602,7 +711,7 @@ function addEntry(){
 
 
 /* ================================
-   좋아요 자료 형식 보정
+   좋아요 데이터 형식
 ================================ */
 
 function normalizeLikes(id){
@@ -648,7 +757,6 @@ function normalizeLikes(id){
 
 /* ================================
    좋아요 추가
-
    누를 때마다 +1
 ================================ */
 
@@ -657,13 +765,11 @@ function addLike(id){
  const data =
  normalizeLikes(id);
 
-
  data.count++;
 
  data.times.push(
   Date.now()
  );
-
 
  saveLikes();
 
@@ -673,7 +779,7 @@ function addLike(id){
 
 
 /* ================================
-   취소 가능한 좋아요 확인
+   취소 가능한 좋아요 찾기
 ================================ */
 
 function getCancelableIndex(id){
@@ -690,9 +796,7 @@ function getCancelableIndex(id){
 
  }
 
-
  const now=Date.now();
-
 
  return data.times.findIndex(
   time =>
@@ -741,11 +845,8 @@ function cancelLike(id){
  data.count--;
 
  if(data.count<0){
-
   data.count=0;
-
  }
-
 
  saveLikes();
 
@@ -755,7 +856,7 @@ function cancelLike(id){
 
 
 /* ================================
-   남은 시간
+   취소 버튼 글자
 ================================ */
 
 function getCancelText(id){
@@ -780,7 +881,7 @@ function getCancelText(id){
  const canCancel =
  data.times.some(
   time =>
-  now-time >= LIKE_CANCEL_DELAY
+  now-time>=LIKE_CANCEL_DELAY
  );
 
 
@@ -845,11 +946,8 @@ function render(){
   const data =
   normalizeLikes(e.id);
 
-  const cancelIndex =
-  getCancelableIndex(e.id);
-
   const cancelAvailable =
-  cancelIndex !== -1;
+  getCancelableIndex(e.id)!==-1;
 
   const cancelText =
   getCancelText(e.id);
@@ -866,10 +964,7 @@ function render(){
     </div>
 
     <div class="time">
-
-    작성:
-    ${formatDate(e.createdAt)}
-
+    작성: ${formatDate(e.createdAt)}
     ${
      e.updatedAt
      ?
@@ -877,7 +972,6 @@ function render(){
      :
      ""
     }
-
     </div>
 
    </div>
@@ -890,7 +984,6 @@ function render(){
 
    <div class="actions">
 
-
     <div class="like-area">
 
      <button
@@ -900,11 +993,9 @@ function render(){
       ❤️ 좋아요
      </button>
 
-
      <span class="like-count">
       ${data.count}
      </span>
-
 
      <button
       class="cancel-like"
@@ -932,7 +1023,6 @@ function render(){
     삭제
     </button>
 
-
    </div>
 
   </article>
@@ -945,7 +1035,7 @@ function render(){
 
 
 /* ================================
-   수정 / 삭제 비밀번호 요청
+   수정 / 삭제 요청
 ================================ */
 
 function requestAction(action,id){
@@ -955,25 +1045,18 @@ function requestAction(action,id){
   id:id
  };
 
-
  document.getElementById("checkPw").value="";
 
- document.getElementById("pwError")
- .textContent="";
+ document.getElementById("pwError").textContent="";
 
-
- document.getElementById("modalTitle")
- .textContent =
+ document.getElementById("modalTitle").textContent=
  action==="edit"
  ?
  "수정을 위한 비밀번호 확인"
  :
  "삭제를 위한 비밀번호 확인";
 
-
- document.getElementById("modal")
- .classList.add("show");
-
+ document.getElementById("modal").classList.add("show");
 
  setTimeout(
   ()=>{
@@ -1050,8 +1133,6 @@ function confirmPassword(){
  closeModal();
 
 
- /* 삭제 */
-
  if(action==="delete"){
 
   if(
@@ -1065,9 +1146,7 @@ function confirmPassword(){
     x=>x.id!==id
    );
 
-
    delete likes[id];
-
 
    save();
 
@@ -1079,8 +1158,6 @@ function confirmPassword(){
 
  }
 
-
- /* 수정 */
 
  else{
 
@@ -1096,7 +1173,6 @@ function confirmPassword(){
    target.name
   );
 
-
   if(newName===null)return;
 
 
@@ -1105,7 +1181,6 @@ function confirmPassword(){
    "방문록 내용",
    target.message
   );
-
 
   if(newMessage===null)return;
 
@@ -1182,14 +1257,14 @@ document.addEventListener(
 
 
 /* ================================
-   1초마다 7초 타이머 갱신
+   좋아요 타이머
 ================================ */
 
 setInterval(
  ()=>{
   render();
  },
-  1000
+ 1000
 );
 
 
