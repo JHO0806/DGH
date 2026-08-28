@@ -498,7 +498,7 @@ button.danger{
 
 .game-status{
  display:grid;
- grid-template-columns:repeat(5,1fr);
+ grid-template-columns:repeat(4,1fr);
  gap:10px;
  margin-bottom:18px;
 }
@@ -569,7 +569,7 @@ button.danger{
 }
 
 .question{
- min-height:110px;
+ min-height:115px;
  display:flex;
  align-items:center;
  justify-content:center;
@@ -753,171 +753,12 @@ button.danger{
 <body>
 
 <!-- =========================
-     배경 로고
+     배경 교표
 ========================= -->
 
-<div class="logo-float logo-float-1">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-2">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-3">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-4">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-5">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-6">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-7">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-8">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-9">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-10">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-11">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<div class="logo-float logo-float-12">
-<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-<circle cx="100" cy="100" r="94" fill="#8a2340"/>
-<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
-<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
-<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
-<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>
-<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
-<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
-<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
-</svg>
-</div>
-
-<!-- =========================
-     헤더
-========================= -->
+<div id="floatingLogos"></div>
 
 <header class="hero">
-
 <div class="top">
 
 <div class="logo">
@@ -933,7 +774,6 @@ button.danger{
 </div>
 
 </div>
-
 </header>
 
 <!-- =========================
@@ -968,7 +808,6 @@ button.danger{
 </div>
 
 </div>
-
 </div>
 
 </section>
@@ -1016,11 +855,7 @@ placeholder="수정·삭제용 비밀번호"
 </div>
 
 <div class="actions">
-
-<button onclick="addEntry()">
-방문록 등록
-</button>
-
+<button onclick="addEntry()">방문록 등록</button>
 </div>
 
 <div class="hint">
@@ -1063,7 +898,7 @@ placeholder="수정·삭제용 비밀번호"
 </h2>
 
 <p class="game-description">
-30초 동안 최대한 많은 문제를 풀어보세요. 각 문제에는 20초의 제한시간이 있습니다.
+문제마다 20초 안에 답을 선택하세요. <b>5번 연속 틀리면 게임이 종료됩니다.</b>
 </p>
 
 <div class="nickname-row">
@@ -1085,11 +920,6 @@ placeholder="랭킹에 표시할 닉네임"
 </div>
 
 <div class="status-box">
-<span class="status-label">전체 시간</span>
-<span id="gameTime" class="status-value">30</span>
-</div>
-
-<div class="status-box">
 <span class="status-label">문제 시간</span>
 <span id="questionTime" class="status-value">20</span>
 </div>
@@ -1100,8 +930,8 @@ placeholder="랭킹에 표시할 닉네임"
 </div>
 
 <div class="status-box">
-<span class="status-label">최고 기록</span>
-<span id="gameBest" class="status-value">0</span>
+<span class="status-label">연속 오답</span>
+<span id="wrongStreak" class="status-value">0 / 5</span>
 </div>
 
 </div>
@@ -1202,13 +1032,9 @@ placeholder="비밀번호"
 
 <div class="actions">
 
-<button
-class="secondary"
-onclick="closeModal()"
-
->
-
-취소 </button>
+<button class="secondary" onclick="closeModal()">
+취소
+</button>
 
 <button onclick="confirmPassword()">
 확인
@@ -1223,27 +1049,162 @@ onclick="closeModal()"
 <script>
 
 /* =====================================================
-   페이지 상태 저장
+   배경 로고 생성
+===================================================== */
+
+const logoContainer=
+ document.getElementById("floatingLogos");
+
+
+function createLogoSVG(){
+
+ return `
+ <svg viewBox="0 0 200 200"
+      width="100%"
+      height="100%"
+      xmlns="http://www.w3.org/2000/svg">
+
+  <circle cx="100" cy="100" r="94" fill="#8a2340"/>
+
+  <circle cx="100" cy="100" r="76"
+          fill="none"
+          stroke="#fff"
+          stroke-width="8"/>
+
+  <path
+   d="M58 63 Q100 42 142 63
+      L136 118 Q132 146 100 163
+      Q68 146 64 118 Z"
+   fill="#8a2340"
+   stroke="#fff"
+   stroke-width="3"/>
+
+  <path
+   d="M74 72 L88 61 L100 72
+      L112 61 L126 72 L126 83 L74 83 Z"
+   fill="#fff"/>
+
+  <text
+   x="100"
+   y="101"
+   text-anchor="middle"
+   fill="#fff"
+   font-family="Georgia"
+   font-size="13"
+   font-weight="700">
+   LUX ET SAL
+  </text>
+
+  <text
+   x="100"
+   y="128"
+   text-anchor="middle"
+   fill="#fff"
+   font-family="serif"
+   font-size="27"
+   font-weight="700">
+   大光
+  </text>
+
+  <text
+   x="100"
+   y="28"
+   text-anchor="middle"
+   fill="#fff"
+   font-family="Georgia"
+   font-size="9"
+   font-weight="700">
+   DAE GWANG HIGH SCHOOL
+  </text>
+
+  <text
+   x="100"
+   y="185"
+   text-anchor="middle"
+   fill="#fff"
+   font-family="serif"
+   font-size="9"
+   font-weight="700">
+   대 광 고 등 학 교
+  </text>
+
+ </svg>
+ `;
+}
+
+
+const logoSizes=[
+  64,56,48,60,52,68,
+  50,58,44,62,54,46
+];
+
+const animations=[
+ "move1 17s linear infinite",
+ "move2 20s linear infinite",
+ "move3 18s linear infinite",
+ "move4 21s linear infinite",
+ "move5 16s linear infinite",
+ "move6 23s linear infinite",
+ "move7 19s linear infinite",
+ "move8 22s linear infinite",
+ "move9 17s linear infinite",
+ "move10 24s linear infinite",
+ "move11 20s linear infinite",
+ "move12 18s linear infinite"
+];
+
+
+for(let i=0;i<12;i++){
+
+ const item=
+  document.createElement("div");
+
+ item.className=
+  "logo-float";
+
+ item.style.width=
+  logoSizes[i]+"px";
+
+ item.style.height=
+  logoSizes[i]+"px";
+
+ item.style.animation=
+  animations[i];
+
+ item.style.animationDelay=
+  `${-(i*1.8)}s`;
+
+ item.innerHTML=
+  createLogoSVG();
+
+ logoContainer.appendChild(item);
+
+}
+
+
+/* =====================================================
+   페이지 전환 + 새로고침 유지
 ===================================================== */
 
 const PAGE_KEY=
-"daekwang_bigbit_current_page_v2";
+ "daekwang_bigbit_current_page_v3";
 
 
 function showPage(pageId){
 
- document.querySelectorAll(".page").forEach(
+ document.querySelectorAll(".page")
+ .forEach(
   page=>{
    page.classList.remove("active");
   }
  );
 
- const target=
+ const page=
   document.getElementById(pageId);
 
- if(!target)return;
+ if(!page)return;
 
- target.classList.add("active");
+ page.classList.add("active");
 
  sessionStorage.setItem(
   PAGE_KEY,
@@ -1260,26 +1221,26 @@ function showPage(pageId){
 ===================================================== */
 
 const STORAGE_KEY=
-"daekwang_bigbit_festival_guestbook_v2";
+ "daekwang_bigbit_festival_guestbook_v2";
 
 const LIKE_KEY=
-"daekwang_bigbit_festival_likes_v3";
+ "daekwang_bigbit_festival_likes_v3";
 
 const MASTER_PASSWORD=
-"20100806";
+ "20100806";
 
 const LIKE_CANCEL_DELAY=
-7000;
+ 7000;
 
 let entries=
-JSON.parse(
- localStorage.getItem(STORAGE_KEY)||"[]"
-);
+ JSON.parse(
+  localStorage.getItem(STORAGE_KEY)||"[]"
+ );
 
 let likes=
-JSON.parse(
- localStorage.getItem(LIKE_KEY)||"{}"
-);
+ JSON.parse(
+  localStorage.getItem(LIKE_KEY)||"{}"
+ );
 
 let pending=null;
 
@@ -1360,10 +1321,8 @@ function addEntry(){
 
  const id=
   window.crypto&&crypto.randomUUID
-  ?
-  crypto.randomUUID()
-  :
-  String(Date.now()+Math.random());
+  ?crypto.randomUUID()
+  :String(Date.now()+Math.random());
 
 
  entries.unshift({
@@ -1378,6 +1337,7 @@ function addEntry(){
 
 
  save();
+
  render();
 
 
@@ -1403,7 +1363,6 @@ function normalizeLikes(id){
 
  }
 
-
  if(typeof likes[id]==="number"){
 
   likes[id]={
@@ -1413,20 +1372,17 @@ function normalizeLikes(id){
 
  }
 
-
  if(!Array.isArray(likes[id].times)){
 
   likes[id].times=[];
 
  }
 
-
  if(typeof likes[id].count!=="number"){
 
   likes[id].count=0;
 
  }
-
 
  return likes[id];
 
@@ -1464,7 +1420,6 @@ function getCancelableIndex(id){
   return -1;
 
  }
-
 
  const now=Date.now();
 
@@ -1509,7 +1464,6 @@ function cancelLike(id){
 
  }
 
-
  saveLikes();
 
  render();
@@ -1532,7 +1486,6 @@ function getCancelText(id){
 
  }
 
-
  const now=Date.now();
 
  const available=
@@ -1550,7 +1503,6 @@ function getCancelText(id){
 
  const earliest=
   Math.min(...data.times);
-
 
  const remain=
   Math.max(
@@ -1705,13 +1657,13 @@ function requestAction(action,id){
   id:id
  };
 
-
  document.getElementById("checkPw").value="";
 
  document.getElementById("pwError").textContent="";
 
 
- document.getElementById("modalTitle").textContent=
+ document.getElementById("modalTitle")
+ .textContent=
   action==="edit"
   ?
   "수정을 위한 비밀번호 확인"
@@ -1874,10 +1826,6 @@ function confirmPassword(){
 }
 
 
-/* =====================================================
-   모달
-===================================================== */
-
 document
 .getElementById("modal")
 .addEventListener(
@@ -1904,25 +1852,24 @@ document.addEventListener(
 
   }
 
- }
-);
+ });
 
 
 /* =====================================================
-   수학게임
+   수학게임 설정
 ===================================================== */
-
-const GAME_TOTAL_TIME=
- 30;
 
 const QUESTION_TIME=
  20;
 
+const MAX_WRONG_STREAK=
+ 5;
+
 const RANKING_KEY=
- "daekwang_bigbit_math_ranking_v4";
+ "daekwang_bigbit_math_ranking_v5";
 
 const BEST_KEY=
- "daekwang_bigbit_math_best_v4";
+ "daekwang_bigbit_math_best_v5";
 
 
 const difficultyConfig={
@@ -1968,7 +1915,6 @@ const difficultyConfig={
   score:16,
   weight:2
  }
-
 };
 
 
@@ -1976,13 +1922,11 @@ let gameRunning=false;
 
 let gameScore=0;
 
-let gameTime=GAME_TOTAL_TIME;
-
 let questionTime=QUESTION_TIME;
 
 let gameSolved=0;
 
-let gameTimer=null;
+let wrongStreak=0;
 
 let questionTimer=null;
 
@@ -1998,13 +1942,13 @@ let bestGameScore=
  );
 
 
-document.getElementById("gameBest")
-.textContent=
- bestGameScore;
+document.getElementById("gameBest");
+
+renderGameStatus();
 
 
 /* =====================================================
-   공통 수학 함수
+   수학 공통
 ===================================================== */
 
 function randInt(min,max){
@@ -2103,39 +2047,55 @@ function combination(n,r){
 
 function formatNumber(value){
 
- if(typeof value!=="number"){
+ if(typeof value==="number"){
 
-  return String(value);
+  if(!Number.isFinite(value)){
 
- }
+   return "∞";
 
- if(!Number.isFinite(value)){
+  }
 
-  return "∞";
+  if(
+   Math.abs(
+    value-Math.round(value)
+   )<0.0000001
+  ){
 
- }
+   return String(
+    Math.round(value)
+   );
 
- if(
-  Math.abs(
-   value-Math.round(value)
-  )<0.0000001
- ){
+  }
 
   return String(
-   Math.round(value)
+   Math.round(value*100)/100
   );
 
  }
 
- return String(
-  Math.round(value*100)/100
- );
+ return String(value);
+
+}
+
+
+function sameAnswer(a,b){
+
+ if(
+  typeof a==="number"&&
+  typeof b==="number"
+ ){
+
+  return Math.abs(a-b)<0.000001;
+
+ }
+
+ return String(a)===String(b);
 
 }
 
 
 /* =====================================================
-   난이도
+   난이도 선택
 ===================================================== */
 
 function chooseDifficulty(){
@@ -2207,7 +2167,7 @@ function generateKindergarten(){
   "k_count",
   "k_double",
   "k_half",
-  "k_shape_count"
+  "k_shape"
  ];
 
  const type=
@@ -2249,7 +2209,7 @@ function generateKindergarten(){
 
   return {
    type,
-   question:`다음 두 수 중 더 큰 수는?  ${a} , ${b}`,
+   question:`다음 두 수 중 더 큰 수는? ${a}, ${b}`,
    answer:Math.max(a,b)
   };
 
@@ -2263,7 +2223,7 @@ function generateKindergarten(){
 
   return {
    type,
-   question:`사탕 ${groups}묶음이 있고 한 묶음에 ${each}개입니다. 모두 몇 개일까요?`,
+   question:`사탕 ${groups}묶음에 한 묶음당 ${each}개가 있습니다. 모두 몇 개일까요?`,
    answer:groups*each
   };
 
@@ -2297,10 +2257,10 @@ function generateKindergarten(){
 
 
  const shapes=[
-  {name:"삼각형",count:3},
-  {name:"사각형",count:4},
-  {name:"오각형",count:5},
-  {name:"육각형",count:6}
+  {name:"삼각형",n:3},
+  {name:"사각형",n:4},
+  {name:"오각형",n:5},
+  {name:"육각형",n:6}
  ];
 
  const shape=
@@ -2309,7 +2269,7 @@ function generateKindergarten(){
  return {
   type,
   question:`${shape.name}의 변은 몇 개일까요?`,
-  answer:shape.count
+  answer:shape.n
  };
 
 }
@@ -2328,7 +2288,7 @@ function generateElementaryLow(){
   "el_money",
   "el_time",
   "el_missing",
-  "el_shape_side"
+  "el_shape"
  ];
 
  const type=
@@ -2399,7 +2359,7 @@ function generateElementaryLow(){
   return {
    type,
    question:`오후 ${hour}시에 시작해서 ${add}시간 후는 몇 시일까요?`,
-   answer:hour+add
+   answer:(hour+add-1)%12+1
   };
 
  }
@@ -2420,20 +2380,19 @@ function generateElementaryLow(){
 
 
  const sides=[
-  {name:"삼각형",value:3},
-  {name:"사각형",value:4},
-  {name:"오각형",value:5},
-  {name:"육각형",value:6},
-  {name:"팔각형",value:8}
+  {name:"삼각형",n:3},
+  {name:"사각형",n:4},
+  {name:"오각형",n:5},
+  {name:"팔각형",n:8}
  ];
 
- const shape=
+ const s=
   randomChoice(sides);
 
  return {
   type,
-  question:`${shape.name}의 변의 개수는?`,
-  answer:shape.value
+  question:`${s.name}의 변의 개수는?`,
+  answer:s.n
  };
 
 }
@@ -2449,12 +2408,13 @@ function generateElementaryHigh(){
   "eh_div",
   "eh_fraction",
   "eh_percent",
-  "eh_area_rect",
+  "eh_rect_area",
   "eh_average",
   "eh_ratio",
-  "eh_circle_basic",
+  "eh_circle_diameter",
+  "eh_circle_circumference",
   "eh_triangle_area",
-  "eh_perimeter"
+  "eh_rect_perimeter"
  ];
 
  const type=
@@ -2479,7 +2439,6 @@ function generateElementaryHigh(){
 
   const d=randInt(2,10);
   const n=randInt(1,d-1);
-
   const d2=randInt(2,10);
   const n2=randInt(1,d2-1);
 
@@ -2506,7 +2465,7 @@ function generateElementaryHigh(){
  }
 
 
- if(type==="eh_area_rect"){
+ if(type==="eh_rect_area"){
 
   const w=randInt(3,20);
   const h=randInt(3,20);
@@ -2527,20 +2486,17 @@ function generateElementaryHigh(){
 
   for(let i=0;i<n;i++){
 
-   values.push(randInt(5,30));
+   values.push(
+    randInt(5,30)
+   );
 
   }
-
-  const total=
-   values.reduce(
-    (a,b)=>a+b,
-    0
-   );
 
   return {
    type,
    question:`${values.join(", ")}의 평균은?`,
-   answer:total/n
+   answer:
+    values.reduce((a,b)=>a+b,0)/n
   };
 
  }
@@ -2550,25 +2506,38 @@ function generateElementaryHigh(){
 
   const a=randInt(2,9);
   const b=randInt(2,9);
-  const multiplier=randInt(2,8);
+  const m=randInt(2,8);
 
   return {
    type,
-   question:`A:B=${a}:${b}이고 B=${b*multiplier}일 때 A는?`,
-   answer:a*multiplier
+   question:`A:B=${a}:${b}이고 B=${b*m}일 때 A는?`,
+   answer:a*m
   };
 
  }
 
 
- if(type==="eh_circle_basic"){
+ if(type==="eh_circle_diameter"){
 
-  const r=randInt(2,10);
+  const r=randInt(2,12);
 
   return {
    type,
-   question:`반지름이 ${r}인 원의 지름은?`,
-   answer:r*2
+   question:`반지름이 ${r}cm인 원의 지름은?`,
+   answer:2*r
+  };
+
+ }
+
+
+ if(type==="eh_circle_circumference"){
+
+  const r=randInt(2,12);
+
+  return {
+   type,
+   question:`반지름이 ${r}cm인 원의 둘레를 π를 사용하여 나타내면?`,
+   answer:`${2*r}π`
   };
 
  }
@@ -2616,7 +2585,9 @@ function generateMiddle(){
   "m_function",
   "m_triangle_angle",
   "m_rectangle_perimeter",
-  "m_circle_area"
+  "m_circle_area_pi",
+  "m_circle_circumference_pi",
+  "m_circle_sector_angle"
  ];
 
  const type=
@@ -2734,7 +2705,9 @@ function generateMiddle(){
   const c=180-a-b;
 
   if(c<=10){
+
    return generateMiddle();
+
   }
 
   return {
@@ -2760,12 +2733,39 @@ function generateMiddle(){
  }
 
 
- const r=randInt(2,9);
+ if(type==="m_circle_area_pi"){
+
+  const r=randInt(2,12);
+
+  return {
+   type,
+   question:`반지름이 ${r}cm인 원의 넓이를 π를 사용하여 나타내면?`,
+   answer:`${r*r}π`
+  };
+
+ }
+
+
+ if(type==="m_circle_circumference_pi"){
+
+  const r=randInt(2,12);
+
+  return {
+   type,
+   question:`반지름이 ${r}cm인 원의 둘레를 π를 사용하여 나타내면?`,
+   answer:`${2*r}π`
+  };
+
+ }
+
+
+ const r=randInt(2,10);
+ const angle=randomChoice([30,45,60,90,120]);
 
  return {
   type,
-  question:`반지름이 ${r}인 원의 넓이를 πr²로 나타낼 때 π의 계수는?`,
-  answer:r*r
+  question:`반지름 ${r}인 원에서 중심각 ${angle}°인 부채꼴의 중심각 비율은?`,
+  answer:angle/360
  };
 
 }
@@ -2785,11 +2785,13 @@ function generateHigh(){
   "h_sequence",
   "h_derivative",
   "h_probability",
-  "h_combinatorics",
+  "h_combinations",
   "h_triangle_area",
-  "h_circle_angle",
   "h_coordinate_distance",
-  "h_parabola_value"
+  "h_parabola",
+  "h_circle_sector",
+  "h_circle_arc",
+  "h_circle_equation"
  ];
 
  const type=
@@ -2898,13 +2900,15 @@ function generateHigh(){
   return {
    type,
    question:`동전을 ${n}번 던질 때 앞면이 정확히 ${success}번 나올 확률은?`,
-   answer:combination(n,success)*Math.pow(.5,n)
+   answer:
+    combination(n,success)*
+    Math.pow(.5,n)
   };
 
  }
 
 
- if(type==="h_combinatorics"){
+ if(type==="h_combinations"){
 
   const n=randInt(5,10);
   const r=randInt(2,n-2);
@@ -2932,20 +2936,6 @@ function generateHigh(){
  }
 
 
- if(type==="h_circle_angle"){
-
-  const radius=randInt(2,9);
-  const angle=randomChoice([30,45,60,90]);
-
-  return {
-   type,
-   question:`반지름 ${radius}인 원에서 중심각이 ${angle}°인 부채꼴의 중심각 비율은?`,
-   answer:angle/360
-  };
-
- }
-
-
  if(type==="h_coordinate_distance"){
 
   const x1=randInt(-6,6);
@@ -2965,13 +2955,57 @@ function generateHigh(){
  }
 
 
- const a=randInt(2,8);
- const x=randInt(-5,8);
+ if(type==="h_parabola"){
+
+  const a=randInt(2,8);
+  const x=randInt(-5,8);
+
+  return {
+   type,
+   question:`f(x)=${a}x²일 때 f(${x})는?`,
+   answer:a*x*x
+  };
+
+ }
+
+
+ if(type==="h_circle_sector"){
+
+  const r=randInt(2,10);
+  const angle=randomChoice([30,45,60,90,120,180]);
+
+  return {
+   type,
+   question:`반지름 ${r}인 원에서 중심각 ${angle}°인 부채꼴의 넓이를 π로 나타내면?`,
+   answer:`${r*r*angle/360}π`
+  };
+
+ }
+
+
+ if(type==="h_circle_arc"){
+
+  const r=randInt(2,10);
+  const angle=randomChoice([30,45,60,90,120,180]);
+
+  const coefficient=
+   2*r*angle/360;
+
+  return {
+   type,
+   question:`반지름 ${r}인 원에서 중심각 ${angle}°인 호의 길이를 π로 나타내면?`,
+   answer:`${coefficient}π`
+  };
+
+ }
+
+
+ const r=randInt(2,10);
 
  return {
   type,
-  question:`f(x)=${a}x²일 때 f(${x})는?`,
-  answer:a*x*x
+  question:`중심이 원점이고 반지름이 ${r}인 원의 방정식은?`,
+  answer:`x²+y²=${r*r}`
  };
 
 }
@@ -2993,7 +3027,7 @@ function generateUniversity(){
   "u_complex",
   "u_limit",
   "u_vector",
-  "u_geometry"
+  "u_circle_integral"
  ];
 
  const type=
@@ -3132,12 +3166,11 @@ function generateUniversity(){
 
 
  const r=randInt(2,8);
- const angle=randomChoice([90,180,270]);
 
  return {
   type,
-  question:`반지름 ${r}인 원에서 중심각 ${angle}°가 나타내는 부채꼴의 넓이를 πr² 기준으로 나타낸 비율은?`,
-  answer:angle/360
+  question:`반지름 ${r}인 원의 둘레를 적분으로 표현한 값의 결과는?`,
+  answer:`${2*r}π`
  };
 
 }
@@ -3158,7 +3191,8 @@ function generateUniversityHard(){
   "uh_eigen",
   "uh_series",
   "uh_vector_cross",
-  "uh_geometry_coordinate"
+  "uh_circle_area",
+  "uh_circle_sector"
  ];
 
  const type=
@@ -3278,24 +3312,33 @@ function generateUniversityHard(){
  }
 
 
- const x1=randInt(-5,5);
- const y1=randInt(-5,5);
- const x2=randInt(-5,5);
- const y2=randInt(-5,5);
+ if(type==="uh_circle_area"){
+
+  const r=randInt(2,9);
+
+  return {
+   type,
+   question:`반지름 ${r}인 원의 넓이는?`,
+   answer:`${r*r}π`
+  };
+
+ }
+
+
+ const r=randInt(2,9);
+ const angle=randomChoice([30,45,60,90,120,180]);
 
  return {
   type,
-  question:`좌표평면에서 (${x1},${y1})과 (${x2},${y2})를 잇는 선분의 길이의 제곱은?`,
-  answer:
-   Math.pow(x2-x1,2)+
-   Math.pow(y2-y1,2)
+  question:`반지름 ${r}인 원에서 중심각 ${angle}°인 부채꼴의 넓이는?`,
+  answer:`${r*r*angle/360}π`
  };
 
 }
 
 
 /* =====================================================
-   문제 생성
+   문제 전체 생성
 ===================================================== */
 
 function createQuestion(){
@@ -3303,7 +3346,7 @@ function createQuestion(){
  let attempts=0;
 
 
- while(attempts<500){
+ while(attempts<800){
 
   attempts++;
 
@@ -3316,25 +3359,39 @@ function createQuestion(){
 
 
   if(level==="kindergarten"){
+
    q=generateKindergarten();
+
   }
   else if(level==="elementaryLow"){
+
    q=generateElementaryLow();
+
   }
   else if(level==="elementaryHigh"){
+
    q=generateElementaryHigh();
+
   }
   else if(level==="middle"){
+
    q=generateMiddle();
+
   }
   else if(level==="high"){
+
    q=generateHigh();
+
   }
   else if(level==="university"){
+
    q=generateUniversity();
+
   }
   else{
+
    q=generateUniversityHard();
+
   }
 
 
@@ -3364,13 +3421,9 @@ function createQuestion(){
    q.type;
 
 
-  return {
-   level:level,
-   type:q.type,
-   question:q.question,
-   answer:q.answer,
-   key:key
-  };
+  q.level=level;
+
+  return q;
 
  }
 
@@ -3382,20 +3435,169 @@ function createQuestion(){
   level:"elementaryLow",
   type:"fallback_"+Date.now(),
   question:`${a} + ${b} = ?`,
-  answer:a+b,
-  key:"fallback_"+Date.now()
+  answer:a+b
  };
 
 }
 
 
 /* =====================================================
-   보기 만들기
+   보기 생성
 ===================================================== */
 
 function makeChoices(answer,level){
 
- const choices=[answer];
+ /* 문자열 정답: π 문제 / 방정식 */
+
+ if(typeof answer==="string"){
+
+  const choices=[
+   answer
+  ];
+
+  const match=
+   answer.match(/^(-?\d+(?:\.\d+)?)π$/);
+
+
+  if(match){
+
+   const coefficient=
+    Number(match[1]);
+
+
+   const offsets=[
+    -2,-1,1,2
+   ];
+
+
+   offsets.forEach(
+    offset=>{
+
+     const value=
+      coefficient+offset;
+
+
+     if(value>0){
+
+      const text=
+       `${Number.isInteger(value)?value:Math.round(value*100)/100}π`;
+
+
+      if(!choices.includes(text)){
+
+       choices.push(text);
+
+      }
+
+     }
+
+    }
+   );
+
+  }
+
+
+  else{
+
+   /* x²+y²=... 유형 */
+
+   const eqMatch=
+    answer.match(
+     /^x²\+y²=(\d+)$/
+    );
+
+
+   if(eqMatch){
+
+    const n=
+     Number(eqMatch[1]);
+
+
+    [
+     n-1,
+     n+1,
+     Math.max(1,n*2),
+     Math.max(1,n-2)
+    ].forEach(
+     value=>{
+
+      const text=
+       `x²+y²=${value}`;
+
+
+      if(
+       !choices.includes(text)
+      ){
+
+       choices.push(text);
+
+      }
+
+     }
+    );
+
+   }
+
+
+   /* 혹시 안전망 */
+
+   while(
+    choices.length<5
+   ){
+
+    choices.push(
+     `보기 ${choices.length+1}`
+    );
+
+   }
+
+  }
+
+
+  /* 문자열 보기 섞기 */
+
+  while(choices.length<5){
+
+   choices.push(
+    `보기 ${choices.length+1}`
+   );
+
+  }
+
+
+  for(
+   let i=choices.length-1;
+   i>0;
+   i--
+  ){
+
+   const j=
+    Math.floor(
+     Math.random()*(i+1)
+    );
+
+
+   [
+    choices[i],
+    choices[j]
+   ]=[
+    choices[j],
+    choices[i]
+   ];
+
+  }
+
+
+  return choices;
+
+ }
+
+
+ /* 숫자 정답 */
+
+ const choices=[
+  answer
+ ];
 
  let attempts=0;
 
@@ -3408,85 +3610,75 @@ function makeChoices(answer,level){
   attempts++;
 
 
-  if(
-   typeof answer==="number"&&
-   Number.isFinite(answer)
-  ){
-
-   let range;
+  let range;
 
 
-   if(level==="kindergarten"){
+  if(level==="kindergarten"){
 
-    range=5;
+   range=5;
 
-   }
-   else if(level==="elementaryLow"){
+  }
+  else if(level==="elementaryLow"){
 
-    range=10;
+   range=10;
 
-   }
-   else if(level==="elementaryHigh"){
+  }
+  else if(level==="elementaryHigh"){
 
-    range=15;
+   range=15;
 
-   }
-   else if(level==="middle"){
+  }
+  else if(level==="middle"){
 
-    range=20;
+   range=20;
 
-   }
-   else if(level==="high"){
+  }
+  else if(level==="high"){
 
-    range=25;
+   range=25;
 
-   }
-   else{
+  }
+  else{
 
-    range=
-     Math.max(
-      2,
-      Math.round(
-       Math.abs(answer)*.25
-      )
-     );
-
-   }
-
-
-   let wrong=
-    answer+
-    randomChoice([
-     -1,1,-2,2,
-     -range,
-     range
-    ]);
-
-
-   if(!Number.isInteger(answer)){
-
-    wrong=
+   range=
+    Math.max(
+     2,
      Math.round(
-      wrong*100
-     )/100;
-
-   }
-
-
-   const duplicate=
-    choices.some(
-     value=>
-      Math.abs(
-       Number(value)-Number(wrong)
-      )<0.000001
+      Math.abs(answer)*.25
+     )
     );
 
+  }
 
-   if(!duplicate){
 
-    choices.push(wrong);
+  let wrong=
+   answer+
+   randomChoice([
+    -1,1,-2,2,
+    -range,range
+   ]);
 
-   }
+
+  if(
+   !Number.isInteger(answer)
+  ){
+
+   wrong=
+    Math.round(
+     wrong*100
+    )/100;
+
+  }
+
+
+  if(
+   !choices.some(
+    value=>
+     sameAnswer(value,wrong)
+   )
+  ){
+
+   choices.push(wrong);
 
   }
 
@@ -3496,21 +3688,29 @@ function makeChoices(answer,level){
  while(choices.length<5){
 
   let extra=
-   answer+
-   choices.length*7+
-   3;
+   typeof answer==="number"
+   ?answer+choices.length*7+3
+   :String(
+     choices.length+1
+    );
 
 
   while(
    choices.some(
     value=>
-     Math.abs(
-      Number(value)-Number(extra)
-     )<0.000001
+     sameAnswer(value,extra)
    )
   ){
 
-   extra+=7;
+   if(typeof extra==="number"){
+
+    extra+=7;
+
+   }else{
+
+    extra+=".";
+
+   }
 
   }
 
@@ -3549,6 +3749,35 @@ function makeChoices(answer,level){
 
 
 /* =====================================================
+   게임 상태
+===================================================== */
+
+function renderGameStatus(){
+
+ document.getElementById(
+  "gameScore"
+ ).textContent=
+  gameScore;
+
+ document.getElementById(
+  "questionTime"
+ ).textContent=
+  questionTime;
+
+ document.getElementById(
+  "gameSolved"
+ ).textContent=
+  gameSolved;
+
+ document.getElementById(
+  "wrongStreak"
+ ).textContent=
+  `${wrongStreak} / ${MAX_WRONG_STREAK}`;
+
+}
+
+
+/* =====================================================
    문제 표시
 ===================================================== */
 
@@ -3567,13 +3796,15 @@ function showQuestion(){
   ];
 
 
- document.getElementById("difficulty")
- .textContent=
+ document.getElementById(
+  "difficulty"
+ ).textContent=
   `${config.label} · 정답 +${config.score}점`;
 
 
- document.getElementById("question")
- .textContent=
+ document.getElementById(
+  "question"
+ ).textContent=
   currentQuestion.question;
 
 
@@ -3589,7 +3820,9 @@ function showQuestion(){
 
 
  const box=
-  document.getElementById("choices");
+  document.getElementById(
+   "choices"
+  );
 
 
  box.innerHTML="";
@@ -3630,8 +3863,9 @@ function showQuestion(){
  );
 
 
- document.getElementById("gameMessage")
- .textContent=
+ document.getElementById(
+  "gameMessage"
+ ).textContent=
   "정답을 선택하세요.";
 
 
@@ -3641,14 +3875,16 @@ function showQuestion(){
 
 
 /* =====================================================
-   문제별 20초
+   문제 20초 타이머
 ===================================================== */
 
 function startQuestionTimer(){
 
  if(questionTimer){
 
-  clearInterval(questionTimer);
+  clearInterval(
+   questionTimer
+  );
 
  }
 
@@ -3657,7 +3893,13 @@ function startQuestionTimer(){
   QUESTION_TIME;
 
 
- updateQuestionTimer();
+ renderGameStatus();
+
+
+ document.getElementById(
+  "questionTimerBar"
+ ).style.width=
+  "100%";
 
 
  questionTimer=
@@ -3666,12 +3908,27 @@ function startQuestionTimer(){
 
     questionTime--;
 
-    updateQuestionTimer();
+    renderGameStatus();
 
 
-    if(questionTime<=0){
+    document.getElementById(
+     "questionTimerBar"
+    ).style.width=
+     `${Math.max(
+      0,
+      questionTime/
+      QUESTION_TIME*
+      100
+     )}%`;
 
-     clearInterval(questionTimer);
+
+    if(
+     questionTime<=0
+    ){
+
+     clearInterval(
+      questionTimer
+     );
 
      questionTimer=null;
 
@@ -3686,24 +3943,9 @@ function startQuestionTimer(){
 }
 
 
-function updateQuestionTimer(){
-
- document.getElementById(
-  "questionTime"
- ).textContent=
-  questionTime;
-
-
- document.getElementById(
-  "questionTimerBar"
- ).style.width=
-  `${Math.max(
-   0,
-   questionTime/QUESTION_TIME*100
-  )}%`;
-
-}
-
+/* =====================================================
+   시간 초과 = 연속 오답 1회
+===================================================== */
 
 function questionTimeout(){
 
@@ -3719,10 +3961,37 @@ function questionTimeout(){
  );
 
 
+ wrongStreak++;
+
+ renderGameStatus();
+
+
+ if(
+  wrongStreak>=MAX_WRONG_STREAK
+ ){
+
+  document.getElementById(
+   "gameMessage"
+  ).textContent=
+   "⏰ 5번 연속 오답으로 게임 종료!";
+
+
+  setTimeout(
+   ()=>{
+    endMathGame();
+   },
+   450
+  );
+
+  return;
+
+ }
+
+
  document.getElementById(
   "gameMessage"
  ).textContent=
-  "⏰ 시간 초과! 다음 문제로 넘어갑니다.";
+  `⏰ 시간 초과! 연속 오답 ${wrongStreak}/${MAX_WRONG_STREAK}`;
 
 
  setTimeout(
@@ -3753,20 +4022,18 @@ function answerQuestion(
 
  if(questionTimer){
 
-  clearInterval(questionTimer);
+  clearInterval(
+   questionTimer
+  );
 
   questionTimer=null;
 
  }
 
 
- const buttons=
-  document.querySelectorAll(
-   ".choice-btn"
-  );
-
-
- buttons.forEach(
+ document.querySelectorAll(
+  ".choice-btn"
+ ).forEach(
   button=>{
    button.disabled=true;
   }
@@ -3778,10 +4045,10 @@ function answerQuestion(
 
 
  const correct=
-  Math.abs(
-   Number(selected)-
-   Number(currentQuestion.answer)
-  )<0.000001;
+  sameAnswer(
+   selected,
+   currentQuestion.answer
+  );
 
 
  if(correct){
@@ -3801,17 +4068,7 @@ function answerQuestion(
 
   gameSolved++;
 
-
-  document.getElementById(
-   "gameScore"
-  ).textContent=
-   gameScore;
-
-
-  document.getElementById(
-   "gameSolved"
-  ).textContent=
-   gameSolved;
+  wrongStreak=0;
 
 
   document.getElementById(
@@ -3827,25 +4084,45 @@ function answerQuestion(
   );
 
 
+  wrongStreak++;
+
+
   document.getElementById(
    "gameMessage"
   ).textContent=
-   `❌ 오답! 정답은 ${formatNumber(currentQuestion.answer)}입니다.`;
+   `❌ 오답! 정답은 ${formatNumber(currentQuestion.answer)} · 연속 오답 ${wrongStreak}/${MAX_WRONG_STREAK}`;
+
+ }
+
+
+ renderGameStatus();
+
+
+ if(
+  wrongStreak>=MAX_WRONG_STREAK
+ ){
+
+  setTimeout(
+   ()=>{
+    endMathGame();
+   },
+   500
+  );
+
+  return;
 
  }
 
 
  setTimeout(
   ()=>{
-
    if(gameRunning){
 
     showQuestion();
 
    }
-
   },
-  450
+  500
  );
 
 }
@@ -3883,22 +4160,14 @@ function startMathGame(){
 
  gameRunning=true;
 
- /* 게임 중 닉네임 입력 잠금 */
-
- document.getElementById(
-  "gameNickname"
- ).disabled=true;
-
-
  gameScore=0;
-
- gameTime=
-  GAME_TOTAL_TIME;
 
  questionTime=
   QUESTION_TIME;
 
  gameSolved=0;
+
+ wrongStreak=0;
 
  currentQuestion=null;
 
@@ -3908,23 +4177,11 @@ function startMathGame(){
  lastQuestionType=null;
 
 
- document.getElementById(
-  "gameScore"
- ).textContent="0";
+ /* 게임 중 닉네임 잠금 */
 
  document.getElementById(
-  "gameTime"
- ).textContent=
-  GAME_TOTAL_TIME;
-
- document.getElementById(
-  "questionTime"
- ).textContent=
-  QUESTION_TIME;
-
- document.getElementById(
-  "gameSolved"
- ).textContent="0";
+  "gameNickname"
+ ).disabled=true;
 
 
  document.getElementById(
@@ -3938,36 +4195,17 @@ function startMathGame(){
   "startGameBtn"
  ).disabled=true;
 
+
  document.getElementById(
   "startGameBtn"
  ).textContent=
   "게임 중...";
 
 
+ renderGameStatus();
+
+
  showQuestion();
-
-
- gameTimer=
-  setInterval(
-   ()=>{
-
-    gameTime--;
-
-    document.getElementById(
-     "gameTime"
-    ).textContent=
-     gameTime;
-
-
-    if(gameTime<=0){
-
-     endMathGame();
-
-    }
-
-   },
-   1000
-  );
 
 }
 
@@ -3984,29 +4222,15 @@ function endMathGame(){
  gameRunning=false;
 
 
- if(gameTimer){
-
-  clearInterval(gameTimer);
-
-  gameTimer=null;
-
- }
-
-
  if(questionTimer){
 
-  clearInterval(questionTimer);
+  clearInterval(
+   questionTimer
+  );
 
   questionTimer=null;
 
  }
-
-
- /* 게임이 끝나면 닉네임 다시 입력 가능 */
-
- document.getElementById(
-  "gameNickname"
- ).disabled=false;
 
 
  document.querySelectorAll(
@@ -4018,9 +4242,17 @@ function endMathGame(){
  );
 
 
+ /* 닉네임 다시 입력 가능 */
+
+ document.getElementById(
+  "gameNickname"
+ ).disabled=false;
+
+
  document.getElementById(
   "startGameBtn"
  ).disabled=false;
+
 
  document.getElementById(
   "startGameBtn"
@@ -4040,19 +4272,36 @@ function endMathGame(){
   "0%";
 
 
- document.getElementById(
-  "gameMessage"
- ).textContent=
-  "⏰ 전체 게임 시간이 끝났습니다!";
-
-
  const nickname=
   document.getElementById(
    "gameNickname"
   ).value.trim();
 
 
- if(gameScore>bestGameScore){
+ let endReason="";
+
+ if(wrongStreak>=MAX_WRONG_STREAK){
+
+  endReason=
+   "5번 연속 오답";
+
+ }else{
+
+  endReason=
+   "게임 종료";
+
+ }
+
+
+ document.getElementById(
+  "gameMessage"
+ ).textContent=
+  `게임 종료 · ${endReason}`;
+
+
+ if(
+  gameScore>bestGameScore
+ ){
 
   bestGameScore=
    gameScore;
@@ -4062,12 +4311,6 @@ function endMathGame(){
    BEST_KEY,
    String(bestGameScore)
   );
-
-
-  document.getElementById(
-   "gameBest"
-  ).textContent=
-   bestGameScore;
 
  }
 
@@ -4088,13 +4331,14 @@ function endMathGame(){
  document.getElementById(
   "resultInfo"
  ).textContent=
-  `${nickname}님 · ${gameSolved}문제 정답`;
+  `${nickname}님 · ${gameSolved}문제 정답 · ${endReason}`;
 
 
  saveRanking(
   nickname,
   gameScore
  );
+
 
 }
 
@@ -4141,7 +4385,9 @@ function saveRanking(
  ranking.push({
 
   name:nickname,
+
   score:score,
+
   time:Date.now()
 
  });
@@ -4173,9 +4419,6 @@ function renderRanking(){
   document.getElementById(
    "rankingBody"
   );
-
-
- if(!body)return;
 
 
  const ranking=
@@ -4219,7 +4462,7 @@ function renderRanking(){
 
 
 /* =====================================================
-   새로고침해도 현재 페이지 유지
+   페이지 복원
 ===================================================== */
 
 function restorePage(){
@@ -4242,11 +4485,16 @@ function restorePage(){
   validPages.includes(savedPage)
  ){
 
-  showPage(savedPage);
+  showPage(
+   savedPage
+  );
 
- }else{
+ }
+ else{
 
-  showPage("menuPage");
+  showPage(
+   "menuPage"
+  );
 
  }
 
