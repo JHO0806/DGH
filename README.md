@@ -16,8 +16,10 @@ body{
  overflow-x:hidden;
 }
 
+input,textarea,button{font:inherit}
+
 /* =========================
-   화면 고정 배경
+   배경
 ========================= */
 
 body::before{
@@ -31,6 +33,7 @@ body::before{
  z-index:-2;
 }
 
+
 /* =========================
    대광고 로고 애니메이션
 ========================= */
@@ -39,111 +42,163 @@ body::before{
  position:fixed;
  left:0;
  top:0;
- width:58px;
- height:58px;
+ width:68px;
+ height:68px;
  z-index:0;
  pointer-events:none;
- opacity:.105;
- filter:blur(.35px);
+ opacity:.14;
+ filter:blur(.2px);
  will-change:transform;
 }
 
-/* 화면 아래 → 오른쪽 위 대각선 → 화면 밖 */
+/* 회전 없음 */
 
 .logo-float-1{
- animation:moveLogo1 18s linear infinite;
- animation-delay:-2s;
+ animation:moveLogo1 17s linear infinite;
+ animation-delay:-1s;
 }
 
 .logo-float-2{
- width:48px;
- height:48px;
- animation:moveLogo2 21s linear infinite;
- animation-delay:-8s;
+ width:58px;
+ height:58px;
+ animation:moveLogo2 20s linear infinite;
+ animation-delay:-7s;
 }
 
 .logo-float-3{
- width:42px;
- height:42px;
- animation:moveLogo3 17s linear infinite;
- animation-delay:-13s;
+ width:52px;
+ height:52px;
+ animation:moveLogo3 18s linear infinite;
+ animation-delay:-12s;
 }
 
 .logo-float-4{
- width:52px;
- height:52px;
- animation:moveLogo4 23s linear infinite;
- animation-delay:-17s;
+ width:62px;
+ height:62px;
+ animation:moveLogo4 21s linear infinite;
+ animation-delay:-4s;
 }
 
 .logo-float-5{
- width:38px;
- height:38px;
- animation:moveLogo5 19s linear infinite;
- animation-delay:-10s;
+ width:48px;
+ height:48px;
+ animation:moveLogo5 16s linear infinite;
+ animation-delay:-9s;
 }
 
 .logo-float-6{
- width:46px;
- height:46px;
- animation:moveLogo6 25s linear infinite;
- animation-delay:-21s;
+ width:56px;
+ height:56px;
+ animation:moveLogo6 23s linear infinite;
+ animation-delay:-17s;
 }
 
-/* 서로 다른 시작 위치와 속도 */
+.logo-float-7{
+ width:64px;
+ height:64px;
+ animation:moveLogo7 19s linear infinite;
+ animation-delay:-14s;
+}
+
+.logo-float-8{
+ width:50px;
+ height:50px;
+ animation:moveLogo8 22s linear infinite;
+ animation-delay:-3s;
+}
+
+.logo-float-9{
+ width:60px;
+ height:60px;
+ animation:moveLogo9 18s linear infinite;
+ animation-delay:-6s;
+}
+
+.logo-float-10{
+ width:45px;
+ height:45px;
+ animation:moveLogo10 21s linear infinite;
+ animation-delay:-15s;
+}
+
+.logo-float-11{
+ width:54px;
+ height:54px;
+ animation:moveLogo11 17s linear infinite;
+ animation-delay:-11s;
+}
+
+.logo-float-12{
+ width:66px;
+ height:66px;
+ animation:moveLogo12 24s linear infinite;
+ animation-delay:-20s;
+}
+
+
+/* =========================
+   아래에서 오른쪽 위로 이동
+   모든 로고 정방향 고정
+========================= */
 
 @keyframes moveLogo1{
- 0%{
-  transform:translate3d(8vw,115vh,0) rotate(0deg);
- }
- 100%{
-  transform:translate3d(82vw,-20vh,0) rotate(360deg);
- }
+ 0%{transform:translate3d(3vw,118vh,0)}
+ 100%{transform:translate3d(78vw,-18vh,0)}
 }
 
 @keyframes moveLogo2{
- 0%{
-  transform:translate3d(30vw,118vh,0) rotate(-20deg);
- }
- 100%{
-  transform:translate3d(105vw,-18vh,0) rotate(340deg);
- }
+ 0%{transform:translate3d(18vw,120vh,0)}
+ 100%{transform:translate3d(102vw,-17vh,0)}
 }
 
 @keyframes moveLogo3{
- 0%{
-  transform:translate3d(52vw,120vh,0) rotate(15deg);
- }
- 100%{
-  transform:translate3d(118vw,-15vh,0) rotate(375deg);
- }
+ 0%{transform:translate3d(36vw,119vh,0)}
+ 100%{transform:translate3d(118vw,-15vh,0)}
 }
 
 @keyframes moveLogo4{
- 0%{
-  transform:translate3d(-8vw,116vh,0) rotate(0deg);
- }
- 100%{
-  transform:translate3d(75vw,-18vh,0) rotate(-330deg);
- }
+ 0%{transform:translate3d(-8vw,116vh,0)}
+ 100%{transform:translate3d(72vw,-18vh,0)}
 }
 
 @keyframes moveLogo5{
- 0%{
-  transform:translate3d(68vw,122vh,0) rotate(10deg);
- }
- 100%{
-  transform:translate3d(125vw,-12vh,0) rotate(370deg);
- }
+ 0%{transform:translate3d(52vw,121vh,0)}
+ 100%{transform:translate3d(125vw,-16vh,0)}
 }
 
 @keyframes moveLogo6{
- 0%{
-  transform:translate3d(18vw,120vh,0) rotate(-10deg);
- }
- 100%{
-  transform:translate3d(95vw,-20vh,0) rotate(350deg);
- }
+ 0%{transform:translate3d(8vw,120vh,0)}
+ 100%{transform:translate3d(93vw,-20vh,0)}
+}
+
+@keyframes moveLogo7{
+ 0%{transform:translate3d(67vw,120vh,0)}
+ 100%{transform:translate3d(128vw,-13vh,0)}
+}
+
+@keyframes moveLogo8{
+ 0%{transform:translate3d(27vw,122vh,0)}
+ 100%{transform:translate3d(111vw,-19vh,0)}
+}
+
+@keyframes moveLogo9{
+ 0%{transform:translate3d(-4vw,121vh,0)}
+ 100%{transform:translate3d(86vw,-16vh,0)}
+}
+
+@keyframes moveLogo10{
+ 0%{transform:translate3d(44vw,123vh,0)}
+ 100%{transform:translate3d(118vw,-18vh,0)}
+}
+
+@keyframes moveLogo11{
+ 0%{transform:translate3d(74vw,121vh,0)}
+ 100%{transform:translate3d(132vw,-14vh,0)}
+}
+
+@keyframes moveLogo12{
+ 0%{transform:translate3d(12vw,123vh,0)}
+ 100%{transform:translate3d(104vw,-21vh,0)}
 }
 
 
@@ -249,7 +304,7 @@ input,textarea{
 
 textarea{
  min-height:105px;
- resize:vertical;
+ resize:none;
 }
 
 input:focus,textarea:focus{
@@ -481,104 +536,188 @@ footer{
  }
 
  .logo-float{
-  opacity:.07;
+  opacity:.11;
  }
 
- .logo-float-1{width:46px;height:46px}
- .logo-float-2{width:40px;height:40px}
- .logo-float-3{width:35px;height:35px}
- .logo-float-4{width:43px;height:43px}
- .logo-float-5{width:32px;height:32px}
- .logo-float-6{width:38px;height:38px}
+ .logo-float-1{width:54px;height:54px}
+ .logo-float-2{width:47px;height:47px}
+ .logo-float-3{width:42px;height:42px}
+ .logo-float-4{width:50px;height:50px}
+ .logo-float-5{width:39px;height:39px}
+ .logo-float-6{width:45px;height:45px}
+ .logo-float-7{width:51px;height:51px}
+ .logo-float-8{width:41px;height:41px}
+ .logo-float-9{width:48px;height:48px}
+ .logo-float-10{width:37px;height:37px}
+ .logo-float-11{width:44px;height:44px}
+ .logo-float-12{width:52px;height:52px}
 }
 </style>
+
 </head>
 
 <body>
 
 <!-- =====================================================
-     화면에 고정되어 움직이는 대광고 실제 교표 스타일
-     SVG라 확대해도 깨지지 않음
+     움직이는 대광고 로고 12개
+     SVG 방식이라 확대/축소해도 깨지지 않음
 ====================================================== -->
 
 <div class="logo-float logo-float-1">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
- <circle cx="100" cy="100" r="94" fill="#8a2340"/>
- <circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
- <path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
- <path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
- <text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
- <text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
- <text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
- <text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-2">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
- <circle cx="100" cy="100" r="94" fill="#8a2340"/>
- <circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
- <path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
- <path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
- <text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
- <text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
- <text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
- <text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-3">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
- <circle cx="100" cy="100" r="94" fill="#8a2340"/>
- <circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
- <path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
- <path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
- <text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
- <text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
- <text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
- <text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-4">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
- <circle cx="100" cy="100" r="94" fill="#8a2340"/>
- <circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
- <path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
- <path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
- <text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
- <text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
- <text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
- <text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-5">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
- <circle cx="100" cy="100" r="94" fill="#8a2340"/>
- <circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
- <path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
- <path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
- <text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
- <text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
- <text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
- <text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
 <div class="logo-float logo-float-6">
 <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
- <circle cx="100" cy="100" r="94" fill="#8a2340"/>
- <circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
- <path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
- <path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
- <text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
- <text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
- <text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
- <text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
 </svg>
 </div>
 
+<div class="logo-float logo-float-7">
+<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+</svg>
+</div>
+
+<div class="logo-float logo-float-8">
+<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+</svg>
+</div>
+
+<div class="logo-float logo-float-9">
+<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+</svg>
+</div>
+
+<div class="logo-float logo-float-10">
+<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+</svg>
+</div>
+
+<div class="logo-float logo-float-11">
+<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+</svg>
+</div>
+
+<div class="logo-float logo-float-12">
+<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="94" fill="#8a2340"/>
+<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>
+<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>
+<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="13" font-weight="700">LUX ET SAL</text>
+<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>
+<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>
+<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>
+</svg>
+</div>
 
 <!-- =========================
      헤더
@@ -611,9 +750,8 @@ footer{
 
 </header>
 
-
 <!-- =========================
-     본문
+     방문록 입력
 ========================= -->
 
 <main>
@@ -625,16 +763,18 @@ footer{
 <div class="grid">
 
 <input
- id="name"
- maxlength="30"
- placeholder="이름 또는 닉네임"
+id="name"
+maxlength="30"
+placeholder="이름 또는 닉네임"
+
 >
 
 <input
- id="password"
- type="password"
- maxlength="30"
- placeholder="수정·삭제용 비밀번호"
+id="password"
+type="password"
+maxlength="30"
+placeholder="수정·삭제용 비밀번호"
+
 >
 
 <textarea
@@ -660,6 +800,9 @@ footer{
 
 </section>
 
+<!-- =========================
+     방문록 목록
+========================= -->
 
 <section class="panel">
 
@@ -674,7 +817,6 @@ footer{
 
 </main>
 
-
 <!-- =========================
      비밀번호 모달
 ========================= -->
@@ -688,9 +830,10 @@ footer{
 </h3>
 
 <input
- id="checkPw"
- type="password"
- placeholder="비밀번호"
+id="checkPw"
+type="password"
+placeholder="비밀번호"
+
 >
 
 <div id="pwError" class="error"></div>
@@ -698,11 +841,12 @@ footer{
 <div class="actions">
 
 <button
- class="secondary"
- onclick="closeModal()"
+class="secondary"
+onclick="closeModal()"
+
 >
-취소
-</button>
+
+취소 </button>
 
 <button onclick="confirmPassword()">
 확인
@@ -713,7 +857,6 @@ footer{
 </div>
 
 </div>
-
 
 <script>
 
@@ -777,13 +920,17 @@ function escapeHTML(s){
 
  return String(s).replace(
   /[&<>"']/g,
+
   c=>({
+
    "&":"&amp;",
    "<":"&lt;",
    ">":"&gt;",
    '"':"&quot;",
    "'":"&#039;"
+
   }[c])
+
  );
 
 }
@@ -871,7 +1018,7 @@ function addEntry(){
 
 
 /* ================================
-   좋아요 데이터
+   좋아요 데이터 형식
 ================================ */
 
 function normalizeLikes(id){
@@ -917,7 +1064,6 @@ function normalizeLikes(id){
 
 /* ================================
    좋아요 추가
-   누를 때마다 +1
 ================================ */
 
 function addLike(id){
@@ -1009,7 +1155,6 @@ function cancelLike(id){
   data.count=0;
 
  }
-
 
  saveLikes();
 
@@ -1127,7 +1272,10 @@ function render(){
     </div>
 
     <div class="time">
-    작성: ${formatDate(e.createdAt)}
+
+    작성:
+    ${formatDate(e.createdAt)}
+
     ${
      e.updatedAt
      ?
@@ -1135,6 +1283,7 @@ function render(){
      :
      ""
     }
+
     </div>
 
    </div>
@@ -1198,7 +1347,7 @@ function render(){
 
 
 /* ================================
-   수정 / 삭제 요청
+   수정 / 삭제
 ================================ */
 
 function requestAction(action,id){
@@ -1212,7 +1361,6 @@ function requestAction(action,id){
 
  document.getElementById("pwError").textContent="";
 
-
  document.getElementById("modalTitle")
  .textContent =
  action==="edit"
@@ -1221,10 +1369,8 @@ function requestAction(action,id){
  :
  "삭제를 위한 비밀번호 확인";
 
-
  document.getElementById("modal")
  .classList.add("show");
-
 
  setTimeout(
   ()=>{
@@ -1238,10 +1384,6 @@ function requestAction(action,id){
 }
 
 
-/* ================================
-   모달 닫기
-================================ */
-
 function closeModal(){
 
  pending=null;
@@ -1253,10 +1395,6 @@ function closeModal(){
 
 }
 
-
-/* ================================
-   비밀번호 확인
-================================ */
 
 function confirmPassword(){
 
@@ -1301,8 +1439,6 @@ function confirmPassword(){
  closeModal();
 
 
- /* 삭제 */
-
  if(action==="delete"){
 
   if(
@@ -1328,8 +1464,6 @@ function confirmPassword(){
 
  }
 
-
- /* 수정 */
 
  else{
 
@@ -1429,7 +1563,7 @@ document.addEventListener(
 
 
 /* ================================
-   좋아요 7초 타이머
+   좋아요 취소 타이머
 ================================ */
 
 setInterval(
@@ -1450,3 +1584,4 @@ render();
 
 </body>
 </html>
+```
