@@ -1,1 +1,1266 @@
-<html lang="ko"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>대광고등학교 큰빛축제 방문록</title> <style> *{box-sizing:border-box}html,body{margin:0;padding:0} body{font-family:"Malgun Gothic","Noto Sans KR",sans-serif;background:#eef3f8;color:#172033;user-select:none} input,textarea,button{font:inherit} .hero{background:linear-gradient(135deg,#0b2d59,#155aa2);color:#fff;padding:28px 18px 34px;box-shadow:0 4px 16px #0002} .top{max-width:1050px;margin:auto;display:flex;align-items:center;gap:18px} .logo{width:78px;height:78px;border:3px solid #fff;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;box-shadow:0 3px 10px #0004} .mark{color:#0b3b78;font-weight:900;font-size:25px;line-height:1;text-align:center}.mark small{display:block;font-size:8px;letter-spacing:1px;margin-top:3px} h1{margin:0;font-size:30px}.sub{margin-top:7px;opacity:.9} main{max-width:1050px;margin:24px auto;padding:0 14px} .panel{background:#fff;border-radius:18px;padding:20px;box-shadow:0 4px 18px #173b5b14;margin-bottom:20px} .panel h2{margin:0 0 15px;font-size:20px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px} input,textarea{width:100%;border:1px solid #cdd7e3;border-radius:10px;padding:12px;outline:none;user-select:text;background:#fff} textarea{min-height:105px;resize:vertical}input:focus,textarea:focus{border-color:#236ab5;box-shadow:0 0 0 3px #236ab51a} .full{grid-column:1/-1} button{border:0;border-radius:10px;padding:11px 18px;cursor:pointer;background:#0d4f91;color:#fff;font-weight:700} button.secondary{background:#e9eef5;color:#20334b}button.danger{background:#c53c45} .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px;flex-wrap:wrap} .hint{font-size:13px;color:#66768a;margin-top:8px}.entry{border:1px solid #dce4ed;border-radius:15px;padding:17px;margin-top:12px;background:#fbfdff} .entry-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.name{font-weight:800;font-size:17px}.time{font-size:12px;color:#6a7888} .content{white-space:pre-wrap;line-height:1.65;margin:12px 0}.tag{display:inline-block;background:#e8f1fb;color:#14528c;border-radius:999px;padding:4px 9px;font-size:12px} .empty{text-align:center;color:#7b8795;padding:35px 10px} .modal{position:fixed;inset:0;background:#07162699;display:none;align-items:center;justify-content:center;padding:18px;z-index:10} .modal.show{display:flex}.modal-card{background:#fff;border-radius:17px;padding:22px;width:min(430px,100%);box-shadow:0 15px 50px #0005} .modal-card h3{margin-top:0}.error{color:#c53c45;font-size:13px;margin-top:8px;min-height:18px} footer{text-align:center;color:#748196;font-size:12px;padding:8px 20px 30px} .master{margin-top:10px;padding:12px;background:#fff7e8;border:1px solid #f0d49b;border-radius:10px;font-size:13px;color:#77551b} /* 좋아요 */ .like-btn{ background:#fff; color:#c53c45; border:1px solid #dce4ed; padding:8px 13px; border-radius:10px; font-weight:700; transition:.15s; } .like-btn:hover{ background:#fff1f2; } .like-btn.liked{ background:#ffe5e8; color:#c53c45; border-color:#f2b8bf; } @media(max-width:650px){ .grid{grid-template-columns:1fr} .full{grid-column:auto} h1{font-size:23px} .logo{width:65px;height:65px} } </style> </head> <body> <header class="hero"> <div class="top"> <div class="logo"> <div class="mark">大光<small>DAE KWANG</small></div> </div> <div> <h1>대광고등학교 큰빛축제</h1> <div class="sub">우리들의 축제, 우리들의 기록 · 큰빛축제 방문록</div> </div> </div> </header> <main> <section class="panel"> <h2>✍️ 방문록 남기기</h2> <div class="grid"> <input id="name" maxlength="30" placeholder="이름 또는 닉네임"> <input id="password" type="password" maxlength="30" placeholder="수정·삭제용 비밀번호"> <textarea id="message" class="full" maxlength="1000" placeholder="큰빛축제에서 느낀 점을 남겨보세요."></textarea> </div> <div class="actions"> <button onclick="addEntry()">방문록 등록</button> </div> <div class="hint"> ※ 작성할 때 입력한 비밀번호로 본인 글을 수정·삭제할 수 있습니다. </div> </section> <section class="panel"> <h2> 📖 큰빛축제 방문록 <span id="count" class="tag">0개</span> </h2> <div id="entries"></div> </section> </main> <div id="modal" class="modal"> <div class="modal-card"> <h3 id="modalTitle">비밀번호 확인</h3> <input id="checkPw" type="password" placeholder="비밀번호"> <div id="pwError" class="error"></div> <div class="actions"> <button class="secondary" onclick="closeModal()">취소</button> <button onclick="confirmPassword()">확인</button> </div> </div> </div> <script> const STORAGE_KEY="daekwang_bigbit_festival_guestbook_v2"; const LIKE_KEY="daekwang_bigbit_festival_likes_v1"; const MASTER_PASSWORD="20100806"; let entries=JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]"); let likes=JSON.parse(localStorage.getItem(LIKE_KEY)||"{}"); let pending=null; /* 방문록 저장 */ function save(){ localStorage.setItem( STORAGE_KEY, JSON.stringify(entries) ); } /* 좋아요 저장 */ function saveLikes(){ localStorage.setItem( LIKE_KEY, JSON.stringify(likes) ); } /* HTML 특수문자 처리 */ function escapeHTML(s){ return String(s).replace( /[&<>"']/g, c=>({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;" }[c]) ); } /* 날짜 */ function formatDate(iso){ const d=new Date(iso); const p=n=>String(n).padStart(2,"0"); return `${d.getFullYear()}년 ${p(d.getMonth()+1)}월 ${p(d.getDate())}일 ${p(d.getHours())}시 ${p(d.getMinutes())}분 ${p(d.getSeconds())}초`; } /* 방문록 등록 */ function addEntry(){ const name= document.getElementById("name").value.trim(); const pw= document.getElementById("password").value; const message= document.getElementById("message").value.trim(); if(!name||!pw||!message){ alert("이름(닉네임), 비밀번호, 내용을 모두 입력해주세요."); return; } const id= crypto.randomUUID ? crypto.randomUUID() : String(Date.now()+Math.random()); entries.unshift({ id:id, name:name, message:message, password:pw, createdAt:new Date().toISOString() }); save(); render(); document.getElementById("name").value=""; document.getElementById("password").value=""; document.getElementById("message").value=""; } /* 좋아요 */ function toggleLike(id){ if(!likes[id]){ likes[id]=1; }else{ likes[id]=likes[id]===1?0:1; } saveLikes(); render(); } /* 방문록 출력 */ function render(){ const box= document.getElementById("entries"); document.getElementById("count").textContent= `${entries.length}개`; if(!entries.length){ box.innerHTML= '<div class="empty">아직 등록된 방문록이 없습니다.<br>첫 번째 기록을 남겨보세요!</div>'; return; } box.innerHTML= entries.map(e=>{ const liked=likes[e.id]===1; return ` <article class="entry"> <div class="entry-head"> <div class="name"> ${escapeHTML(e.name)} </div> <div class="time"> 작성: ${formatDate(e.createdAt)} ${e.updatedAt ? `<br>수정: ${formatDate(e.updatedAt)}` : "" } </div> </div> <div class="content"> ${escapeHTML(e.message)} </div> <div class="actions"> <button class="like-btn ${liked?"liked":""}" onclick="toggleLike('${e.id}')" > ${liked?"❤️":"🤍"} 좋아요 </button> <span style=" display:flex; align-items:center; padding:0 4px; font-size:13px; color:#66768a; " > ${liked?"1":"0"} </span> <button class="secondary" onclick="requestAction('edit','${e.id}')" > 수정 </button> <button class="danger" onclick="requestAction('delete','${e.id}')" > 삭제 </button> </div> </article> `; }).join(""); } /* 수정/삭제 요청 */ function requestAction(action,id){ pending={ action:action, id:id }; document.getElementById("checkPw").value=""; document.getElementById("pwError").textContent=""; document.getElementById("modalTitle").textContent= action==="edit" ? "수정을 위한 비밀번호 확인" : "삭제를 위한 비밀번호 확인"; document.getElementById("modal").classList.add("show"); setTimeout( ()=>{ document.getElementById("checkPw").focus(); }, 50 ); } /* 모달 닫기 */ function closeModal(){ pending=null; document.getElementById("modal").classList.remove("show"); } /* 비밀번호 확인 */ function confirmPassword(){ if(!pending)return; const e= entries.find(x=>x.id===pending.id); const pw= document.getElementById("checkPw").value; if( !e|| !(pw===e.password||pw===MASTER_PASSWORD) ){ document.getElementById("pwError").textContent= "비밀번호가 올바르지 않습니다."; return; } const action=pending.action; const id=pending.id; closeModal(); /* 삭제 */ if(action==="delete"){ if( confirm("이 방문록을 삭제할까요?") ){ entries= entries.filter(x=>x.id!==id); /* 삭제된 글의 좋아요도 같이 삭제 */ delete likes[id]; save(); saveLikes(); render(); } }else{ /* 수정 */ const target= entries.find(x=>x.id===id); const newName= prompt( "이름 또는 닉네임", target.name ); if(newName===null)return; const newMessage= prompt( "방문록 내용", target.message ); if(newMessage===null)return; if( !newName.trim()|| !newMessage.trim() ){ alert("내용을 비워둘 수 없습니다."); return; } target.name= newName.trim(); target.message= newMessage.trim(); target.updatedAt= new Date().toISOString(); save(); render(); } } /* 모달 바깥 클릭 */ document .getElementById("modal") .addEventListener( "click", e=>{ if(e.target.id==="modal"){ closeModal(); } } ); /* ESC */ document.addEventListener( "keydown", e=>{ if(e.key==="Escape"){ closeModal(); } } ); /* 시작 */ render(); </script> </body> </html>
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>대광고등학교 큰빛축제 방문록</title>
+
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+ font-family:"Malgun Gothic","Noto Sans KR",sans-serif;
+ background:#eef3f8;
+ color:#172033;
+ user-select:none
+}
+input,textarea,button{font:inherit}
+
+.hero{
+ background:linear-gradient(135deg,#0b2d59,#155aa2);
+ color:#fff;
+ padding:28px 18px 34px;
+ box-shadow:0 4px 16px #0002
+}
+
+.top{
+ max-width:1050px;
+ margin:auto;
+ display:flex;
+ align-items:center;
+ gap:18px
+}
+
+.logo{
+ width:78px;
+ height:78px;
+ border:3px solid #fff;
+ border-radius:50%;
+ background:#fff;
+ display:grid;
+ place-items:center;
+ flex:none;
+ box-shadow:0 3px 10px #0004
+}
+
+.mark{
+ color:#0b3b78;
+ font-weight:900;
+ font-size:25px;
+ line-height:1;
+ text-align:center
+}
+
+.mark small{
+ display:block;
+ font-size:8px;
+ letter-spacing:1px;
+ margin-top:3px
+}
+
+h1{
+ margin:0;
+ font-size:30px
+}
+
+.sub{
+ margin-top:7px;
+ opacity:.9
+}
+
+main{
+ max-width:1050px;
+ margin:24px auto;
+ padding:0 14px
+}
+
+.panel{
+ background:#fff;
+ border-radius:18px;
+ padding:20px;
+ box-shadow:0 4px 18px #173b5b14;
+ margin-bottom:20px
+}
+
+.panel h2{
+ margin:0 0 15px;
+ font-size:20px
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px
+}
+
+input,textarea{
+ width:100%;
+ border:1px solid #cdd7e3;
+ border-radius:10px;
+ padding:12px;
+ outline:none;
+ user-select:text;
+ background:#fff
+}
+
+textarea{
+ min-height:105px;
+ resize:vertical
+}
+
+input:focus,textarea:focus{
+ border-color:#236ab5;
+ box-shadow:0 0 0 3px #236ab51a
+}
+
+.full{
+ grid-column:1/-1
+}
+
+button{
+ border:0;
+ border-radius:10px;
+ padding:11px 18px;
+ cursor:pointer;
+ background:#0d4f91;
+ color:#fff;
+ font-weight:700
+}
+
+button.secondary{
+ background:#e9eef5;
+ color:#20334b
+}
+
+button.danger{
+ background:#c53c45
+}
+
+.actions{
+ display:flex;
+ gap:8px;
+ justify-content:flex-end;
+ margin-top:12px;
+ flex-wrap:wrap
+}
+
+.hint{
+ font-size:13px;
+ color:#66768a;
+ margin-top:8px
+}
+
+.entry{
+ border:1px solid #dce4ed;
+ border-radius:15px;
+ padding:17px;
+ margin-top:12px;
+ background:#fbfdff
+}
+
+.entry-head{
+ display:flex;
+ justify-content:space-between;
+ gap:10px;
+ align-items:center
+}
+
+.name{
+ font-weight:800;
+ font-size:17px
+}
+
+.time{
+ font-size:12px;
+ color:#6a7888
+}
+
+.content{
+ white-space:pre-wrap;
+ line-height:1.65;
+ margin:12px 0
+}
+
+.tag{
+ display:inline-block;
+ background:#e8f1fb;
+ color:#14528c;
+ border-radius:999px;
+ padding:4px 9px;
+ font-size:12px
+}
+
+.empty{
+ text-align:center;
+ color:#7b8795;
+ padding:35px 10px
+}
+
+.modal{
+ position:fixed;
+ inset:0;
+ background:#07162699;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ padding:18px;
+ z-index:10
+}
+
+.modal.show{
+ display:flex
+}
+
+.modal-card{
+ background:#fff;
+ border-radius:17px;
+ padding:22px;
+ width:min(430px,100%);
+ box-shadow:0 15px 50px #0005
+}
+
+.modal-card h3{
+ margin-top:0
+}
+
+.error{
+ color:#c53c45;
+ font-size:13px;
+ margin-top:8px;
+ min-height:18px
+}
+
+footer{
+ text-align:center;
+ color:#748196;
+ font-size:12px;
+ padding:8px 20px 30px
+}
+
+.master{
+ margin-top:10px;
+ padding:12px;
+ background:#fff7e8;
+ border:1px solid #f0d49b;
+ border-radius:10px;
+ font-size:13px;
+ color:#77551b
+}
+
+
+/* =========================
+   좋아요
+   ========================= */
+
+.like-area{
+ display:flex;
+ align-items:center;
+ gap:8px;
+ flex-wrap:wrap
+}
+
+.like-btn{
+ background:#fff;
+ color:#c53c45;
+ border:1px solid #dce4ed;
+ padding:9px 14px;
+ border-radius:10px;
+ font-weight:700;
+ cursor:pointer;
+ transition:.15s
+}
+
+.like-btn:hover{
+ background:#fff1f2
+}
+
+.like-count{
+ min-width:30px;
+ text-align:center;
+ font-size:14px;
+ font-weight:700;
+ color:#c53c45
+}
+
+.cancel-like{
+ background:#e9eef5;
+ color:#20334b;
+ border:0;
+ padding:9px 14px;
+ border-radius:10px;
+ font-weight:700;
+ cursor:pointer
+}
+
+.cancel-like:disabled{
+ background:#f0f2f5;
+ color:#a0a8b2;
+ cursor:not-allowed
+}
+
+
+/* 모바일 */
+
+@media(max-width:650px){
+
+ .grid{
+  grid-template-columns:1fr
+ }
+
+ .full{
+  grid-column:auto
+ }
+
+ h1{
+  font-size:23px
+ }
+
+ .logo{
+  width:65px;
+  height:65px
+ }
+
+ .like-area{
+  width:100%
+ }
+
+}
+</style>
+</head>
+
+
+<body>
+
+<header class="hero">
+
+<div class="top">
+
+<div class="logo">
+
+<div class="mark">
+大光
+<small>DAE KWANG</small>
+</div>
+
+</div>
+
+<div>
+
+<h1>대광고등학교 큰빛축제</h1>
+
+<div class="sub">
+우리들의 축제, 우리들의 기록 · 큰빛축제 방문록
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main>
+
+
+<section class="panel">
+
+<h2>✍️ 방문록 남기기</h2>
+
+<div class="grid">
+
+<input
+ id="name"
+ maxlength="30"
+ placeholder="이름 또는 닉네임"
+>
+
+<input
+ id="password"
+ type="password"
+ maxlength="30"
+ placeholder="수정·삭제용 비밀번호"
+>
+
+<textarea
+ id="message"
+ class="full"
+ maxlength="1000"
+ placeholder="큰빛축제에서 느낀 점을 남겨보세요."
+></textarea>
+
+</div>
+
+
+<div class="actions">
+
+<button onclick="addEntry()">
+방문록 등록
+</button>
+
+</div>
+
+
+<div class="hint">
+※ 작성할 때 입력한 비밀번호로 본인 글을 수정·삭제할 수 있습니다.
+</div>
+
+</section>
+
+
+
+<section class="panel">
+
+<h2>
+📖 큰빛축제 방문록
+<span id="count" class="tag">0개</span>
+</h2>
+
+<div id="entries"></div>
+
+</section>
+
+</main>
+
+
+
+<!-- 비밀번호 모달 -->
+
+<div id="modal" class="modal">
+
+<div class="modal-card">
+
+<h3 id="modalTitle">
+비밀번호 확인
+</h3>
+
+<input
+ id="checkPw"
+ type="password"
+ placeholder="비밀번호"
+>
+
+<div
+ id="pwError"
+ class="error"
+></div>
+
+<div class="actions">
+
+<button
+ class="secondary"
+ onclick="closeModal()"
+>
+취소
+</button>
+
+<button onclick="confirmPassword()">
+확인
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+/* ========================================================
+   기본 설정
+   ======================================================== */
+
+const STORAGE_KEY =
+"daekwang_bigbit_festival_guestbook_v2";
+
+const LIKE_KEY =
+"daekwang_bigbit_festival_likes_v2";
+
+const MASTER_PASSWORD =
+"20100806";
+
+
+/* ========================================================
+   방문록
+   ======================================================== */
+
+let entries =
+JSON.parse(
+ localStorage.getItem(STORAGE_KEY) || "[]"
+);
+
+
+/* ========================================================
+   좋아요 정보
+
+   likes[id] = 총 좋아요 개수
+
+   likeTimes[id] =
+   좋아요를 누른 시간들의 배열
+   ======================================================== */
+
+let likes =
+JSON.parse(
+ localStorage.getItem(LIKE_KEY) || "{}"
+);
+
+
+let pending=null;
+
+
+/* ========================================================
+   저장
+   ======================================================== */
+
+function save(){
+
+ localStorage.setItem(
+  STORAGE_KEY,
+  JSON.stringify(entries)
+ );
+
+}
+
+
+function saveLikes(){
+
+ localStorage.setItem(
+  LIKE_KEY,
+  JSON.stringify(likes)
+ );
+
+}
+
+
+/* ========================================================
+   HTML 특수문자 처리
+   ======================================================== */
+
+function escapeHTML(s){
+
+ return String(s).replace(
+  /[&<>"']/g,
+
+  c=>({
+
+   "&":"&amp;",
+   "<":"&lt;",
+   ">":"&gt;",
+   '"':"&quot;",
+   "'":"&#039;"
+
+  }[c])
+
+ );
+
+}
+
+
+/* ========================================================
+   날짜
+   ======================================================== */
+
+function formatDate(iso){
+
+ const d=new Date(iso);
+
+ const p=n =>
+ String(n).padStart(2,"0");
+
+ return `${d.getFullYear()}년 ${p(d.getMonth()+1)}월 ${p(d.getDate())}일 ${p(d.getHours())}시 ${p(d.getMinutes())}분 ${p(d.getSeconds())}초`;
+
+}
+
+
+/* ========================================================
+   방문록 등록
+   ======================================================== */
+
+function addEntry(){
+
+ const name =
+ document.getElementById("name")
+ .value
+ .trim();
+
+ const pw =
+ document.getElementById("password")
+ .value;
+
+ const message =
+ document.getElementById("message")
+ .value
+ .trim();
+
+
+ if(!name || !pw || !message){
+
+  alert(
+   "이름(닉네임), 비밀번호, 내용을 모두 입력해주세요."
+  );
+
+  return;
+
+ }
+
+
+ const id =
+ crypto.randomUUID
+ ?
+ crypto.randomUUID()
+ :
+ String(Date.now()+Math.random());
+
+
+ entries.unshift({
+
+  id:id,
+
+  name:name,
+
+  message:message,
+
+  password:pw,
+
+  createdAt:new Date().toISOString()
+
+ });
+
+
+ save();
+
+ render();
+
+
+ document.getElementById("name").value="";
+
+ document.getElementById("password").value="";
+
+ document.getElementById("message").value="";
+
+}
+
+
+/* ========================================================
+   좋아요 1회 추가
+
+   중요:
+   다시 눌러도 취소되지 않음.
+   누를 때마다 +1.
+   ======================================================== */
+
+function addLike(id){
+
+ if(!likes[id]){
+
+  likes[id]={
+   count:0,
+   times:[]
+  };
+
+ }
+
+
+ /* 예전 형식의 데이터가 있을 경우 대비 */
+
+ if(
+  typeof likes[id]==="number"
+ ){
+
+  likes[id]={
+   count:likes[id],
+   times:[]
+  };
+
+ }
+
+
+ likes[id].count++;
+
+ likes[id].times.push(
+  Date.now()
+ );
+
+
+ saveLikes();
+
+ render();
+
+}
+
+
+/* ========================================================
+   좋아요 취소 가능 여부
+
+   좋아요를 누른 뒤 7초가 지나야
+   취소할 수 있음.
+   ======================================================== */
+
+const LIKE_CANCEL_DELAY=7000;
+
+
+function canCancelLike(id){
+
+ if(!likes[id])return false;
+
+ if(!likes[id].times)return false;
+
+ const now=Date.now();
+
+ return likes[id].times.some(
+  t => now-t >= LIKE_CANCEL_DELAY
+ );
+
+}
+
+
+/* ========================================================
+   가장 먼저 7초가 지난 좋아요의 취소
+
+   한 번 취소할 때 좋아요 -1
+   ======================================================== */
+
+function cancelLike(id){
+
+ if(!likes[id])return;
+
+ if(!likes[id].times)return;
+
+ const now=Date.now();
+
+
+ const index =
+ likes[id].times.findIndex(
+  t => now-t >= LIKE_CANCEL_DELAY
+ );
+
+
+ if(index===-1){
+
+  alert(
+   "좋아요를 누른 후 7초가 지나야 취소할 수 있습니다."
+  );
+
+  return;
+
+ }
+
+
+ /* 해당 좋아요 하나 제거 */
+
+ likes[id].times.splice(index,1);
+
+ likes[id].count--;
+
+
+ if(likes[id].count<0){
+  likes[id].count=0;
+ }
+
+
+ saveLikes();
+
+ render();
+
+}
+
+
+/* ========================================================
+   취소 버튼에 표시할 문구
+   ======================================================== */
+
+function getCancelText(id){
+
+ if(!likes[id]||
+    !likes[id].times||
+    !likes[id].times.length){
+
+  return "좋아요 취소";
+
+ }
+
+
+ const now=Date.now();
+
+
+ /* 이미 취소 가능한 좋아요가 있는 경우 */
+
+ if(
+  likes[id].times.some(
+   t=>now-t>=LIKE_CANCEL_DELAY
+  )
+ ){
+
+  return "좋아요 취소";
+
+ }
+
+
+ /* 가장 빨리 취소 가능한 시간 계산 */
+
+ const earliest =
+ Math.min(...likes[id].times);
+
+ const remain =
+ Math.max(
+  0,
+  Math.ceil(
+   (LIKE_CANCEL_DELAY-(now-earliest))/1000
+  )
+ );
+
+
+ return `${remain}초 후 취소`;
+
+}
+
+
+/* ========================================================
+   방문록 화면
+   ======================================================== */
+
+function render(){
+
+ const box =
+ document.getElementById("entries");
+
+
+ document.getElementById("count")
+ .textContent =
+ `${entries.length}개`;
+
+
+ if(!entries.length){
+
+  box.innerHTML=
+  `
+  <div class="empty">
+  아직 등록된 방문록이 없습니다.<br>
+  첫 번째 기록을 남겨보세요!
+  </div>
+  `;
+
+  return;
+
+ }
+
+
+ box.innerHTML =
+ entries.map(e=>{
+
+
+  /* 좋아요 데이터 */
+
+  let likeData =
+  likes[e.id];
+
+
+  if(!likeData){
+
+   likeData={
+    count:0,
+    times:[]
+   };
+
+  }
+
+
+  if(typeof likeData==="number"){
+
+   likeData={
+    count:likeData,
+    times:[]
+   };
+
+  }
+
+
+  const likeCount =
+  likeData.count || 0;
+
+
+  const cancelAvailable =
+  canCancelLike(e.id);
+
+
+  const cancelText =
+  getCancelText(e.id);
+
+
+  return `
+
+  <article class="entry">
+
+
+   <div class="entry-head">
+
+    <div class="name">
+
+    ${escapeHTML(e.name)}
+
+    </div>
+
+
+    <div class="time">
+
+    작성:
+    ${formatDate(e.createdAt)}
+
+    ${
+     e.updatedAt
+     ?
+     `<br>수정: ${formatDate(e.updatedAt)}`
+     :
+     ""
+    }
+
+    </div>
+
+   </div>
+
+
+
+   <div class="content">
+
+   ${escapeHTML(e.message)}
+
+   </div>
+
+
+
+   <div class="actions">
+
+
+    <!-- 좋아요 영역 -->
+
+    <div class="like-area">
+
+
+     <button
+      class="like-btn"
+      onclick="addLike('${e.id}')"
+     >
+      ❤️ 좋아요
+     </button>
+
+
+     <span class="like-count">
+      ${likeCount}
+     </span>
+
+
+     <button
+      class="cancel-like"
+      onclick="cancelLike('${e.id}')"
+      ${cancelAvailable?"":"disabled"}
+     >
+      ${cancelText}
+     </button>
+
+
+    </div>
+
+
+
+    <!-- 기존 수정 -->
+
+    <button
+     class="secondary"
+     onclick="requestAction('edit','${e.id}')"
+    >
+    수정
+    </button>
+
+
+
+    <!-- 기존 삭제 -->
+
+    <button
+     class="danger"
+     onclick="requestAction('delete','${e.id}')"
+    >
+    삭제
+    </button>
+
+
+   </div>
+
+
+  </article>
+
+  `;
+
+ }).join("");
+
+}
+
+
+/* ========================================================
+   수정 / 삭제 요청
+   ======================================================== */
+
+function requestAction(action,id){
+
+ pending={
+  action:action,
+  id:id
+ };
+
+
+ document.getElementById("checkPw").value="";
+
+ document.getElementById("pwError").textContent="";
+
+
+ document.getElementById("modalTitle")
+ .textContent =
+ action==="edit"
+ ?
+ "수정을 위한 비밀번호 확인"
+ :
+ "삭제를 위한 비밀번호 확인";
+
+
+ document.getElementById("modal")
+ .classList.add("show");
+
+
+ setTimeout(
+  ()=>{
+   document
+   .getElementById("checkPw")
+   .focus();
+  },
+  50
+ );
+
+}
+
+
+/* ========================================================
+   모달 닫기
+   ======================================================== */
+
+function closeModal(){
+
+ pending=null;
+
+ document
+ .getElementById("modal")
+ .classList
+ .remove("show");
+
+}
+
+
+/* ========================================================
+   비밀번호 확인
+   ======================================================== */
+
+function confirmPassword(){
+
+ if(!pending)return;
+
+
+ const e =
+ entries.find(
+  x=>x.id===pending.id
+ );
+
+
+ const pw =
+ document.getElementById("checkPw")
+ .value;
+
+
+ if(
+  !e ||
+  !(pw===e.password ||
+    pw===MASTER_PASSWORD)
+ ){
+
+  document
+  .getElementById("pwError")
+  .textContent =
+  "비밀번호가 올바르지 않습니다.";
+
+  return;
+
+ }
+
+
+ const action =
+ pending.action;
+
+ const id =
+ pending.id;
+
+
+ closeModal();
+
+
+ /* ======================================================
+    삭제
+    ====================================================== */
+
+ if(action==="delete"){
+
+  if(
+   confirm(
+    "이 방문록을 삭제할까요?"
+   )
+  ){
+
+   entries =
+   entries.filter(
+    x=>x.id!==id
+   );
+
+
+   /* 해당 글의 좋아요도 제거 */
+
+   delete likes[id];
+
+
+   save();
+
+   saveLikes();
+
+   render();
+
+  }
+
+ }
+
+
+ /* ======================================================
+    수정
+    ====================================================== */
+
+ else{
+
+  const target =
+  entries.find(
+   x=>x.id===id
+  );
+
+
+  const newName =
+  prompt(
+   "이름 또는 닉네임",
+   target.name
+  );
+
+
+  if(newName===null)return;
+
+
+  const newMessage =
+  prompt(
+   "방문록 내용",
+   target.message
+  );
+
+
+  if(newMessage===null)return;
+
+
+  if(
+   !newName.trim() ||
+   !newMessage.trim()
+  ){
+
+   alert(
+    "내용을 비워둘 수 없습니다."
+   );
+
+   return;
+
+  }
+
+
+  target.name =
+  newName.trim();
+
+  target.message =
+  newMessage.trim();
+
+  target.updatedAt =
+  new Date().toISOString();
+
+
+  save();
+
+  render();
+
+ }
+
+}
+
+
+/* ========================================================
+   모달 바깥 클릭
+   ======================================================== */
+
+document
+.getElementById("modal")
+.addEventListener(
+ "click",
+ e=>{
+
+  if(e.target.id==="modal"){
+
+   closeModal();
+
+  }
+
+ }
+);
+
+
+/* ========================================================
+   ESC
+   ======================================================== */
+
+document.addEventListener(
+ "keydown",
+ e=>{
+
+  if(e.key==="Escape"){
+
+   closeModal();
+
+  }
+
+ }
+);
+
+
+/* ========================================================
+   1초마다 좋아요 취소 시간 갱신
+
+   7초가 지나면 버튼이 자동으로 활성화됨.
+   ======================================================== */
+
+setInterval(
+ ()=>{
+  render();
+ },
+  1000
+);
+
+
+/* ========================================================
+   시작
+   ======================================================== */
+
+render();
+
+</script>
+
+</body>
+</html>
+```
