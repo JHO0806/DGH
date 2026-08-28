@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -11,31 +9,31 @@
 html,body{margin:0;padding:0}
 
 body{
-font-family:"Malgun Gothic","Noto Sans KR",sans-serif;
-background:#f7eef1;
-color:#24151b;
-user-select:none;
-overflow-x:hidden;
+  font-family:"Malgun Gothic","Noto Sans KR",sans-serif;
+  background:#f7eef1;
+  color:#24151b;
+  user-select:none;
+  overflow-x:hidden;
 }
 
 input,textarea,button{font:inherit}
 input,textarea{user-select:text}
 
 #floatingLogos{
-position:fixed;
-inset:0;
-z-index:0;
-pointer-events:none;
-overflow:hidden;
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
 }
 
 .logo-float{
-position:absolute;
-left:0;
-top:0;
-pointer-events:none;
-opacity:.09;
-will-change:transform;
+  position:absolute;
+  left:0;
+  top:0;
+  pointer-events:none;
+  opacity:.08;
+  will-change:transform;
 }
 
 .logo-float:nth-child(1){width:64px;height:64px;animation:move1 17s linear infinite}
@@ -51,593 +49,644 @@ will-change:transform;
 .logo-float:nth-child(11){width:54px;height:54px;animation:move11 20s linear infinite}
 .logo-float:nth-child(12){width:46px;height:46px;animation:move12 18s linear infinite}
 
-@keyframes move1{0%{transform:translate3d(2vw,118vh,0)}100%{transform:translate3d(82vw,-18vh,0)}}
-@keyframes move2{0%{transform:translate3d(18vw,120vh,0)}100%{transform:translate3d(103vw,-18vh,0)}}
-@keyframes move3{0%{transform:translate3d(35vw,120vh,0)}100%{transform:translate3d(118vw,-16vh,0)}}
-@keyframes move4{0%{transform:translate3d(-7vw,117vh,0)}100%{transform:translate3d(74vw,-18vh,0)}}
-@keyframes move5{0%{transform:translate3d(49vw,121vh,0)}100%{transform:translate3d(126vw,-15vh,0)}}
-@keyframes move6{0%{transform:translate3d(7vw,120vh,0)}100%{transform:translate3d(96vw,-20vh,0)}}
-@keyframes move7{0%{transform:translate3d(66vw,121vh,0)}100%{transform:translate3d(129vw,-14vh,0)}}
-@keyframes move8{0%{transform:translate3d(26vw,122vh,0)}100%{transform:translate3d(110vw,-19vh,0)}}
-@keyframes move9{0%{transform:translate3d(-4vw,119vh,0)}100%{transform:translate3d(87vw,-18vh,0)}}
-@keyframes move10{0%{transform:translate3d(43vw,121vh,0)}100%{transform:translate3d(120vw,-17vh,0)}}
-@keyframes move11{0%{transform:translate3d(72vw,120vh,0)}100%{transform:translate3d(132vw,-15vh,0)}}
-@keyframes move12{0%{transform:translate3d(11vw,123vh,0)}100%{transform:translate3d(105vw,-21vh,0)}}
+@keyframes move1{
+  0%{transform:translate3d(2vw,118vh,0)}
+  100%{transform:translate3d(82vw,-18vh,0)}
+}
+@keyframes move2{
+  0%{transform:translate3d(18vw,120vh,0)}
+  100%{transform:translate3d(103vw,-18vh,0)}
+}
+@keyframes move3{
+  0%{transform:translate3d(35vw,120vh,0)}
+  100%{transform:translate3d(118vw,-16vh,0)}
+}
+@keyframes move4{
+  0%{transform:translate3d(-7vw,117vh,0)}
+  100%{transform:translate3d(74vw,-18vh,0)}
+}
+@keyframes move5{
+  0%{transform:translate3d(49vw,121vh,0)}
+  100%{transform:translate3d(126vw,-15vh,0)}
+}
+@keyframes move6{
+  0%{transform:translate3d(7vw,120vh,0)}
+  100%{transform:translate3d(96vw,-20vh,0)}
+}
+@keyframes move7{
+  0%{transform:translate3d(66vw,121vh,0)}
+  100%{transform:translate3d(129vw,-14vh,0)}
+}
+@keyframes move8{
+  0%{transform:translate3d(26vw,122vh,0)}
+  100%{transform:translate3d(110vw,-19vh,0)}
+}
+@keyframes move9{
+  0%{transform:translate3d(-4vw,119vh,0)}
+  100%{transform:translate3d(87vw,-18vh,0)}
+}
+@keyframes move10{
+  0%{transform:translate3d(43vw,121vh,0)}
+  100%{transform:translate3d(120vw,-17vh,0)}
+}
+@keyframes move11{
+  0%{transform:translate3d(72vw,120vh,0)}
+  100%{transform:translate3d(132vw,-15vh,0)}
+}
+@keyframes move12{
+  0%{transform:translate3d(11vw,123vh,0)}
+  100%{transform:translate3d(105vw,-21vh,0)}
+}
 
 .hero{
-background:linear-gradient(135deg,#64152f,#8f2948);
-color:#fff;
-padding:28px 18px 34px;
-box-shadow:0 4px 16px #0002;
-position:relative;
-z-index:10;
+  background:linear-gradient(135deg,#64152f,#8f2948);
+  color:#fff;
+  padding:28px 18px 34px;
+  box-shadow:0 4px 16px #0002;
+  position:relative;
+  z-index:10;
 }
 
 .top{
-max-width:1050px;
-margin:auto;
-display:flex;
-align-items:center;
-gap:18px;
+  max-width:1050px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:18px;
 }
 
 .logo{
-width:78px;
-height:78px;
-border:3px solid #fff;
-border-radius:50%;
-background:#fff;
-display:grid;
-place-items:center;
-flex:none;
-box-shadow:0 3px 10px #0004;
+  width:78px;
+  height:78px;
+  border:3px solid #fff;
+  border-radius:50%;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  flex:none;
+  box-shadow:0 3px 10px #0004;
 }
 
 .mark{
-color:#741b38;
-font-weight:900;
-font-size:25px;
-line-height:1;
-text-align:center;
+  color:#741b38;
+  font-weight:900;
+  font-size:25px;
+  line-height:1;
+  text-align:center;
 }
 
 .mark small{
-display:block;
-font-size:8px;
-letter-spacing:1px;
-margin-top:3px;
+  display:block;
+  font-size:8px;
+  letter-spacing:1px;
+  margin-top:3px;
 }
 
-h1{margin:0;font-size:30px}
-.sub{margin-top:7px;opacity:.9}
+h1{
+  margin:0;
+  font-size:30px;
+}
+
+.sub{
+  margin-top:7px;
+  opacity:.9;
+}
 
 main{
-max-width:1050px;
-margin:24px auto;
-padding:0 14px;
-position:relative;
-z-index:5;
+  max-width:1050px;
+  margin:24px auto;
+  padding:0 14px;
+  position:relative;
+  z-index:5;
 }
 
 .page{
-display:none;
-position:relative;
-z-index:5;
+  display:none;
+  position:relative;
+  z-index:5;
 }
 
-.page.active{display:block}
+.page.active{
+  display:block;
+}
 
 .panel{
-background:#fff;
-border-radius:18px;
-padding:20px;
-box-shadow:0 4px 18px #6d203714;
-margin-bottom:20px;
-position:relative;
-z-index:5;
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 4px 18px #6d203714;
+  margin-bottom:20px;
+  position:relative;
+  z-index:5;
 }
 
 .panel h2{
-margin:0 0 15px;
-font-size:20px;
+  margin:0 0 15px;
+  font-size:20px;
 }
 
 .grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
 }
 
 input,textarea{
-width:100%;
-border:1px solid #dccbd1;
-border-radius:10px;
-padding:12px;
-outline:none;
-background:#fff;
+  width:100%;
+  border:1px solid #dccbd1;
+  border-radius:10px;
+  padding:12px;
+  outline:none;
+  background:#fff;
 }
 
 input:disabled{
-background:#f1edef;
-color:#8f858a;
-cursor:not-allowed;
+  background:#f1edef;
+  color:#8f858a;
+  cursor:not-allowed;
 }
 
 textarea{
-min-height:105px;
-resize:none;
+  min-height:105px;
+  resize:none;
 }
 
 input:focus,textarea:focus{
-border-color:#8a2947;
-box-shadow:0 0 0 3px #8a29471a;
+  border-color:#8a2947;
+  box-shadow:0 0 0 3px #8a29471a;
 }
 
-.full{grid-column:1/-1}
+.full{
+  grid-column:1/-1;
+}
 
 button{
-border:0;
-border-radius:10px;
-padding:11px 18px;
-cursor:pointer;
-background:#741b38;
-color:#fff;
-font-weight:700;
-position:relative;
-z-index:1;
+  border:0;
+  border-radius:10px;
+  padding:11px 18px;
+  cursor:pointer;
+  background:#741b38;
+  color:#fff;
+  font-weight:700;
+  position:relative;
+  z-index:1;
 }
 
 button:disabled{
-cursor:not-allowed;
+  cursor:not-allowed;
 }
 
 button.secondary{
-background:#f1e5e9;
-color:#5d1930;
+  background:#f1e5e9;
+  color:#5d1930;
 }
 
 button.danger{
-background:#b73550;
+  background:#b73550;
 }
 
 .actions{
-display:flex;
-gap:8px;
-justify-content:flex-end;
-margin-top:12px;
-flex-wrap:wrap;
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  margin-top:12px;
+  flex-wrap:wrap;
 }
 
 .hint{
-font-size:13px;
-color:#76636b;
-margin-top:8px;
+  font-size:13px;
+  color:#76636b;
+  margin-top:8px;
 }
 
 .entry{
-border:1px solid #ead6dc;
-border-radius:15px;
-padding:17px;
-margin-top:12px;
-background:#fffafb;
-position:relative;
-z-index:5;
+  border:1px solid #ead6dc;
+  border-radius:15px;
+  padding:17px;
+  margin-top:12px;
+  background:#fffafb;
+  position:relative;
+  z-index:5;
 }
 
 .entry-head{
-display:flex;
-justify-content:space-between;
-gap:10px;
-align-items:center;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:center;
 }
 
 .name{
-font-weight:800;
-font-size:17px;
+  font-weight:800;
+  font-size:17px;
 }
 
 .time{
-font-size:12px;
-color:#7d6c74;
-text-align:right;
+  font-size:12px;
+  color:#7d6c74;
+  text-align:right;
 }
 
 .content{
-white-space:pre-wrap;
-line-height:1.65;
-margin:12px 0;
+  white-space:pre-wrap;
+  line-height:1.65;
+  margin:12px 0;
 }
 
 .tag{
-display:inline-block;
-background:#f3e3e8;
-color:#741b38;
-border-radius:999px;
-padding:4px 9px;
-font-size:12px;
+  display:inline-block;
+  background:#f3e3e8;
+  color:#741b38;
+  border-radius:999px;
+  padding:4px 9px;
+  font-size:12px;
 }
 
 .empty{
-text-align:center;
-color:#8b7b82;
-padding:35px 10px;
+  text-align:center;
+  color:#8b7b82;
+  padding:35px 10px;
 }
 
-.back-btn{margin-bottom:16px}
+.back-btn{
+  margin-bottom:16px;
+}
 
 .menu-wrap{
-min-height:calc(100vh - 150px);
-display:flex;
-align-items:center;
-justify-content:center;
-padding:25px 0 40px;
-position:relative;
-z-index:6;
+  min-height:calc(100vh - 150px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:25px 0 40px;
+  position:relative;
+  z-index:6;
 }
 
 .menu{
-width:min(760px,100%);
-position:relative;
-z-index:7;
+  width:min(760px,100%);
+  position:relative;
+  z-index:7;
 }
 
 .menu-title{
-text-align:center;
-margin-bottom:28px;
-position:relative;
-z-index:7;
+  text-align:center;
+  margin-bottom:28px;
+  position:relative;
+  z-index:7;
 }
 
 .menu-title h2{
-margin:0;
-color:#741b38;
-font-size:31px;
+  margin:0;
+  color:#741b38;
+  font-size:31px;
 }
 
 .menu-title p{
-margin:10px 0 0;
-color:#806d76;
+  margin:10px 0 0;
+  color:#806d76;
 }
 
 .menu-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:18px;
-position:relative;
-z-index:8;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  position:relative;
+  z-index:8;
 }
 
 .menu-card{
-background:#fff;
-border:1px solid #ead6dc;
-border-radius:22px;
-padding:32px 20px;
-text-align:center;
-box-shadow:0 8px 28px #6d203725;
-cursor:pointer;
-transition:.2s;
-position:relative;
-z-index:9;
+  background:#fff;
+  border:1px solid #ead6dc;
+  border-radius:22px;
+  padding:32px 20px;
+  text-align:center;
+  box-shadow:0 8px 28px #6d203725;
+  cursor:pointer;
+  transition:.2s;
+  position:relative;
+  z-index:9;
 }
 
 .menu-card:hover{
-transform:translateY(-5px);
-box-shadow:0 12px 32px #6d203735;
+  transform:translateY(-5px);
 }
 
 .menu-icon{
-font-size:50px;
-margin-bottom:14px;
+  font-size:50px;
+  margin-bottom:14px;
 }
 
 .menu-card h3{
-margin:0;
-color:#741b38;
-font-size:22px;
+  margin:0;
+  color:#741b38;
+  font-size:22px;
 }
 
 .menu-card p{
-color:#806d76;
-margin:9px 0 0;
-font-size:14px;
+  color:#806d76;
+  margin:9px 0 0;
+  font-size:14px;
 }
 
 .like-area{
-display:flex;
-align-items:center;
-gap:7px;
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  flex-wrap:wrap;
 }
 
 .like-btn{
-background:#fff;
-color:#8a2947;
-border:1px solid #ead6dc;
-padding:9px 14px;
-border-radius:10px;
-font-weight:700;
+  background:#fff;
+  color:#8a2947;
+  border:1px solid #ead6dc;
+  padding:9px 14px;
+  border-radius:10px;
+  font-weight:700;
 }
 
 .like-count{
-min-width:28px;
-text-align:center;
-color:#8a2947;
-font-size:14px;
-font-weight:800;
+  min-width:28px;
+  text-align:center;
+  color:#8a2947;
+  font-size:14px;
+  font-weight:800;
 }
 
 .cancel-like{
-background:#f1e5e9;
-color:#5d1930;
-border:0;
-padding:9px 14px;
-border-radius:10px;
-font-weight:700;
+  background:#f1e5e9;
+  color:#5d1930;
+  border:0;
+  padding:9px 14px;
+  border-radius:10px;
+  font-weight:700;
 }
 
 .cancel-like:disabled{
-background:#f3f1f2;
-color:#aaa0a5;
-cursor:not-allowed;
+  background:#f3f1f2;
+  color:#aaa0a5;
 }
 
 .modal{
-position:fixed;
-inset:0;
-background:#2b0d1799;
-display:none;
-align-items:center;
-justify-content:center;
-padding:18px;
-z-index:100;
+  position:fixed;
+  inset:0;
+  background:#2b0d1799;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  z-index:100;
 }
 
-.modal.show{display:flex}
+.modal.show{
+  display:flex;
+}
 
 .modal-card{
-background:#fff;
-border-radius:17px;
-padding:22px;
-width:min(430px,100%);
-box-shadow:0 15px 50px #0005;
+  background:#fff;
+  border-radius:17px;
+  padding:22px;
+  width:min(430px,100%);
+  box-shadow:0 15px 50px #0005;
 }
 
-.modal-card h3{margin-top:0}
+.modal-card h3{
+  margin-top:0;
+}
 
 .error{
-color:#b73550;
-font-size:13px;
-margin-top:8px;
-min-height:18px;
+  color:#b73550;
+  font-size:13px;
+  margin-top:8px;
+  min-height:18px;
 }
 
 .game-box{
-background:#fff;
-border-radius:18px;
-padding:20px;
-box-shadow:0 4px 18px #6d203714;
-margin-bottom:20px;
-position:relative;
-z-index:5;
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 4px 18px #6d203714;
+  margin-bottom:20px;
+  position:relative;
+  z-index:5;
 }
 
 .game-title{
-text-align:center;
-color:#741b38;
-margin:0 0 8px;
-font-size:25px;
+  text-align:center;
+  color:#741b38;
+  margin:0 0 8px;
+  font-size:25px;
 }
 
 .game-description{
-text-align:center;
-color:#806d76;
-margin:0 0 18px;
-font-size:14px;
+  text-align:center;
+  color:#806d76;
+  margin:0 0 18px;
+  font-size:14px;
 }
 
 .game-status{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-margin-bottom:18px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-bottom:18px;
 }
 
 .status-box{
-background:#f8eff2;
-border:1px solid #ead6dc;
-border-radius:12px;
-padding:12px;
-text-align:center;
+  background:#f8eff2;
+  border:1px solid #ead6dc;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
 }
 
 .status-label{
-display:block;
-color:#806d76;
-font-size:12px;
-margin-bottom:4px;
+  display:block;
+  color:#806d76;
+  font-size:12px;
+  margin-bottom:4px;
 }
 
 .status-value{
-color:#741b38;
-font-weight:900;
-font-size:18px;
+  color:#741b38;
+  font-weight:900;
+  font-size:18px;
 }
 
 .nickname-row{
-display:flex;
-gap:8px;
-margin-bottom:16px;
+  display:flex;
+  gap:8px;
+  margin-bottom:16px;
 }
 
-.nickname-row input{flex:1}
+.nickname-row input{
+  flex:1;
+}
 
 .game-screen{
-border:1px solid #ead6dc;
-border-radius:16px;
-padding:22px;
-background:linear-gradient(180deg,#fffafb,#f6e9ed);
+  border:1px solid #ead6dc;
+  border-radius:16px;
+  padding:22px;
+  background:linear-gradient(180deg,#fffafb,#f6e9ed);
 }
 
 .difficulty{
-display:inline-block;
-padding:6px 11px;
-border-radius:999px;
-background:#f1dce3;
-color:#741b38;
-font-size:12px;
-font-weight:800;
-margin-bottom:10px;
+  display:inline-block;
+  padding:6px 11px;
+  border-radius:999px;
+  background:#f1dce3;
+  color:#741b38;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:10px;
 }
 
 .question-timer-wrap{
-width:100%;
-height:8px;
-background:#eadde1;
-border-radius:999px;
-overflow:hidden;
-margin-bottom:12px;
+  width:100%;
+  height:8px;
+  background:#eadde1;
+  border-radius:999px;
+  overflow:hidden;
+  margin-bottom:12px;
 }
 
 #questionTimerBar{
-height:100%;
-width:100%;
-background:#8a2947;
-transition:width 1s linear;
+  height:100%;
+  width:100%;
+  background:#8a2947;
+  transition:width 1s linear;
 }
 
 .question{
-min-height:125px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-font-size:23px;
-font-weight:900;
-color:#24151b;
-line-height:1.6;
-padding:8px;
-word-break:break-word;
+  min-height:125px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:23px;
+  font-weight:900;
+  color:#24151b;
+  line-height:1.6;
+  padding:8px;
+  word-break:break-word;
 }
 
 .choices{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin-top:16px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:16px;
 }
 
 .choice-btn{
-background:#fff;
-color:#5d1930;
-border:1px solid #dccbd1;
-padding:14px 12px;
-min-height:54px;
-transition:.15s;
-text-align:center;
+  background:#fff;
+  color:#5d1930;
+  border:1px solid #dccbd1;
+  padding:14px 12px;
+  min-height:54px;
+  transition:.15s;
+  text-align:center;
 }
 
 .choice-btn:hover{
-background:#f8edf1;
-border-color:#b86b85;
+  background:#f8edf1;
+  border-color:#b86b85;
 }
 
 .choice-btn.correct{
-background:#dff3e5;
-color:#176b32;
-border-color:#77ba8b;
+  background:#dff3e5;
+  color:#176b32;
+  border-color:#77ba8b;
 }
 
 .choice-btn.wrong{
-background:#fde2e2;
-color:#a12831;
-border-color:#d9888f;
+  background:#fde2e2;
+  color:#a12831;
+  border-color:#d9888f;
 }
 
 .game-message{
-text-align:center;
-color:#806d76;
-min-height:23px;
-margin-top:14px;
-font-size:14px;
+  text-align:center;
+  color:#806d76;
+  min-height:23px;
+  margin-top:14px;
+  font-size:14px;
 }
 
 .game-start-wrap{
-text-align:center;
-margin-top:16px;
+  text-align:center;
+  margin-top:16px;
 }
 
 .big-btn{
-padding:14px 25px;
-font-size:16px;
+  padding:14px 25px;
+  font-size:16px;
 }
 
 .result{
-display:none;
-text-align:center;
-padding:12px 0 2px;
+  display:none;
+  text-align:center;
+  padding:12px 0 2px;
 }
 
-.result.show{display:block}
+.result.show{
+  display:block;
+}
 
 .result-score{
-color:#741b38;
-font-size:31px;
-font-weight:900;
-margin-bottom:6px;
+  color:#741b38;
+  font-size:31px;
+  font-weight:900;
+  margin-bottom:6px;
 }
 
 .result-info{
-color:#806d76;
-font-size:14px;
+  color:#806d76;
+  font-size:14px;
 }
 
 .ranking-box{
-margin-top:20px;
-border-top:1px solid #ead6dc;
-padding-top:20px;
+  margin-top:20px;
+  border-top:1px solid #ead6dc;
+  padding-top:20px;
 }
 
 .ranking-title{
-color:#741b38;
-font-size:20px;
-font-weight:900;
-margin-bottom:12px;
+  color:#741b38;
+  font-size:20px;
+  font-weight:900;
+  margin-bottom:12px;
 }
 
 .ranking-table{
-width:100%;
-border-collapse:collapse;
+  width:100%;
+  border-collapse:collapse;
 }
 
 .ranking-table th,
 .ranking-table td{
-padding:10px 8px;
-text-align:center;
-border-bottom:1px solid #eee1e5;
-font-size:14px;
+  padding:10px 8px;
+  text-align:center;
+  border-bottom:1px solid #eee1e5;
+  font-size:14px;
 }
 
 .ranking-table th{
-background:#f4e6ea;
-color:#741b38;
-}
-
-.ranking-table tr:last-child td{
-border-bottom:0;
+  background:#f4e6ea;
+  color:#741b38;
 }
 
 @media(max-width:650px){
-.grid{grid-template-columns:1fr}
-.full{grid-column:auto}
-h1{font-size:23px}
-.logo{width:65px;height:65px}
-.menu-grid{grid-template-columns:1fr}
-.menu-title h2{font-size:26px}
-.game-status{grid-template-columns:1fr 1fr}
-.choices{grid-template-columns:1fr}
-.question{font-size:20px}
-.nickname-row{flex-direction:column}
-.logo-float{opacity:.07}
+  .grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  h1{font-size:23px}
+  .logo{width:65px;height:65px}
+  .menu-grid{grid-template-columns:1fr}
+  .menu-title h2{font-size:26px}
+  .game-status{grid-template-columns:1fr 1fr}
+  .choices{grid-template-columns:1fr}
+  .question{font-size:20px}
+  .nickname-row{flex-direction:column}
+  .logo-float{opacity:.06}
 }
 </style>
 
@@ -712,7 +761,12 @@ h1{font-size:23px}
 
 <div class="grid">
 
-<input id="name" maxlength="30" placeholder="이름 또는 닉네임">
+<input
+id="name"
+maxlength="30"
+placeholder="이름 또는 닉네임"
+
+>
 
 <input
 id="password"
@@ -771,8 +825,8 @@ placeholder="큰빛축제에서 느낀 점을 남겨보세요."
 </h2>
 
 <p class="game-description">
-고등학교 1학년 이상의 수학 문제가 랜덤으로 출제됩니다.
-문제마다 20초이며 5번 연속 오답이면 게임이 종료됩니다.
+쉬운 문제부터 어려운 문제까지 나옵니다.
+문제마다 20초의 제한시간이 있으며 5번 연속 오답이면 종료됩니다.
 </p>
 
 <div class="nickname-row">
@@ -902,9 +956,13 @@ placeholder="비밀번호"
 
 <div class="actions">
 
-<button class="secondary" onclick="closeModal()">
-취소
-</button>
+<button
+class="secondary"
+onclick="closeModal()"
+
+>
+
+취소 </button>
 
 <button onclick="confirmPassword()">
 확인
@@ -919,147 +977,85 @@ placeholder="비밀번호"
 <script>
 
 /* =====================================================
-   배경 로고
+   배경 대광 로고
 ===================================================== */
 
 function createLogoSVG(){
 
-return `
-<svg
-viewBox="0 0 200 200"
-width="100%"
-height="100%"
-xmlns="http://www.w3.org/2000/svg"
->
+return (
+'<svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">' +
 
-<circle
-cx="100"
-cy="100"
-r="94"
-fill="#8a2340"
-/>
+'<circle cx="100" cy="100" r="94" fill="#8a2340"/>' +
 
-<circle
-cx="100"
-cy="100"
-r="76"
-fill="none"
-stroke="#fff"
-stroke-width="8"
-/>
+'<circle cx="100" cy="100" r="76" fill="none" stroke="#fff" stroke-width="8"/>' +
 
-<path
-d="M58 63 Q100 42 142 63
-L136 118 Q132 146 100 163
-Q68 146 64 118 Z"
-fill="#8a2340"
-stroke="#fff"
-stroke-width="3"
-/>
+'<path d="M58 63 Q100 42 142 63 L136 118 Q132 146 100 163 Q68 146 64 118 Z" fill="#8a2340" stroke="#fff" stroke-width="3"/>' +
 
-<path
-d="M74 72 L88 61 L100 72
-L112 61 L126 72
-L126 83 L74 83 Z"
-fill="#fff"
-/>
+'<path d="M74 72 L88 61 L100 72 L112 61 L126 72 L126 83 L74 83 Z" fill="#fff"/>' +
 
-<text
-x="100"
-y="101"
-text-anchor="middle"
-fill="#fff"
-font-family="Georgia"
-font-size="13"
-font-weight="700"
->
-LUX ET SAL
-</text>
+'<text x="100" y="101" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="13" font-weight="700">LUX ET SAL</text>' +
 
-<text
-x="100"
-y="128"
-text-anchor="middle"
-fill="#fff"
-font-family="serif"
-font-size="27"
-font-weight="700"
->
-大光
-</text>
+'<text x="100" y="128" text-anchor="middle" fill="#fff" font-family="serif" font-size="27" font-weight="700">大光</text>' +
 
-<text
-x="100"
-y="28"
-text-anchor="middle"
-fill="#fff"
-font-family="Georgia"
-font-size="9"
-font-weight="700"
->
-DAE GWANG HIGH SCHOOL
-</text>
+'<text x="100" y="28" text-anchor="middle" fill="#fff" font-family="Georgia" font-size="9" font-weight="700">DAE GWANG HIGH SCHOOL</text>' +
 
-<text
-x="100"
-y="185"
-text-anchor="middle"
-fill="#fff"
-font-family="serif"
-font-size="9"
-font-weight="700"
->
-대 광 고 등 학 교
-</text>
+'<text x="100" y="185" text-anchor="middle" fill="#fff" font-family="serif" font-size="9" font-weight="700">대 광 고 등 학 교</text>' +
 
-</svg>
-`;
-}
-
-const floatingLogos=
-document.getElementById(
-"floatingLogos"
+'</svg>'
 );
 
-for(let i=0;i<12;i++){
+}
 
-const logo=
+var floatingLogos=
+document.getElementById("floatingLogos");
+
+for(
+var i=0;
+i<12;
+i++
+){
+
+var logo=
 document.createElement("div");
 
-logo.className=
-"logo-float";
+logo.className="logo-float";
 
 logo.innerHTML=
 createLogoSVG();
 
 logo.style.animationDelay=
-`${-(i*1.7)}s`;
+(-(i*1.7))+"s";
 
 floatingLogos.appendChild(
 logo
 );
+
 }
 
 
 /* =====================================================
-   페이지 저장
+   페이지
 ===================================================== */
 
-const PAGE_KEY=
-"daekwang_bigbit_current_page_final2";
+var PAGE_KEY=
+"daekwang_bigbit_current_page_final";
 
 function showPage(pageId){
 
 document
 .querySelectorAll(".page")
-.forEach(page=>{
+.forEach(
+function(page){
 page.classList.remove("active");
-});
+}
+);
 
-const page=
+var page=
 document.getElementById(pageId);
 
-if(!page)return;
+if(!page){
+return;
+}
 
 page.classList.add("active");
 
@@ -1072,16 +1068,17 @@ window.scrollTo(
 0,
 0
 );
+
 }
 
 function restorePage(){
 
-const saved=
+var saved=
 sessionStorage.getItem(
 PAGE_KEY
 );
 
-const valid=[
+var valid=[
 "menuPage",
 "guestbookPage",
 "gamePage"
@@ -1089,7 +1086,7 @@ const valid=[
 
 if(
 saved &&
-valid.includes(saved)
+valid.indexOf(saved)!==-1
 ){
 
 showPage(saved);
@@ -1099,6 +1096,7 @@ showPage(saved);
 showPage("menuPage");
 
 }
+
 }
 
 
@@ -1106,83 +1104,72 @@ showPage("menuPage");
    방문록
 ===================================================== */
 
-const STORAGE_KEY=
+var STORAGE_KEY=
 "daekwang_bigbit_festival_guestbook_v2";
 
-const LIKE_KEY=
+var LIKE_KEY=
 "daekwang_bigbit_festival_likes_v3";
 
-const MASTER_PASSWORD=
+var MASTER_PASSWORD=
 "20100806";
 
-const LIKE_CANCEL_DELAY=
+var LIKE_CANCEL_DELAY=
 7000;
 
-let entries=
-loadArray(STORAGE_KEY,[]);
-
-let likes=
-loadObject(LIKE_KEY,{});
-
-let pending=null;
-
-function loadArray(key,fallback){
+function safeRead(key,fallback){
 
 try{
 
-const value=
+var raw=
 localStorage.getItem(key);
 
-if(value===null){
+if(raw===null){
 return fallback;
 }
 
-const parsed=
-JSON.parse(value);
-
-return Array.isArray(parsed)
-?parsed
-:fallback;
+return JSON.parse(raw);
 
 }catch(error){
 
 return fallback;
 
 }
-}
-
-function loadObject(key,fallback){
-
-try{
-
-const value=
-localStorage.getItem(key);
-
-if(value===null){
-return fallback;
-}
-
-const parsed=
-JSON.parse(value);
-
-return parsed &&
-typeof parsed==="object"
-?parsed
-:fallback;
-
-}catch(error){
-
-return fallback;
 
 }
+
+var entries=
+safeRead(
+STORAGE_KEY,
+[]
+);
+
+var likes=
+safeRead(
+LIKE_KEY,
+{}
+);
+
+if(!Array.isArray(entries)){
+entries=[];
 }
 
-function save(){
+if(
+!likes ||
+typeof likes!=="object"
+){
+likes={};
+}
+
+var pending=null;
+
+
+function saveEntries(){
 
 localStorage.setItem(
 STORAGE_KEY,
 JSON.stringify(entries)
 );
+
 }
 
 function saveLikes(){
@@ -1191,92 +1178,128 @@ localStorage.setItem(
 LIKE_KEY,
 JSON.stringify(likes)
 );
+
 }
 
 function escapeHTML(text){
 
 return String(text).replace(
 /[&<>"']/g,
-char=>({
+function(char){
+
+var map={
 "&":"&amp;",
 "<":"&lt;",
 ">":"&gt;",
 '"':"&quot;",
 "'":"&#039;"
-}[char])
+};
+
+return map[char];
+
+}
 );
+
 }
 
 function formatDate(iso){
 
-const d=
+var d=
 new Date(iso);
 
-const p=
-n=>String(n).padStart(
+function pad(n){
+
+return String(n).padStart(
 2,
 "0"
 );
 
-return `${d.getFullYear()}년 ${p(d.getMonth()+1)}월 ${p(d.getDate())}일 ${p(d.getHours())}시 ${p(d.getMinutes())}분 ${p(d.getSeconds())}초`;
+}
+
+return (
+d.getFullYear()+
+"년 "+
+pad(d.getMonth()+1)+
+"월 "+
+pad(d.getDate())+
+"일 "+
+pad(d.getHours())+
+"시 "+
+pad(d.getMinutes())+
+"분 "+
+pad(d.getSeconds())+
+"초"
+);
+
 }
 
 function addEntry(){
 
-const name=
+var name=
 document.getElementById(
 "name"
 ).value.trim();
 
-const password=
+var password=
 document.getElementById(
 "password"
 ).value;
 
-const message=
+var message=
 document.getElementById(
 "message"
 ).value.trim();
 
-if(!name||!password||!message){
+if(
+!name ||
+!password ||
+!message
+){
 
 alert(
 "이름(닉네임), 비밀번호, 내용을 모두 입력해주세요."
 );
 
 return;
+
 }
 
-const id=
+var id;
+
+if(
 window.crypto &&
-typeof crypto.randomUUID==="function"
-?
-crypto.randomUUID()
-:
-`${Date.now()}_${Math.random()}`;
+typeof window.crypto.randomUUID==="function"
+){
+
+id=
+window.crypto.randomUUID();
+
+}else{
+
+id=
+String(Date.now())+
+String(Math.random());
+
+}
 
 entries.unshift({
+
 id:id,
 name:name,
 message:message,
 password:password,
-createdAt:new Date().toISOString()
+createdAt:
+new Date().toISOString()
+
 });
 
-save();
+saveEntries();
 render();
 
-document.getElementById(
-"name"
-).value="";
+document.getElementById("name").value="";
+document.getElementById("password").value="";
+document.getElementById("message").value="";
 
-document.getElementById(
-"password"
-).value="";
-
-document.getElementById(
-"message"
-).value="";
 }
 
 
@@ -1296,8 +1319,7 @@ times:[]
 }
 
 if(
-typeof likes[id]===
-"number"
+typeof likes[id]==="number"
 ){
 
 likes[id]={
@@ -1307,9 +1329,11 @@ times:[]
 
 }
 
-if(!Array.isArray(
+if(
+!Array.isArray(
 likes[id].times
-)){
+)
+){
 
 likes[id].times=[];
 
@@ -1329,7 +1353,7 @@ return likes[id];
 
 function addLike(id){
 
-const data=
+var data=
 normalizeLikes(id);
 
 data.count++;
@@ -1339,15 +1363,16 @@ Date.now()
 
 saveLikes();
 render();
+
 }
 
 function getCancelableIndex(id){
 
-const data=
+var data=
 likes[id];
 
 if(
-!data||
+!data ||
 !Array.isArray(data.times)
 ){
 
@@ -1355,24 +1380,32 @@ return -1;
 
 }
 
-const now=
+var now=
 Date.now();
 
 return data.times.findIndex(
-timestamp=>
+function(timestamp){
+
+return (
 now-timestamp>=
 LIKE_CANCEL_DELAY
 );
+
+}
+);
+
 }
 
 function cancelLike(id){
 
-const data=
+var data=
 likes[id];
 
-if(!data)return;
+if(!data){
+return;
+}
 
-const index=
+var index=
 getCancelableIndex(id);
 
 if(index===-1){
@@ -1397,16 +1430,17 @@ data.count-1
 
 saveLikes();
 render();
+
 }
 
 function getCancelText(id){
 
-const data=
+var data=
 likes[id];
 
 if(
-!data||
-!data.times||
+!data ||
+!data.times ||
 !data.times.length
 ){
 
@@ -1414,14 +1448,19 @@ return "좋아요 취소";
 
 }
 
-const now=
+var now=
 Date.now();
 
-const available=
+var available=
 data.times.some(
-timestamp=>
+function(timestamp){
+
+return (
 now-timestamp>=
 LIKE_CANCEL_DELAY
+);
+
+}
 );
 
 if(available){
@@ -1430,12 +1469,13 @@ return "좋아요 취소";
 
 }
 
-const earliest=
-Math.min(
-...data.times
+var earliest=
+Math.min.apply(
+Math,
+data.times
 );
 
-const remain=
+var remain=
 Math.max(
 0,
 Math.ceil(
@@ -1446,124 +1486,133 @@ LIKE_CANCEL_DELAY-
 )
 );
 
-return `${remain}초 후 취소`;
+return (
+String(remain)+
+"초 후 취소"
+);
+
 }
+
+
+/* =====================================================
+   방문록 렌더링
+===================================================== */
 
 function render(){
 
-const box=
+var box=
 document.getElementById(
 "entries"
 );
 
-const count=
+var count=
 document.getElementById(
 "count"
 );
 
-if(!box||!count)return;
-
-count.textContent=
-`${entries.length}개`;
-
-if(!entries.length){
-
-box.innerHTML=`
-<div class="empty">
-아직 등록된 방문록이 없습니다.<br>
-첫 번째 기록을 남겨보세요!
-</div>
-`;
-
+if(
+!box ||
+!count
+){
 return;
 }
 
-box.innerHTML=
-entries.map(
-entry=>{
+count.textContent=
+String(entries.length)+
+"개";
 
-const data=
+if(entries.length===0){
+
+box.innerHTML=
+'<div class="empty">아직 등록된 방문록이 없습니다.<br>첫 번째 기록을 남겨보세요!</div>';
+
+return;
+
+}
+
+var html="";
+
+entries.forEach(
+function(entry){
+
+var data=
 normalizeLikes(
 entry.id
 );
 
-const canCancel=
+var canCancel=
 getCancelableIndex(
 entry.id
 )!==-1;
 
-return `
-<article class="entry">
+html+=
+'<article class="entry">'+
 
-<div class="entry-head">
+'<div class="entry-head">'+
 
-<div class="name">
-${escapeHTML(entry.name)}
-</div>
+'<div class="name">'+
+escapeHTML(entry.name)+
+'</div>'+
 
-<div class="time">
-작성:
-${formatDate(entry.createdAt)}
-${
+'<div class="time">'+
+'작성: '+
+formatDate(entry.createdAt)+
+(
 entry.updatedAt
 ?
-`<br>수정: ${formatDate(entry.updatedAt)}`
+'<br>수정: '+
+formatDate(entry.updatedAt)
 :
-""
+''
+)+
+'</div>'+
+
+'</div>'+
+
+'<div class="content">'+
+escapeHTML(entry.message)+
+'</div>'+
+
+'<div class="actions">'+
+
+'<div class="like-area">'+
+
+'<button class="like-btn" onclick="addLike(\''+
+entry.id+
+'\')">❤️ 좋아요</button>'+
+
+'<span class="like-count">'+
+data.count+
+'</span>'+
+
+'<button class="cancel-like" onclick="cancelLike(\''+
+entry.id+
+'\')" '+
+(canCancel ? '' : 'disabled')+
+'>'+
+getCancelText(entry.id)+
+'</button>'+
+
+'</div>'+
+
+'<button class="secondary" onclick="requestAction(\'edit\',\''+
+entry.id+
+'\')">수정</button>'+
+
+'<button class="danger" onclick="requestAction(\'delete\',\''+
+entry.id+
+'\')">삭제</button>'+
+
+'</div>'+
+
+'</article>';
+
 }
-</div>
+);
 
-</div>
+box.innerHTML=
+html;
 
-<div class="content">
-${escapeHTML(entry.message)}
-</div>
-
-<div class="actions">
-
-<div class="like-area">
-
-<button
-class="like-btn"
-onclick="addLike('${entry.id}')"
->
-❤️ 좋아요
-</button>
-
-<span class="like-count">
-${data.count}
-</span>
-
-<button
-class="cancel-like"
-onclick="cancelLike('${entry.id}')"
-${canCancel?"":"disabled"}
->
-${getCancelText(entry.id)}
-</button>
-
-</div>
-
-<button
-class="secondary"
-onclick="requestAction('edit','${entry.id}')"
->
-수정
-</button>
-
-<button
-class="danger"
-onclick="requestAction('delete','${entry.id}')"
->
-삭제
-</button>
-
-</div>
-
-</article>
-`;
-}
-).join("");
 }
 
 
@@ -1571,10 +1620,7 @@ onclick="requestAction('delete','${entry.id}')"
    수정 삭제
 ===================================================== */
 
-function requestAction(
-action,
-id
-){
+function requestAction(action,id){
 
 pending={
 action:action,
@@ -1605,13 +1651,16 @@ document.getElementById(
 );
 
 setTimeout(
-()=>{
+function(){
+
 document.getElementById(
 "checkPw"
 ).focus();
+
 },
 50
 );
+
 }
 
 function closeModal(){
@@ -1623,27 +1672,31 @@ document.getElementById(
 ).classList.remove(
 "show"
 );
+
 }
 
 function confirmPassword(){
 
-if(!pending)return;
+if(!pending){
+return;
+}
 
-const entry=
+var entry=
 entries.find(
-item=>
-item.id===pending.id
+function(item){
+return item.id===pending.id;
+}
 );
 
-const password=
+var password=
 document.getElementById(
 "checkPw"
 ).value;
 
 if(
-!entry||
+!entry ||
 !(
-password===entry.password||
+password===entry.password ||
 password===MASTER_PASSWORD
 )
 ){
@@ -1654,15 +1707,17 @@ document.getElementById(
 "비밀번호가 올바르지 않습니다.";
 
 return;
+
 }
 
-const action=
+var action=
 pending.action;
 
-const id=
+var id=
 pending.id;
 
 closeModal();
+
 
 if(action==="delete"){
 
@@ -1674,45 +1729,57 @@ confirm(
 
 entries=
 entries.filter(
-item=>item.id!==id
+function(item){
+return item.id!==id;
+}
 );
 
 delete likes[id];
 
-save();
+saveEntries();
 saveLikes();
 render();
 
 }
 
 return;
+
 }
 
-const target=
+
+var target=
 entries.find(
-item=>item.id===id
+function(item){
+return item.id===id;
+}
 );
 
-if(!target)return;
+if(!target){
+return;
+}
 
-const newName=
+var newName=
 prompt(
 "이름 또는 닉네임",
 target.name
 );
 
-if(newName===null)return;
+if(newName===null){
+return;
+}
 
-const newMessage=
+var newMessage=
 prompt(
 "방문록 내용",
 target.message
 );
 
-if(newMessage===null)return;
+if(newMessage===null){
+return;
+}
 
 if(
-!newName.trim()||
+!newName.trim() ||
 !newMessage.trim()
 ){
 
@@ -1732,17 +1799,16 @@ newMessage.trim();
 target.updatedAt=
 new Date().toISOString();
 
-save();
+saveEntries();
 render();
+
 }
 
 document
-.getElementById(
-"modal"
-)
+.getElementById("modal")
 .addEventListener(
 "click",
-event=>{
+function(event){
 
 if(
 event.target.id==="modal"
@@ -1757,7 +1823,7 @@ closeModal();
 
 document.addEventListener(
 "keydown",
-event=>{
+function(event){
 
 if(
 event.key==="Escape"
@@ -1772,28 +1838,22 @@ closeModal();
 
 
 /* =====================================================
-   수학게임
+   수학 게임
 ===================================================== */
 
-const QUESTION_TIME=
+var QUESTION_TIME=
 20;
 
-const MAX_WRONG_STREAK=
+var MAX_WRONG_STREAK=
 5;
 
-const RANKING_KEY=
-"daekwang_bigbit_math_ranking_final3";
+var RANKING_KEY=
+"daekwang_bigbit_math_ranking_final4";
 
-const BEST_KEY=
-"daekwang_bigbit_math_best_final3";
+var BEST_KEY=
+"daekwang_bigbit_math_best_final4";
 
-
-/*
-고등학교 비중을 압도적으로 높이고
-대학 / 대학 심화는 낮은 확률로 출제
-*/
-
-const difficultyConfig={
+var difficultyConfig={
 
 high:{
 label:"🟠 고등학교",
@@ -1815,19 +1875,17 @@ weight:5
 
 };
 
+var gameRunning=false;
+var gameScore=0;
+var questionTime=QUESTION_TIME;
+var gameSolved=0;
+var wrongStreak=0;
+var questionTimer=null;
+var currentQuestion=null;
+var usedQuestionKeys={};
+var lastQuestionType=null;
 
-let gameRunning=false;
-let gameScore=0;
-let questionTime=QUESTION_TIME;
-let gameSolved=0;
-let wrongStreak=0;
-let questionTimer=null;
-let currentQuestion=null;
-let usedQuestionKeys=
-new Set();
-let lastQuestionType=null;
-
-let bestGameScore=
+var bestGameScore=
 Number(
 localStorage.getItem(
 BEST_KEY
@@ -1836,7 +1894,7 @@ BEST_KEY
 
 
 /* =====================================================
-   수학 기본
+   랜덤 / 수학
 ===================================================== */
 
 function randInt(min,max){
@@ -1845,6 +1903,7 @@ return Math.floor(
 Math.random()*
 (max-min+1)
 )+min;
+
 }
 
 function randomChoice(array){
@@ -1855,22 +1914,78 @@ Math.random()*
 array.length
 )
 ];
+
+}
+
+function gcd(a,b){
+
+a=Math.abs(a);
+b=Math.abs(b);
+
+while(b){
+
+var t=
+a%b;
+
+a=b;
+b=t;
+
+}
+
+return a||1;
+
+}
+
+function combination(n,r){
+
+if(
+r<0 ||
+r>n
+){
+
+return 0;
+
+}
+
+r=
+Math.min(
+r,
+n-r
+);
+
+var result=1;
+
+for(
+var i=1;
+i<=r;
+i++
+){
+
+result=
+result*
+(n-r+i)/
+i;
+
+}
+
+return Math.round(result);
+
 }
 
 function sameAnswer(a,b){
 
 if(
-typeof a==="number"&&
+typeof a==="number" &&
 typeof b==="number"
 ){
 
-return Math.abs(a-b)<
-0.000001;
+return Math.abs(a-b)<0.000001;
 
 }
 
 return String(a)===
 String(b);
+
 }
 
 function formatNumber(value){
@@ -1880,6 +1995,7 @@ typeof value!=="number"
 ){
 
 return String(value);
+
 }
 
 if(
@@ -1887,6 +2003,7 @@ if(
 ){
 
 return "∞";
+
 }
 
 if(
@@ -1904,110 +2021,34 @@ Math.round(value)
 return String(
 Math.round(value*100)/100
 );
-}
 
-function fraction(n,d){
-
-if(d<0){
-
-n=-n;
-d=-d;
-
-}
-
-const g=
-gcd(
-Math.round(Math.abs(n)),
-Math.round(Math.abs(d))
-);
-
-n/=g;
-d/=g;
-
-if(d===1){
-
-return String(n);
-
-}
-
-return `${n}/${d}`;
-}
-
-function gcd(a,b){
-
-a=Math.abs(a);
-b=Math.abs(b);
-
-while(b!==0){
-
-const temp=
-a%b;
-
-a=b;
-b=temp;
-
-}
-
-return a||1;
-}
-
-function combination(n,r){
-
-if(
-r<0||
-r>n
-){
-
-return 0;
-}
-
-r=
-Math.min(
-r,
-n-r
-);
-
-let result=1;
-
-for(
-let i=1;
-i<=r;
-i++
-){
-
-result=
-result*
-(n-r+i)/
-i;
-
-}
-
-return Math.round(result);
 }
 
 function shuffle(array){
 
 for(
-let i=array.length-1;
+var i=array.length-1;
 i>0;
 i--
 ){
 
-const j=
+var j=
 Math.floor(
 Math.random()*
 (i+1)
 );
 
-[
-array[i],
-array[j]
-]=[
-array[j],
-array[i]
-];
+var temp=
+array[i];
+
+array[i]=
+array[j];
+
+array[j]=
+temp;
 
 }
+
 }
 
 
@@ -2017,78 +2058,86 @@ array[i]
 
 function chooseDifficulty(){
 
-const keys=
+var keys=
 Object.keys(
 difficultyConfig
 );
 
-let total=0;
+var total=0;
 
 keys.forEach(
-key=>{
+function(key){
+
 total+=
 difficultyConfig[key].weight;
+
 }
 );
 
-let r=
+var r=
 Math.random()*
 total;
 
 for(
-const key of keys
+var i=0;
+i<keys.length;
+i++
 ){
 
 r-=
-difficultyConfig[key].weight;
+difficultyConfig[
+keys[i]
+].weight;
 
 if(r<=0){
 
-return key;
+return keys[i];
 
 }
 
 }
 
 return "high";
+
 }
 
 function chooseType(types){
 
-let candidates=
+var pool=
 types.filter(
-type=>
-type!==lastQuestionType
+function(type){
+return type!==lastQuestionType;
+}
 );
 
-if(!candidates.length){
+if(
+!pool.length
+){
 
-candidates=types;
+pool=types;
 
 }
 
 return randomChoice(
-candidates
+pool
 );
+
 }
 
 
 /* =====================================================
-   고등학교 문제
+   고등학교 수준 문제
 ===================================================== */
 
 function generateHigh(){
 
-const types=[
+var types=[
 
 "quadratic_root",
 "quadratic_vertex",
-"polynomial_factor",
-"polynomial_remainder",
+"polynomial_value",
 "function_composition",
 "function_inverse",
-"rational_function",
-"absolute_value",
 "exponential",
 "logarithm",
 "log_equation",
@@ -2100,7 +2149,6 @@ const types=[
 "binomial_probability",
 "combination",
 "permutation",
-"conditional_probability",
 "triangle_area",
 "triangle_angle",
 "pythagoras",
@@ -2122,135 +2170,109 @@ const types=[
 
 ];
 
-
-const type=
+var type=
 chooseType(types);
 
 
-/* 이차방정식 근 */
+/* 이차방정식 */
 
 if(type==="quadratic_root"){
 
-const r1=
+var r1=
 randInt(-10,10);
 
-const r2=
+var r2=
 randInt(-10,10);
 
-const B=
+var B=
 -(r1+r2);
 
-const C=
+var C=
 r1*r2;
 
 return {
-
-type,
-
+type:type,
 question:
-`방정식 x² ${B>=0?"+ "+B:"- "+Math.abs(B)}x ${C>=0?"+ "+C:"- "+Math.abs(C)} = 0의 한 근은?`,
-
+"x² "+
+(B>=0 ? "+ "+B : "- "+Math.abs(B))+
+"x "+
+(C>=0 ? "+ "+C : "- "+Math.abs(C))+
+" = 0의 한 근은?",
 answer:r1
-
 };
 
 }
 
 
-/* 포물선 꼭짓점의 x */
+/* 꼭짓점 */
 
 if(type==="quadratic_vertex"){
 
-const a=
+var a=
 randomChoice(
 [1,2,3,-1,-2]
 );
 
-const h=
+var h=
 randInt(-6,6);
 
-const k=
+var k=
 randInt(-10,10);
 
-const b=
+var b=
 -2*a*h;
 
-const c=
+var c=
 a*h*h+k;
 
 return {
-
-type,
-
+type:type,
 question:
-`f(x)=${a}x² ${b>=0?"+ "+b:"- "+Math.abs(b)}x ${c>=0?"+ "+c:"- "+Math.abs(c)}의 꼭짓점의 x좌표는?`,
-
+"f(x)="+a+"x² "+
+(b>=0 ? "+ "+b : "- "+Math.abs(b))+
+"x "+
+(c>=0 ? "+ "+c : "- "+Math.abs(c))+
+"의 꼭짓점의 x좌표는?",
 answer:h
-
 };
 
 }
 
 
-/* 인수분해 */
+/* 다항식 */
 
-if(type==="polynomial_factor"){
+if(type==="polynomial_value"){
 
-const r1=
-randInt(-8,8);
-
-const r2=
-randInt(-8,8);
-
-const B=
--(r1+r2);
-
-const C=
-r1*r2;
-
-return {
-
-type,
-
-question:
-`x² ${B>=0?"+ "+B:"- "+Math.abs(B)}x ${C>=0?"+ "+C:"- "+Math.abs(C)}를 인수분해했을 때 한 인수는?`,
-
-answer:
-`x${r1>=0?"-"+r1:"+ "+Math.abs(r1)}`
-
-};
-
-}
-
-
-/* 나머지 정리 */
-
-if(type==="polynomial_remainder"){
-
-const a=
+var pa=
 randInt(2,6);
 
-const b=
+var pb=
 randInt(-8,8);
 
-const c=
-randInt(1,5);
+var pc=
+randInt(-10,10);
 
-const x=
-randInt(-4,4);
+var px=
+randInt(-4,6);
 
-const value=
-a*x*x+b*x+c;
+var pvalue=
+pa*px*px+
+pb*px+
+pc;
 
 return {
-
-type,
-
+type:type,
 question:
-`P(x)=${a}x²${b>=0?"+ "+b:"- "+Math.abs(b)}x+${c}일 때 P(${x})의 값은?`,
-
-answer:value
-
+"P(x)="+
+pa+
+"x² "+
+(pb>=0 ? "+ "+pb : "- "+Math.abs(pb))+
+"x "+
+(pc>=0 ? "+ "+pc : "- "+Math.abs(pc))+
+"일 때 P("+
+px+
+")의 값은?",
+answer:pvalue
 };
 
 }
@@ -2260,31 +2282,26 @@ answer:value
 
 if(type==="function_composition"){
 
-const a=
+var fa=
 randInt(2,7);
 
-const b=
+var fb=
 randInt(-6,6);
 
-const x=
+var gx=
 randInt(-5,7);
 
-const inner=
-a*x+b;
-
-const p=
-randInt(2,6);
-
 return {
-
-type,
-
+type:type,
 question:
-`f(x)=${a}x${b>=0?"+ "+b:"- "+Math.abs(b)}, g(x)=x²일 때 f(g(${x}))는?`,
-
+"f(x)="+fa+"x "+
+(fb>=0 ? "+ "+fb : "- "+Math.abs(fb))+
+", g(x)=x²일 때 f(g("+
+gx+
+"))는?",
 answer:
-a*x*x+b
-
+fa*gx*gx+
+fb
 };
 
 }
@@ -2294,77 +2311,24 @@ a*x*x+b
 
 if(type==="function_inverse"){
 
-const a=
+var ia=
 randInt(2,8);
 
-const b=
+var ib=
 randInt(-8,8);
 
-const y=
+var ix=
 randInt(-5,8);
 
 return {
-
-type,
-
+type:type,
 question:
-`f(x)=${a}x${b>=0?"+ "+b:"- "+Math.abs(b)}일 때 f⁻¹(${a*y+b})는?`,
-
-answer:y
-
-};
-
-}
-
-
-/* 유리함수 */
-
-if(type==="rational_function"){
-
-const a=
-randInt(2,8);
-
-const b=
-randInt(1,8);
-
-const x=
-randInt(2,8);
-
-return {
-
-type,
-
-question:
-`f(x)=(${a}x+${b})/x일 때 f(${x})는?`,
-
-answer:
-(a*x+b)/x
-
-};
-
-}
-
-
-/* 절댓값 */
-
-if(type==="absolute_value"){
-
-const a=
-randInt(-20,20);
-
-const b=
-randInt(-10,10);
-
-return {
-
-type,
-
-question:
-`|${a}| + ${b} = ?`,
-
-answer:
-Math.abs(a)+b
-
+"f(x)="+ia+"x "+
+(ib>=0 ? "+ "+ib : "- "+Math.abs(ib))+
+"일 때 f⁻¹("+
+(ia*ix+ib)+
+")는?",
+answer:ix
 };
 
 }
@@ -2374,27 +2338,29 @@ Math.abs(a)+b
 
 if(type==="exponential"){
 
-const base=
+var base=
 randomChoice(
 [2,3,5]
 );
 
-const a=
+var ea=
 randInt(2,5);
 
-const b=
+var eb=
 randInt(1,4);
 
 return {
-
-type,
-
+type:type,
 question:
-`${base}^${a} × ${base}^${b} = ?`,
-
+base+"^"+ea+
+" × "+
+base+"^"+eb+
+" = ?",
 answer:
-Math.pow(base,a+b)
-
+Math.pow(
+base,
+ea+eb
+)
 };
 
 }
@@ -2404,29 +2370,22 @@ Math.pow(base,a+b)
 
 if(type==="logarithm"){
 
-const base=
+var lb=
 randomChoice(
 [2,3,4,5]
 );
 
-const exponent=
+var le=
 randInt(2,6);
 
-const value=
-Math.pow(
-base,
-exponent
-);
-
 return {
-
-type,
-
+type:type,
 question:
-`log_${base}(${value}) = ?`,
-
-answer:exponent
-
+"log_"+lb+
+"("+
+Math.pow(lb,le)+
+") = ?",
+answer:le
 };
 
 }
@@ -2436,26 +2395,27 @@ answer:exponent
 
 if(type==="log_equation"){
 
-const base=
+var logBase=
 randomChoice(
 [2,3,5]
 );
 
-const x=
-randInt(1,6);
-
-const constant=
-Math.pow(base,x);
+var logAnswer=
+randInt(2,6);
 
 return {
-
-type,
-
+type:type,
 question:
-`log_${base}(x) = ${x}일 때 x는?`,
-
-answer:constant
-
+"log_"+
+logBase+
+"(x) = "+
+logAnswer+
+"일 때 x는?",
+answer:
+Math.pow(
+logBase,
+logAnswer
+)
 };
 
 }
@@ -2465,7 +2425,8 @@ answer:constant
 
 if(type==="trigonometric_value"){
 
-const values=[
+var trig=
+randomChoice([
 
 {q:"sin 30°",a:.5},
 {q:"cos 60°",a:.5},
@@ -2475,20 +2436,14 @@ const values=[
 {q:"sin 150°",a:.5},
 {q:"cos 120°",a:-.5}
 
-];
-
-const item=
-randomChoice(values);
+]);
 
 return {
-
-type,
-
+type:type,
 question:
-`${item.q} = ?`,
-
-answer:item.a
-
+trig.q+
+" = ?",
+answer:trig.a
 };
 
 }
@@ -2498,31 +2453,36 @@ answer:item.a
 
 if(type==="trigonometric_equation"){
 
-const angle=
+var angle=
 randomChoice(
 [30,45,60,90]
 );
 
-const value=
-angle===30
-?.5
-:
-angle===45
-?Math.sqrt(2)/2
-:
-angle===60
-?Math.sqrt(3)/2
-:1;
+var trigValue;
+
+if(angle===30){
+trigValue=.5;
+}
+
+if(angle===45){
+trigValue=Math.sqrt(2)/2;
+}
+
+if(angle===60){
+trigValue=Math.sqrt(3)/2;
+}
+
+if(angle===90){
+trigValue=1;
+}
 
 return {
-
-type,
-
+type:type,
 question:
-`0°≤θ≤90°에서 sin θ = ${formatNumber(value)}일 때 θ는?`,
-
+"0°≤θ≤90°에서 sin θ = "+
+formatNumber(trigValue)+
+"일 때 θ는?",
 answer:angle
-
 };
 
 }
@@ -2532,25 +2492,28 @@ answer:angle
 
 if(type==="arithmetic_sequence"){
 
-const first=
+var af=
 randInt(-10,20);
 
-const d=
+var ad=
 randInt(2,10);
 
-const n=
+var an=
 randInt(6,20);
 
 return {
-
-type,
-
+type:type,
 question:
-`등차수열의 첫째항이 ${first}, 공차가 ${d}일 때 ${n}번째 항은?`,
-
+"등차수열의 첫째항이 "+
+af+
+", 공차가 "+
+ad+
+"일 때 "+
+an+
+"번째 항은?",
 answer:
-first+(n-1)*d
-
+af+
+(an-1)*ad
 };
 
 }
@@ -2560,30 +2523,33 @@ first+(n-1)*d
 
 if(type==="geometric_sequence"){
 
-const first=
+var gf=
 randInt(1,5);
 
-const ratio=
+var gr=
 randomChoice(
 [2,3,-2]
 );
 
-const n=
+var gn=
 randInt(4,8);
 
 return {
-
-type,
-
+type:type,
 question:
-`등비수열의 첫째항이 ${first}, 공비가 ${ratio}일 때 ${n}번째 항은?`,
-
+"등비수열의 첫째항이 "+
+gf+
+", 공비가 "+
+gr+
+"일 때 "+
+gn+
+"번째 항은?",
 answer:
-first*Math.pow(
-ratio,
-n-1
+gf*
+Math.pow(
+gr,
+gn-1
 )
-
 };
 
 }
@@ -2593,60 +2559,55 @@ n-1
 
 if(type==="sequence_sum"){
 
-const first=
+var sf=
 randInt(1,10);
 
-const d=
+var sd=
 randInt(2,7);
 
-const n=
+var sn=
 randInt(5,12);
 
-const sum=
-n*
-(2*first+(n-1)*d)/
-2;
-
 return {
-
-type,
-
+type:type,
 question:
-`등차수열의 첫째항 ${first}, 공차 ${d}인 수열의 첫 ${n}개 항의 합은?`,
-
-answer:sum
-
+"첫째항 "+
+sf+
+", 공차 "+
+sd+
+"인 등차수열의 첫 "+
+sn+
+"개 항의 합은?",
+answer:
+sn*
+(2*sf+(sn-1)*sd)/
+2
 };
 
 }
 
 
-/* 이항분포 */
+/* 이항확률 */
 
 if(type==="binomial_probability"){
 
-const n=
+var bn=
 randInt(4,7);
 
-const success=
-randInt(1,n-1);
-
-const prob=
-combination(
-n,
-success
-)*
-Math.pow(.5,n);
+var bs=
+randInt(1,bn-1);
 
 return {
-
-type,
-
+type:type,
 question:
-`동전을 ${n}번 던질 때 앞면이 정확히 ${success}번 나올 확률은?`,
-
-answer:prob
-
+"공정한 동전을 "+
+bn+
+"번 던질 때 앞면이 정확히 "+
+bs+
+"번 나올 확률은?",
+answer:
+combination(bn,bs)*
+Math.pow(.5,bn)
 };
 
 }
@@ -2656,22 +2617,21 @@ answer:prob
 
 if(type==="combination"){
 
-const n=
+var cn=
 randInt(7,12);
 
-const r=
-randInt(2,n-2);
+var cr=
+randInt(2,cn-2);
 
 return {
-
-type,
-
+type:type,
 question:
-`${n}C${r}의 값은?`,
-
+cn+
+"C"+
+cr+
+"의 값은?",
 answer:
-combination(n,r)
-
+combination(cn,cr)
 };
 
 }
@@ -2681,116 +2641,89 @@ combination(n,r)
 
 if(type==="permutation"){
 
-const n=
+var pn=
 randInt(5,9);
 
-const r=
+var pr=
 randInt(2,4);
 
-let value=1;
+var pvalue=1;
 
 for(
-let i=0;
-i<r;
-i++
+var pi=0;
+pi<pr;
+pi++
 ){
 
-value*=
-n-i;
+pvalue*=
+pn-pi;
 
 }
 
 return {
-
-type,
-
+type:type,
 question:
-`${n}P${r}의 값은?`,
-
-answer:value
-
+pn+
+"P"+
+pr+
+"의 값은?",
+answer:pvalue
 };
 
 }
 
 
-/* 조건부 확률 */
-
-if(type==="conditional_probability"){
-
-const red=
-randInt(2,6);
-
-const blue=
-randInt(2,6);
-
-return {
-
-type,
-
-question:
-`상자에 빨간 공 ${red}개와 파란 공 ${blue}개가 있습니다. 한 개를 뽑아 빨간색임을 알았을 때 빨간색일 확률은?`,
-
-answer:1
-
-};
-
-}
-
-
-/* 삼각형 넓이 */
+/* 삼각형 */
 
 if(type==="triangle_area"){
 
-const base=
+var tb=
 randInt(5,20);
 
-const height=
+var th=
 randInt(5,20);
 
 return {
-
-type,
-
+type:type,
 question:
-`밑변 ${base}, 높이 ${height}인 삼각형의 넓이는?`,
-
+"밑변 "+
+tb+
+", 높이 "+
+th+
+"인 삼각형의 넓이는?",
 answer:
-base*height/2
-
+tb*th/2
 };
 
 }
 
 
-/* 삼각형 각 */
-
 if(type==="triangle_angle"){
 
-const a=
+var ta=
 randInt(25,80);
 
-const b=
+var tb2=
 randInt(25,75);
 
-const c=
-180-a-b;
+var tc=
+180-ta-tb2;
 
-if(c<=15){
+if(tc<=15){
 
 return generateHigh();
 
 }
 
 return {
-
-type,
-
+type:type,
 question:
-`삼각형의 두 내각이 ${a}°, ${b}°일 때 나머지 한 각은?`,
-
-answer:c
-
+"삼각형의 두 내각이 "+
+ta+
+"°, "+
+tb2+
+"°일 때 나머지 한 각은?",
+answer:tc
 };
 
 }
@@ -2800,31 +2733,29 @@ answer:c
 
 if(type==="pythagoras"){
 
-const triples=[
-
+var triples=[
 [3,4,5],
 [5,12,13],
 [8,15,17],
 [7,24,25]
-
 ];
 
-const t=
+var triple=
 randomChoice(triples);
 
-const m=
+var multiple=
 randInt(1,3);
 
 return {
-
-type,
-
+type:type,
 question:
-`직각삼각형의 두 직각변이 ${t[0]*m}, ${t[1]*m}일 때 빗변은?`,
-
+"직각삼각형의 두 직각변이 "+
+triple[0]*multiple+
+", "+
+triple[1]*multiple+
+"일 때 빗변의 길이는?",
 answer:
-t[2]*m
-
+triple[2]*multiple
 };
 
 }
@@ -2834,31 +2765,33 @@ t[2]*m
 
 if(type==="coordinate_distance"){
 
-const x1=
+var x1=
 randInt(-8,8);
 
-const y1=
+var y1=
 randInt(-8,8);
 
-const x2=
+var x2=
 randInt(-8,8);
 
-const y2=
+var y2=
 randInt(-8,8);
 
 return {
-
-type,
-
+type:type,
 question:
-`두 점 (${x1},${y1}), (${x2},${y2}) 사이의 거리는?`,
-
+"두 점 ("+
+x1+
+","+y1+
+"), ("+
+x2+
+","+y2+
+") 사이의 거리는?",
 answer:
 Math.sqrt(
 Math.pow(x2-x1,2)+
 Math.pow(y2-y1,2)
 )
-
 };
 
 }
@@ -2868,72 +2801,70 @@ Math.pow(y2-y1,2)
 
 if(type==="coordinate_midpoint"){
 
-const x1=
+var mx1=
 randInt(-10,10);
 
-const x2=
+var my1=
 randInt(-10,10);
 
-const y1=
+var mx2=
 randInt(-10,10);
 
-const y2=
+var my2=
 randInt(-10,10);
 
 return {
-
-type,
-
+type:type,
 question:
-`두 점 (${x1},${y1}), (${x2},${y2})의 중점의 x좌표는?`,
-
+"두 점 ("+
+mx1+
+","+my1+
+"), ("+
+mx2+
+","+my2+
+")의 중점의 x좌표는?",
 answer:
-(x1+x2)/2
-
+(mx1+mx2)/2
 };
 
 }
 
 
-/* 원의 넓이 */
+/* 원 넓이 */
 
 if(type==="circle_area"){
 
-const r=
+var ra=
 randInt(2,12);
 
 return {
-
-type,
-
+type:type,
 question:
-`반지름 ${r}인 원의 넓이를 π를 사용하여 나타내면?`,
-
+"반지름 "+
+ra+
+"인 원의 넓이를 π를 사용하여 나타내면?",
 answer:
-`${r*r}π`
-
+(ra*ra)+"π"
 };
 
 }
 
 
-/* 원의 둘레 */
+/* 원 둘레 */
 
 if(type==="circle_circumference"){
 
-const r=
+var rc=
 randInt(2,12);
 
 return {
-
-type,
-
+type:type,
 question:
-`반지름 ${r}인 원의 둘레를 π를 사용하여 나타내면?`,
-
+"반지름 "+
+rc+
+"인 원의 둘레를 π를 사용하여 나타내면?",
 answer:
-`${2*r}π`
-
+(2*rc)+"π"
 };
 
 }
@@ -2943,57 +2874,57 @@ answer:
 
 if(type==="circle_sector_area"){
 
-const r=
+var rs=
 randInt(3,10);
 
-const angle=
+var sa=
 randomChoice(
 [30,45,60,90,120,180]
 );
 
-const coefficient=
-r*r*angle/360;
+var sc=
+rs*rs*sa/360;
 
 return {
-
-type,
-
+type:type,
 question:
-`반지름 ${r}, 중심각 ${angle}°인 부채꼴의 넓이는?`,
-
+"반지름 "+
+rs+
+", 중심각 "+
+sa+
+"°인 부채꼴의 넓이는?",
 answer:
-`${Number(coefficient.toFixed(2))}π`
-
+Number(sc.toFixed(2))+"π"
 };
 
 }
 
 
-/* 호의 길이 */
+/* 호 */
 
 if(type==="circle_arc"){
 
-const r=
+var rar=
 randInt(3,10);
 
-const angle=
+var aa=
 randomChoice(
 [30,45,60,90,120,180]
 );
 
-const coefficient=
-2*r*angle/360;
+var ac=
+2*rar*aa/360;
 
 return {
-
-type,
-
+type:type,
 question:
-`반지름 ${r}, 중심각 ${angle}°인 호의 길이는?`,
-
+"반지름 "+
+rar+
+", 중심각 "+
+aa+
+"°인 호의 길이는?",
 answer:
-`${Number(coefficient.toFixed(2))}π`
-
+Number(ac.toFixed(2))+"π"
 };
 
 }
@@ -3003,48 +2934,47 @@ answer:
 
 if(type==="circle_equation"){
 
-const r=
+var re=
 randInt(2,10);
 
 return {
-
-type,
-
+type:type,
 question:
-`중심이 원점이고 반지름이 ${r}인 원의 방정식은?`,
-
+"중심이 원점이고 반지름이 "+
+re+
+"인 원의 방정식은?",
 answer:
-`x²+y²=${r*r}`
-
+"x²+y²="+
+(re*re)
 };
 
 }
 
 
-/* 현 */
+/* 원의 현 */
 
 if(type==="circle_chord"){
 
-const r=
+var rr=
 randInt(5,12);
 
-const d=
-randInt(1,r-2);
+var dd=
+randInt(1,rr-2);
 
-const chord=
+var chord=
 2*Math.sqrt(
-r*r-d*d
+rr*rr-dd*dd
 );
 
 return {
-
-type,
-
+type:type,
 question:
-`반지름 ${r}인 원에서 중심에서 현까지의 거리가 ${d}일 때 현의 길이는?`,
-
+"반지름이 "+
+rr+
+"인 원에서 중심에서 현까지의 거리가 "+
+dd+
+"일 때 현의 길이는?",
 answer:chord
-
 };
 
 }
@@ -3054,27 +2984,33 @@ answer:chord
 
 if(type==="vector_dot"){
 
-const a=
+var va=
 randInt(1,9);
 
-const b=
+var vb=
 randInt(1,9);
 
-const c=
+var vc=
 randInt(1,9);
 
-const d=
+var vd=
 randInt(1,9);
 
 return {
-
-type,
-
+type:type,
 question:
-`벡터 (${a},${b})와 (${c},${d})의 내적은?`,
-
-answer:a*c+b*d
-
+"벡터 ("+
+va+
+","+
+vb+
+")와 ("+
+vc+
+","+
+vd+
+")의 내적은?",
+answer:
+va*vc+
+vb*vd
 };
 
 }
@@ -3084,22 +3020,25 @@ answer:a*c+b*d
 
 if(type==="vector_magnitude"){
 
-const a=
+var vma=
 randInt(3,10);
 
-const b=
+var vmb=
 randInt(3,10);
 
 return {
-
-type,
-
+type:type,
 question:
-`벡터 (${a},${b})의 크기는?`,
-
+"벡터 ("+
+vma+
+","+
+vmb+
+")의 크기는?",
 answer:
-Math.sqrt(a*a+b*b)
-
+Math.sqrt(
+vma*vma+
+vmb*vmb
+)
 };
 
 }
@@ -3109,28 +3048,32 @@ Math.sqrt(a*a+b*b)
 
 if(type==="derivative"){
 
-const n=
+var dn=
 randInt(2,6);
 
-const a=
+var da=
 randInt(2,7);
 
-const x=
+var dx=
 randInt(1,6);
 
 return {
-
-type,
-
+type:type,
 question:
-`f(x)=${a}x^${n}일 때 f'(${x})는?`,
-
+"f(x)="+
+da+
+"x^"+
+dn+
+"일 때 f'("+
+dx+
+")는?",
 answer:
-a*n*Math.pow(
-x,
-n-1
+da*
+dn*
+Math.pow(
+dx,
+dn-1
 )
-
 };
 
 }
@@ -3140,22 +3083,22 @@ n-1
 
 if(type==="tangent_slope"){
 
-const a=
+var tA=
 randInt(2,7);
 
-const x=
+var tX=
 randInt(1,6);
 
 return {
-
-type,
-
+type:type,
 question:
-`f(x)=${a}x²일 때 x=${x}에서의 접선의 기울기는?`,
-
+"f(x)="+
+tA+
+"x²일 때 x="+
+tX+
+"에서의 접선의 기울기는?",
 answer:
-2*a*x
-
+2*tA*tX
 };
 
 }
@@ -3165,73 +3108,79 @@ answer:
 
 if(type==="quadratic_derivative"){
 
-const a=
+var qa=
 randInt(2,7);
 
-const b=
+var qb=
 randInt(-8,8);
 
-const x=
+var qx=
 randInt(-4,7);
 
 return {
-
-type,
-
+type:type,
 question:
-`f(x)=${a}x² ${b>=0?"+ "+b:"- "+Math.abs(b)}x일 때 f'(${x})는?`,
-
+"f(x)="+
+qa+
+"x² "+
+(qb>=0 ? "+ "+qb : "- "+Math.abs(qb))+
+"x일 때 f'("+
+qx+
+")는?",
 answer:
-2*a*x+b
-
+2*qa*qx+
+qb
 };
 
 }
 
 
-/* 기본 적분 */
+/* 적분 */
 
 if(type==="integral_basic"){
 
-const a=
+var ia=
 randInt(2,8);
 
-const n=
+var inum=
 randInt(2,6);
 
 return {
-
-type,
-
+type:type,
 question:
-`∫₀^${n} ${a}x dx = ?`,
-
+"∫₀^"+
+inum+
+" "+
+ia+
+"x dx = ?",
 answer:
-a*n*n/2
-
+ia*inum*inum/2
 };
 
 }
 
 
-/* 곡선과 x축 사이 넓이 */
+/* 곡선과 x축 넓이 */
 
-const a=
+var areaA=
 randInt(1,5);
 
-const n=
+var areaN=
 randInt(1,5);
 
 return {
-
 type:"area_between_curve",
-
 question:
-`y=${a}x와 x=0, x=${n}, x축으로 둘러싸인 도형의 넓이는?`,
-
+"y="+
+areaA+
+"x와 x=0, x="+
+areaN+
+", x축으로 둘러싸인 도형의 넓이는?",
 answer:
-a*n*n/2
-
+areaA*
+areaN*
+areaN/
+2
 };
 
 }
@@ -3243,43 +3192,36 @@ a*n*n/2
 
 function generateUniversity(){
 
-const types=[
-
+var types=[
 "u_integral",
 "u_derivative",
 "u_definite_integral",
 "u_limit",
 "u_matrix_trace",
 "u_matrix_det",
-"u_vector",
+"u_probability",
 "u_complex",
-"u_expectation",
+"u_vector",
 "u_circle"
-
 ];
 
-const type=
+var type=
 chooseType(types);
 
 
 if(type==="u_integral"){
 
-const a=
-randInt(2,7);
-
-const n=
-randInt(2,6);
+var n=
+randInt(2,8);
 
 return {
-
-type,
-
+type:type,
 question:
-`∫₀^${n} ${a}x² dx = ?`,
-
+"∫₀^"+
+n+
+" x² dx = ?",
 answer:
-a*n*n*n/3
-
+n*n*n/3
 };
 
 }
@@ -3287,25 +3229,32 @@ a*n*n*n/3
 
 if(type==="u_derivative"){
 
-const a=
+var ua=
 randInt(2,8);
 
-const n=
+var un=
 randInt(2,5);
 
-const x=
-randInt(1,5);
+var ux=
+randInt(1,6);
 
 return {
-
-type,
-
+type:type,
 question:
-`f(x)=${a}x^${n}일 때 f'(${x})는?`,
-
+"f(x)="+
+ua+
+"x^"+
+un+
+"일 때 f'("+
+ux+
+")는?",
 answer:
-a*n*Math.pow(x,n-1)
-
+ua*
+un*
+Math.pow(
+ux,
+un-1
+)
 };
 
 }
@@ -3313,25 +3262,32 @@ a*n*Math.pow(x,n-1)
 
 if(type==="u_definite_integral"){
 
-const a=
+var ul=
 randInt(2,8);
 
-const b=
+var ub=
 randInt(1,6);
 
-const n=
+var un2=
 randInt(2,6);
 
 return {
-
-type,
-
+type:type,
 question:
-`∫₀^${n} (${a}x+${b}) dx = ?`,
-
+"∫₀^"+
+un2+
+" ("+
+ul+
+"x+"+
+ub+
+") dx = ?",
 answer:
-a*n*n/2+b*n
-
+ul*
+un2*
+un2/
+2+
+ub*
+un2
 };
 
 }
@@ -3339,25 +3295,28 @@ a*n*n/2+b*n
 
 if(type==="u_limit"){
 
-const a=
+var la=
 randInt(2,9);
 
-const b=
+var lb=
 randInt(1,9);
 
-const x=
+var lx=
 randInt(1,7);
 
 return {
-
-type,
-
+type:type,
 question:
-`lim(x→${x})(${a}x+${b}) = ?`,
-
+"lim(x→"+
+lx+
+")("+
+la+
+"x+"+
+lb+
+") = ?",
 answer:
-a*x+b
-
+la*lx+
+lb
 };
 
 }
@@ -3365,22 +3324,22 @@ a*x+b
 
 if(type==="u_matrix_trace"){
 
-const a=
+var ma=
 randInt(1,9);
 
-const b=
+var mb=
 randInt(1,9);
 
 return {
-
-type,
-
+type:type,
 question:
-`행렬 [[${a},0],[0,${b}]]의 trace는?`,
-
+"행렬 [["+
+ma+
+",0],[0,"+
+mb+
+"]]의 trace는?",
 answer:
-a+b
-
+ma+mb
 };
 
 }
@@ -3388,57 +3347,56 @@ a+b
 
 if(type==="u_matrix_det"){
 
-const a=
+var m1=
 randInt(1,7);
 
-const b=
+var m2=
 randInt(1,7);
 
-const c=
+var m3=
 randInt(1,7);
 
-const d=
+var m4=
 randInt(1,7);
 
 return {
-
-type,
-
+type:type,
 question:
-`det [[${a},${b}],[${c},${d}]]의 값은?`,
-
+"det [["+
+m1+
+","+
+m2+
+"],["+
+m3+
+","+
+m4+
+"]]의 값은?",
 answer:
-a*d-b*c
-
+m1*m4-
+m2*m3
 };
 
 }
 
 
-if(type==="u_vector"){
+if(type==="u_probability"){
 
-const a=
-randInt(1,8);
+var us=
+randInt(2,7);
 
-const b=
-randInt(1,8);
-
-const c=
-randInt(1,8);
-
-const d=
-randInt(1,8);
+var ut=
+randInt(us+1,12);
 
 return {
-
-type,
-
+type:type,
 question:
-`(${a},${b})·(${c},${d}) = ?`,
-
+"성공 "+
+us+
+"회 / 전체 "+
+ut+
+"회일 때 경험적 확률은?",
 answer:
-a*c+b*d
-
+us/ut
 };
 
 }
@@ -3446,68 +3404,73 @@ a*c+b*d
 
 if(type==="u_complex"){
 
-const a=
+var ca=
 randInt(1,8);
 
-const b=
+var cb=
 randInt(1,8);
 
 return {
-
-type,
-
+type:type,
 question:
-`z=${a}+${b}i일 때 |z|²는?`,
-
+"z="+
+ca+
+" + "+
+cb+
+"i일 때 |z|²는?",
 answer:
-a*a+b*b
-
+ca*ca+
+cb*cb
 };
 
 }
 
 
-if(type==="u_expectation"){
+if(type==="u_vector"){
 
-const x1=
-randInt(1,5);
+var va=
+randInt(1,8);
 
-const x2=
-randInt(6,10);
+var vb=
+randInt(1,8);
 
-const p=
-randomChoice(
-[.2,.3,.4,.6,.7,.8]
-);
+var vc=
+randInt(1,8);
+
+var vd=
+randInt(1,8);
 
 return {
-
-type,
-
+type:type,
 question:
-`X가 ${x1}을 확률 ${p}, ${x2}를 확률 ${1-p}로 가질 때 E[X]는?`,
-
+"벡터 ("+
+va+
+","+
+vb+
+")·("+
+vc+
+","+
+vd+
+") = ?",
 answer:
-p*x1+(1-p)*x2
-
+va*vc+
+vb*vd
 };
 
 }
 
 
-const r=
+var cr=
 randInt(3,10);
 
 return {
-
 type:"u_circle",
-
 question:
-`반지름 ${r}인 원의 넓이를 π로 나타내면?`,
-
+"반지름 "+
+cr+
+"인 원의 넓이를 π로 나타내면?",
 answer:
-`${r*r}π`
-
+(cr*cr)+"π"
 };
 
 }
@@ -3519,8 +3482,7 @@ answer:
 
 function generateUniversityHard(){
 
-const types=[
-
+var types=[
 "uh_integral_trig",
 "uh_chain_rule",
 "uh_determinant",
@@ -3530,28 +3492,25 @@ const types=[
 "uh_cross_product",
 "uh_circle_sector",
 "uh_coordinate_geometry"
-
 ];
 
-const type=
+var type=
 chooseType(types);
 
 
 if(type==="uh_integral_trig"){
 
-const a=
+var ua=
 randInt(1,7);
 
 return {
-
-type,
-
+type:type,
 question:
-`∫₀^π ${a}sin(x) dx = ?`,
-
+"∫₀^π "+
+ua+
+"sin(x) dx = ?",
 answer:
-2*a
-
+2*ua
 };
 
 }
@@ -3559,22 +3518,29 @@ answer:
 
 if(type==="uh_chain_rule"){
 
-const a=
+var ca=
 randInt(2,7);
 
-const x=
+var cx=
 randInt(1,6);
 
+var inner=
+ca*cx*cx+1;
+
 return {
-
-type,
-
+type:type,
 question:
-`f(x)=(${a}x²+1)³일 때 x=${x}에서 f'(x)는?`,
-
+"f(x)=("+
+ca+
+"x²+1)³일 때 x="+
+cx+
+"에서 f'(x)는?",
 answer:
-6*a*x*Math.pow(a*x*x+1,2)
-
+6*
+ca*
+cx*
+inner*
+inner
 };
 
 }
@@ -3582,24 +3548,27 @@ answer:
 
 if(type==="uh_determinant"){
 
-const a=
+var da=
 randInt(1,5);
 
-const b=
+var db=
 randInt(1,5);
 
-const c=
+var dc=
 randInt(1,5);
 
 return {
-
-type,
-
+type:type,
 question:
-`diag(${a},${b},${c})의 행렬식은?`,
-
-answer:a*b*c
-
+"diag("+
+da+
+","+
+db+
+","+
+dc+
+")의 행렬식은?",
+answer:
+da*db*dc
 };
 
 }
@@ -3607,18 +3576,17 @@ answer:a*b*c
 
 if(type==="uh_complex"){
 
-const a=
-randInt(1,7);
+var za=
+randInt(1,9);
 
 return {
-
-type,
-
+type:type,
 question:
-`z=${a}i일 때 z²는?`,
-
-answer:-a*a
-
+"z="+
+za+
+"i일 때 z²는?",
+answer:
+-za*za
 };
 
 }
@@ -3626,27 +3594,32 @@ answer:-a*a
 
 if(type==="uh_expectation"){
 
-const x1=
+var ex1=
 randInt(1,5);
 
-const x2=
+var ex2=
 randInt(6,10);
 
-const p=
+var prob=
 randomChoice(
 [.2,.3,.4,.6,.7,.8]
 );
 
 return {
-
-type,
-
+type:type,
 question:
-`X가 ${x1}을 확률 ${p}, ${x2}를 확률 ${1-p}로 가질 때 E[X]는?`,
-
+"X가 "+
+ex1+
+"을 확률 "+
+prob+
+", "+
+ex2+
+"를 확률 "+
+(1-prob)+
+"로 가질 때 E[X]는?",
 answer:
-p*x1+(1-p)*x2
-
+prob*ex1+
+(1-prob)*ex2
 };
 
 }
@@ -3654,25 +3627,31 @@ p*x1+(1-p)*x2
 
 if(type==="uh_geometric_series"){
 
-const a=
+var gsA=
 randInt(1,5);
 
-const r=
-randomChoice([2,3]);
+var gsR=
+randomChoice(
+[2,3]
+);
 
-const n=
+var gsN=
 randInt(3,7);
 
 return {
-
-type,
-
+type:type,
 question:
-`첫째항 ${a}, 공비 ${r}인 등비수열의 첫 ${n}개 항의 합은?`,
-
+"첫째항 "+
+gsA+
+", 공비 "+
+gsR+
+"인 등비수열의 첫 "+
+gsN+
+"개 항의 합은?",
 answer:
-a*(Math.pow(r,n)-1)/(r-1)
-
+gsA*
+(Math.pow(gsR,gsN)-1)/
+(gsR-1)
 };
 
 }
@@ -3680,21 +3659,22 @@ a*(Math.pow(r,n)-1)/(r-1)
 
 if(type==="uh_cross_product"){
 
-const a=
+var xa=
 randInt(2,7);
 
-const b=
+var xb=
 randInt(2,7);
 
 return {
-
-type,
-
+type:type,
 question:
-`벡터 (${a},0,0)과 (0,${b},0)의 외적의 크기는?`,
-
-answer:a*b
-
+"벡터 ("+
+xa+
+",0,0)과 (0,"+
+xb+
+",0)의 외적의 크기는?",
+answer:
+xa*xb
 };
 
 }
@@ -3702,64 +3682,71 @@ answer:a*b
 
 if(type==="uh_circle_sector"){
 
-const r=
+var rr=
 randInt(3,9);
 
-const angle=
+var angle=
 randomChoice(
 [30,45,60,90,120]
 );
 
 return {
-
-type,
-
+type:type,
 question:
-`반지름 ${r}, 중심각 ${angle}°인 부채꼴의 넓이는?`,
-
+"반지름 "+
+rr+
+", 중심각 "+
+angle+
+"°인 부채꼴의 넓이는?",
 answer:
-`${Number((r*r*angle/360).toFixed(2))}π`
-
+Number(
+(rr*rr*angle/360)
+.toFixed(2)
+)+"π"
 };
 
 }
 
 
-const x1=
+var x1=
 randInt(-5,5);
 
-const y1=
+var y1=
 randInt(-5,5);
 
-const x2=
+var x2=
 randInt(-5,5);
 
-const y2=
+var y2=
 randInt(-5,5);
 
 return {
-
 type:"uh_coordinate_geometry",
-
 question:
-`두 점 (${x1},${y1}), (${x2},${y2}) 사이 거리의 제곱은?`,
-
+"두 점 ("+
+x1+
+","+
+y1+
+"), ("+
+x2+
+","+
+y2+
+") 사이 거리의 제곱은?",
 answer:
 Math.pow(x2-x1,2)+
 Math.pow(y2-y1,2)
-
 };
 
 }
 
 
 /* =====================================================
-   최종 문제
+   문제 선택
 ===================================================== */
 
 function createQuestion(){
 
-let attempts=0;
+var attempts=0;
 
 while(
 attempts<1000
@@ -3767,30 +3754,29 @@ attempts<1000
 
 attempts++;
 
-const level=
+var level=
 chooseDifficulty();
 
-let q;
+var q;
 
 if(level==="high"){
 
 q=
 generateHigh();
 
-}
-else if(level==="university"){
+}else if(
+level==="university"
+){
 
 q=
 generateUniversity();
 
-}
-else{
+}else{
 
 q=
 generateUniversityHard();
 
 }
-
 
 if(
 q.type===
@@ -3801,18 +3787,24 @@ continue;
 
 }
 
-const key=
-`${level}|${q.type}|${q.question}|${formatNumber(q.answer)}`;
+var key=
+level+
+"|"+
+q.type+
+"|"+
+q.question+
+"|"+
+String(q.answer);
 
 if(
-usedQuestionKeys.has(key)
+usedQuestionKeys[key]
 ){
 
 continue;
 
 }
 
-usedQuestionKeys.add(key);
+usedQuestionKeys[key]=true;
 
 lastQuestionType=
 q.type;
@@ -3824,66 +3816,48 @@ return q;
 
 }
 
-
-/* 안전망도 고등학교 수준 */
-
-const a=
-randInt(2,9);
-
-const b=
-randInt(-8,8);
-
-const x=
-randInt(-4,7);
-
 return {
-
 level:"high",
-
 type:"fallback_"+Date.now(),
-
-question:
-`f(x)=${a}x²${b>=0?"+ "+b:"- "+Math.abs(b)}일 때 f(${x})는?`,
-
-answer:
-a*x*x+b
-
+question:"x² - 7x + 12 = 0의 한 근은?",
+answer:3
 };
 
 }
 
 
 /* =====================================================
-   비슷한 선지 만들기
+   비슷한 선지
 ===================================================== */
 
-function makeChoices(
-answer,
-level
-){
+function makeChoices(answer,level){
 
-/* 문자열 π 문제 */
+/* π */
 
 if(
 typeof answer==="string" &&
-answer.endsWith("π")
+answer.indexOf("π")!==-1
 ){
 
-const coefficient=
+var coefficient=
 parseFloat(
 answer.replace("π","")
 );
 
-const choices=[
+if(
+Number.isFinite(coefficient)
+){
+
+var choices=[
 answer
 ];
 
-const step=
+var step=
 Math.abs(coefficient)>=20
 ?0.5
 :0.25;
 
-const offsets=[
+var offsets=[
 -step*2,
 -step,
 step,
@@ -3891,20 +3865,26 @@ step*2
 ];
 
 offsets.forEach(
-offset=>{
+function(offset){
 
-const value=
-coefficient+offset;
+var value=
+coefficient+
+offset;
+
+if(value<=0){
+return;
+}
+
+var text=
+String(
+Number(
+value.toFixed(2)
+)
+)+
+"π";
 
 if(
-value<=0
-)return;
-
-const text=
-`${Number(value.toFixed(2))}π`;
-
-if(
-!choices.includes(text)
+choices.indexOf(text)===-1
 ){
 
 choices.push(text);
@@ -3918,28 +3898,38 @@ while(
 choices.length<5
 ){
 
-const value=
-coefficient+
-(
+var direction=
 choices.length%2===0
 ?1
-:-1
-)*
+:-1;
+
+var extra=
+coefficient+
+direction*
 step*
 3;
 
+if(extra>0){
+
+var extraText=
+String(
+Number(
+extra.toFixed(2)
+)
+)+
+"π";
+
 if(
-value>0
+choices.indexOf(extraText)===-1
 ){
 
-const text=
-`${Number(value.toFixed(2))}π`;
+choices.push(extraText);
 
-if(
-!choices.includes(text)
-){
+}else{
 
-choices.push(text);
+break;
+
+}
 
 }else{
 
@@ -3949,11 +3939,11 @@ break;
 
 }
 
-}
-
 shuffle(choices);
 
 return choices;
+
+}
 
 }
 
@@ -3962,165 +3952,82 @@ return choices;
 
 if(
 typeof answer==="string" &&
-/^x²\+y²=\d+$/.test(answer)
+answer.indexOf("x²+y²=")===0
 ){
 
-const n=
+var radiusValue=
 Number(
 answer.split("=")[1]
 );
 
-const choices=[
-answer
+var equationChoices=[
+answer,
+"x²+y²="+
+Math.max(1,radiusValue-2),
+"x²+y²="+
+Math.max(1,radiusValue-1),
+"x²+y²="+
+(radiusValue+1),
+"x²+y²="+
+(radiusValue+2)
 ];
 
-[
-n-2,
-n-1,
-n+1,
-n+2
-].forEach(
-value=>{
-
-if(
-value>0
-){
-
-choices.push(
-`x²+y²=${value}`
+shuffle(
+equationChoices
 );
 
-}
-
-}
-);
-
-shuffle(choices);
-
-return choices;
+return equationChoices;
 
 }
 
 
-/* 다항식 인수 문자열 */
-
-if(
-typeof answer==="string" &&
-answer.startsWith("x")
-){
-
-const choices=[
-answer
-];
-
-const variants=[
-"x²",
-"x+1",
-"x-1",
-"x+2",
-"x-2"
-];
-
-variants.forEach(
-value=>{
-
-if(
-choices.length<5 &&
-!choices.includes(value)
-){
-
-choices.push(value);
-
-}
-
-}
-);
-
-shuffle(choices);
-
-return choices;
-
-}
-
-
-/* 숫자 */
+/* 일반 숫자 */
 
 if(
 typeof answer==="number" &&
 Number.isFinite(answer)
 ){
 
-const choices=[
+var numericChoices=[
 answer
 ];
 
-const abs=
+var abs=
 Math.abs(answer);
 
-let step;
+var stepNumber;
 
-if(
-abs<5
-){
-
-step=.25;
-
-}
-else if(
-abs<20
-){
-
-step=.5;
-
-}
-else if(
-abs<100
-){
-
-step=1;
-
-}
-else if(
-abs<500
-){
-
-step=2;
-
-}
-else if(
-abs<2000
-){
-
-step=5;
-
-}
-else{
-
-step=
+if(abs<5){
+stepNumber=.25;
+}else if(abs<20){
+stepNumber=.5;
+}else if(abs<100){
+stepNumber=1;
+}else if(abs<500){
+stepNumber=2;
+}else if(abs<2000){
+stepNumber=5;
+}else{
+stepNumber=
 Math.max(
 10,
-Math.round(
-abs*.01
-)
+Math.round(abs*.01)
 );
-
 }
 
-
-/* 정답 주변 ±1단계, ±2단계 */
-
-const offsets=[
--step*2,
--step,
-step,
-step*2
+var numericOffsets=[
+-stepNumber*2,
+-stepNumber,
+stepNumber,
+stepNumber*2
 ];
 
-offsets.forEach(
-offset=>{
+numericOffsets.forEach(
+function(offset){
 
-let value=
-answer+offset;
+var value=
+answer+
+offset;
 
 if(
 !Number.isInteger(answer)
@@ -4134,79 +4041,76 @@ value*100
 }
 
 if(
-!choices.some(
-item=>
-sameAnswer(
-item,
-value
-)
+!numericChoices.some(
+function(existing){
+return sameAnswer(existing,value);
+}
 )
 ){
 
-choices.push(
-value
-);
+numericChoices.push(value);
 
 }
 
 }
 );
 
-
-/* 혹시 중복되면 초근접 값 추가 */
-
-let extra=.5;
+var micro=
+stepNumber/2;
 
 while(
-choices.length<5
+numericChoices.length<5
 ){
 
-let value=
+var sign=
+numericChoices.length%2===0
+?1
+:-1;
+
+var extraValue=
 answer+
-(
-choices.length%2===0
-?extra
-:-extra
-);
+sign*
+micro;
 
 if(
 !Number.isInteger(answer)
 ){
 
-value=
+extraValue=
 Math.round(
-value*100
+extraValue*100
 )/100;
 
 }
 
 if(
-!choices.some(
-item=>
-sameAnswer(
-item,
-value
-)
+!numericChoices.some(
+function(existing){
+return sameAnswer(existing,extraValue);
+}
 )
 ){
 
-choices.push(value);
+numericChoices.push(
+extraValue
+);
 
 }else{
 
-extra+=step/2;
+micro+=
+stepNumber/2;
 
 }
 
 }
 
+shuffle(
+numericChoices
+);
 
-shuffle(choices);
-
-return choices;
+return numericChoices;
 
 }
-
 
 return [
 answer,
@@ -4220,7 +4124,7 @@ answer,
 
 
 /* =====================================================
-   게임 상태
+   상태
 ===================================================== */
 
 function renderGameStatus(){
@@ -4243,7 +4147,9 @@ gameSolved;
 document.getElementById(
 "wrongStreak"
 ).textContent=
-`${wrongStreak} / ${MAX_WRONG_STREAK}`;
+wrongStreak+
+" / "+
+MAX_WRONG_STREAK;
 
 }
 
@@ -4254,12 +4160,14 @@ document.getElementById(
 
 function showQuestion(){
 
-if(!gameRunning)return;
+if(!gameRunning){
+return;
+}
 
 currentQuestion=
 createQuestion();
 
-const config=
+var config=
 difficultyConfig[
 currentQuestion.level
 ];
@@ -4267,14 +4175,17 @@ currentQuestion.level
 document.getElementById(
 "difficulty"
 ).textContent=
-`${config.label} · 정답 +${config.score}점`;
+config.label+
+" · 정답 +"+
+config.score+
+"점";
 
 document.getElementById(
 "question"
 ).textContent=
 currentQuestion.question;
 
-const choices=
+var choices=
 makeChoices(
 currentQuestion.answer,
 currentQuestion.level
@@ -4283,14 +4194,14 @@ currentQuestion.level
 currentQuestion.choices=
 choices;
 
-const box=
+var box=
 document.getElementById(
 "choices"
 );
 
 box.innerHTML="";
 
-const labels=[
+var labels=[
 "①",
 "②",
 "③",
@@ -4299,9 +4210,9 @@ const labels=[
 ];
 
 choices.forEach(
-(choice,index)=>{
+function(choice,index){
 
-const button=
+var button=
 document.createElement(
 "button"
 );
@@ -4310,10 +4221,12 @@ button.className=
 "choice-btn";
 
 button.textContent=
-`${labels[index]} ${formatNumber(choice)}`;
+labels[index]+
+" "+
+formatNumber(choice);
 
 button.onclick=
-()=>{
+function(){
 
 answerQuestion(
 index,
@@ -4322,7 +4235,9 @@ button
 
 };
 
-box.appendChild(button);
+box.appendChild(
+button
+);
 
 }
 );
@@ -4338,7 +4253,7 @@ startQuestionTimer();
 
 
 /* =====================================================
-   문제 20초
+   20초 타이머
 ===================================================== */
 
 function startQuestionTimer(){
@@ -4363,7 +4278,7 @@ document.getElementById(
 
 questionTimer=
 setInterval(
-()=>{
+function(){
 
 questionTime--;
 
@@ -4372,12 +4287,13 @@ renderGameStatus();
 document.getElementById(
 "questionTimerBar"
 ).style.width=
-`${Math.max(
+Math.max(
 0,
 questionTime/
 QUESTION_TIME*
 100
-)}%`;
+)+
+"%";
 
 if(
 questionTime<=0
@@ -4401,17 +4317,19 @@ questionTimeout();
 
 
 /* =====================================================
-   시간 초과
+   시간초과
 ===================================================== */
 
 function questionTimeout(){
 
-if(!gameRunning)return;
+if(!gameRunning){
+return;
+}
 
 document.querySelectorAll(
 ".choice-btn"
 ).forEach(
-button=>{
+function(button){
 button.disabled=true;
 }
 );
@@ -4431,23 +4349,25 @@ document.getElementById(
 "⏰ 5번 연속 오답으로 게임 종료!";
 
 setTimeout(
-()=>{
+function(){
 endMathGame();
 },
 450
 );
 
 return;
-
 }
 
 document.getElementById(
 "gameMessage"
 ).textContent=
-`⏰ 시간 초과! 연속 오답 ${wrongStreak}/${MAX_WRONG_STREAK}`;
+"⏰ 시간 초과! 연속 오답 "+
+wrongStreak+
+"/"+
+MAX_WRONG_STREAK;
 
 setTimeout(
-()=>{
+function(){
 
 if(gameRunning){
 
@@ -4463,7 +4383,7 @@ showQuestion();
 
 
 /* =====================================================
-   정답
+   답
 ===================================================== */
 
 function answerQuestion(
@@ -4471,7 +4391,9 @@ index,
 clickedButton
 ){
 
-if(!gameRunning)return;
+if(!gameRunning){
+return;
+}
 
 if(questionTimer){
 
@@ -4486,17 +4408,17 @@ questionTimer=null;
 document.querySelectorAll(
 ".choice-btn"
 ).forEach(
-button=>{
+function(button){
 button.disabled=true;
 }
 );
 
-const selected=
+var selected=
 currentQuestion.choices[
 index
 ];
 
-const correct=
+var correct=
 sameAnswer(
 selected,
 currentQuestion.answer
@@ -4508,22 +4430,26 @@ clickedButton.classList.add(
 "correct"
 );
 
-const points=
+var points=
 difficultyConfig[
 currentQuestion.level
 ].score;
 
-gameScore+=points;
+gameScore+=
+points;
+
 gameSolved++;
+
 wrongStreak=0;
 
 document.getElementById(
 "gameMessage"
 ).textContent=
-`✅ 정답! +${points}점`;
+"✅ 정답! +"+
+points+
+"점";
 
-}
-else{
+}else{
 
 clickedButton.classList.add(
 "wrong"
@@ -4534,7 +4460,10 @@ wrongStreak++;
 document.getElementById(
 "gameMessage"
 ).textContent=
-`❌ 오답! 정답은 ${formatNumber(currentQuestion.answer)} · 연속 오답 ${wrongStreak}/${MAX_WRONG_STREAK}`;
+"❌ 오답! 연속 오답 "+
+wrongStreak+
+"/"+
+MAX_WRONG_STREAK;
 
 }
 
@@ -4546,18 +4475,17 @@ MAX_WRONG_STREAK
 ){
 
 setTimeout(
-()=>{
+function(){
 endMathGame();
 },
 500
 );
 
 return;
-
 }
 
 setTimeout(
-()=>{
+function(){
 
 if(gameRunning){
 
@@ -4578,9 +4506,11 @@ showQuestion();
 
 function startMathGame(){
 
-if(gameRunning)return;
+if(gameRunning){
+return;
+}
 
-const nickname=
+var nickname=
 document.getElementById(
 "gameNickname"
 ).value.trim();
@@ -4596,19 +4526,23 @@ document.getElementById(
 ).focus();
 
 return;
-
 }
 
 gameRunning=true;
 
 gameScore=0;
+
 questionTime=
 QUESTION_TIME;
+
 gameSolved=0;
+
 wrongStreak=0;
+
 currentQuestion=null;
-usedQuestionKeys=
-new Set();
+
+usedQuestionKeys={};
+
 lastQuestionType=null;
 
 /* 게임 중 닉네임 잠금 */
@@ -4640,12 +4574,14 @@ showQuestion();
 
 
 /* =====================================================
-   게임 종료
+   종료
 ===================================================== */
 
 function endMathGame(){
 
-if(!gameRunning)return;
+if(!gameRunning){
+return;
+}
 
 gameRunning=false;
 
@@ -4662,12 +4598,12 @@ questionTimer=null;
 document.querySelectorAll(
 ".choice-btn"
 ).forEach(
-button=>{
+function(button){
 button.disabled=true;
 }
 );
 
-/* 종료 후 닉네임 다시 입력 가능 */
+/* 종료 후 닉네임 다시 입력 */
 
 document.getElementById(
 "gameNickname"
@@ -4692,12 +4628,12 @@ document.getElementById(
 ).style.width=
 "0%";
 
-const nickname=
+var nickname=
 document.getElementById(
 "gameNickname"
 ).value.trim();
 
-const reason=
+var reason=
 wrongStreak>=
 MAX_WRONG_STREAK
 ?
@@ -4708,7 +4644,8 @@ MAX_WRONG_STREAK
 document.getElementById(
 "gameMessage"
 ).textContent=
-`${reason}!`;
+reason+
+"!";
 
 if(
 gameScore>
@@ -4720,9 +4657,7 @@ gameScore;
 
 localStorage.setItem(
 BEST_KEY,
-String(
-bestGameScore
-)
+String(bestGameScore)
 );
 
 }
@@ -4736,12 +4671,17 @@ document.getElementById(
 document.getElementById(
 "resultScore"
 ).textContent=
-`${gameScore}점`;
+gameScore+
+"점";
 
 document.getElementById(
 "resultInfo"
 ).textContent=
-`${nickname}님 · ${gameSolved}문제 정답 · ${reason}`;
+nickname+
+"님 · "+
+gameSolved+
+"문제 정답 · "+
+reason;
 
 saveRanking(
 nickname,
@@ -4757,10 +4697,22 @@ gameScore
 
 function getRanking(){
 
-return loadArray(
+var ranking=
+safeRead(
 RANKING_KEY,
 []
 );
+
+if(
+!Array.isArray(ranking)
+){
+
+ranking=[];
+
+}
+
+return ranking;
+
 }
 
 function saveRanking(
@@ -4768,7 +4720,7 @@ nickname,
 score
 ){
 
-const ranking=
+var ranking=
 getRanking();
 
 ranking.push({
@@ -4780,9 +4732,20 @@ time:Date.now()
 });
 
 ranking.sort(
-(a,b)=>
-b.score-a.score||
-a.time-b.time
+function(a,b){
+
+if(
+b.score!==
+a.score
+){
+
+return b.score-a.score;
+
+}
+
+return a.time-b.time;
+
+}
 );
 
 localStorage.setItem(
@@ -4801,64 +4764,65 @@ renderRanking();
 
 function renderRanking(){
 
-const body=
+var body=
 document.getElementById(
 "rankingBody"
 );
 
-if(!body)return;
+if(!body){
+return;
+}
 
-const ranking=
+var ranking=
 getRanking();
 
-if(!ranking.length){
+if(
+ranking.length===0
+){
 
 body.innerHTML=
-`
-<tr>
-<td colspan="3">
-아직 기록이 없습니다.
-</td>
-</tr>
-`;
+'<tr><td colspan="3">아직 기록이 없습니다.</td></tr>';
 
 return;
 
 }
 
+var html="";
+
+ranking.forEach(
+function(item,index){
+
+html+=
+"<tr>"+
+"<td>"+
+(index+1)+
+"</td>"+
+"<td>"+
+escapeHTML(item.name)+
+"</td>"+
+"<td>"+
+item.score+
+"</td>"+
+"</tr>";
+
+}
+);
+
 body.innerHTML=
-ranking.map(
-(item,index)=>`
-
-<tr>
-
-<td>
-${index+1}
-</td>
-
-<td>
-${escapeHTML(item.name)}
-</td>
-
-<td>
-${item.score}
-</td>
-
-</tr>
-
-`
-).join("");
+html;
 
 }
 
 
 /* =====================================================
-   좋아요 실시간 갱신
+   좋아요 시간 갱신
 ===================================================== */
 
 setInterval(
-()=>{
+function(){
+
 render();
+
 },
 1000
 );
@@ -4870,7 +4834,8 @@ render();
 
 document.getElementById(
 "gameBest"
-);
+).textContent=
+bestGameScore;
 
 renderRanking();
 render();
@@ -4880,4 +4845,3 @@ restorePage();
 
 </body>
 </html>
-```
